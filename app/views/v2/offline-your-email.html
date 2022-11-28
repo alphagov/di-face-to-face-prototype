@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-delivery-address" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+               <h1 class="govuk-heading-xl page-heading">We will send your confirmation email to this email address</h1>
+
+
+
+               <form action="" method="post" class="form">
+                 <p>You cannot change this email at as it is associated with your GOV.UK account. </p><p>If this email is different than your email, you have to
+                   <a href="auth-gov-account"  class="govuk-body">
+                                    create or sign in to a GOV.UK account
+                  </a>with the correct email address.</p>
+
+
+
+                 <div class="govuk-inset-text">
+                   example@gmail.com
+                 </div>
+
+
+
+               <input type="hidden" name="_csrf" value="J6kEZSxd-1xxseLbAYGbY5epiThrQJ6IYO7M" />
+
+
+
+               <a href="offline-enter-phone" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+
+
+               </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

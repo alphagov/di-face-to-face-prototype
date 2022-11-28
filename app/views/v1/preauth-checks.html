@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Prove your identity with a GOV.UK account
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+  {% if data['identity-welcome-version'] === 'return' %}
+    <a class="govuk-back-link" href="identity-welcome-return">Back</a>
+  {% elif data['identity-welcome-version'] === 'signedin' %}
+    <a class="govuk-back-link" href="identity-welcome-signedin">Back</a>
+  {% else %}
+    <a class="govuk-back-link" href="identity-welcome">Back</a>
+  {% endif %}
+
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="./auth-gov-account" method="post">
+
+      <h1 class="govuk-heading-l">You must have a photo ID to prove your identity this way</h1>
+
+      <p>You can only prove your identity with your GOV.UK account if you have one of the following:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>a UK driving licence</li>
+        <li>a UK passport</li>
+      </ul>
+
+      <div class="govuk-inset-text">
+        If your passport has expired, you can still use it to prove your identity up until 18 months after the expiry date.
+      </div>
+
+      {{ govukRadios({
+      classes: "govuk-radios",
+      idPrefix: "doc-check",
+      name: "doc-check",
+      fieldset: {
+        legend: {
+          text: "Do you have a photo ID?",
+          isPageHeading: false,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes",
+          checked: checked("doc-check", "yes")
+        },
+        {
+          value: "no",
+          text: "No",
+          checked: checked("doc-check", "no")
+        }
+      ]
+    }) }}
+
+    <button class="govuk-button">Continue</button>
+
+</form>
+
+  </div>
+
+</div>
+{% endblock %}

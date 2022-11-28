@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a href="offline-intro" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+             <h1 class="govuk-heading-xl page-heading">Which identity document can you take to a Post Office?</h1>
+
+
+               <p>Select which document you have to hand and would be able to take to the Post Office within the next 10 days.</p>
+
+               <p>The document must:
+                 <ul class="govuk-list govuk-list--bullet">
+                   <li>be in your current name</li>
+                   <li>be in your current address (where address is included)</li>
+                   <li>include your date of birth (at least 1 document should include this)</li>
+                   <li>be original documents (you cannot use photocopies)</li>
+                 </ul>
+               </p>
+
+               <form class="form" method="post">
+
+
+                 {{ govukRadios({
+                   classes: "govuk-radios",
+                   idPrefix: "offline-doc-check",
+                   name: "offline-doc-check",
+
+                   items: [
+                     {
+                       value: "UK passport~./offline-passport-details",
+                       text: "UK passport",
+                       hint: {
+                         text: "If your passport has expired, you can still use it to prove your identity up until 18 months after the expiry date."
+                       },
+                       checked: checked("id-documents", "UK passport")
+                     },
+                     {
+                       value: "Other~./offline-passport-details",
+                       text: "Other passport with a biometric chip",
+                       checked: checked("id-documents", "Other")
+                     },
+                     {
+                       value: "Biometric residence permit~./offline-brp-details",
+                       text: "Biometric residence permit (BRP)",
+                       checked: checked("id-documents", "BRP")
+                     },
+                     {
+                       value: "UK driving licence~./offline-driving-licence",
+                       text: "UK driving licence",
+                       checked: checked("id-documents", "UK driving licence")
+                     },
+                     {
+                       divider: "or"
+                     },
+                     {
+                       value: "none~./fallback",
+                       text: "None, I do not have any of these types of photo ID",
+                       behaviour: "exclusive",
+                       checked: checked("id-documents", "none")
+                     }
+                   ]
+                 }) }}
+
+
+               <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+           </form>
+
+
+               <a href="./fallback"  class="govuk-body">
+                                  I do not have any of these documents
+                                  </a>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

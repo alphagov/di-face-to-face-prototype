@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-name-match" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+               <h1 class="govuk-heading-xl page-heading">What is your date of birth?</h1>
+
+
+               <form action="" method="post" class="form">
+
+
+
+               <div class="govuk-form-group ">
+
+                   <fieldset class="govuk-fieldset">
+                     <legend>
+
+
+
+
+
+                       <span class="govuk-label">Date of birth</span>
+
+
+
+
+                     </legend>
+
+
+
+
+
+                       <span class="govuk-hint govuk-!-margin-bottom-1">For example, 28 03 1980</span>
+
+
+
+
+
+
+                   <div class="govuk-date-input">
+
+                     <div class="govuk-date-input__item">
+                       <div class="govuk-form-group">
+                         <label class="govuk-label" for="date-of-birth-day">Day</label>
+                         <input
+                           maxlength="2"
+                           id="date-of-birth-day"
+
+                           class="govuk-input govuk-date-input__input govuk-input--width-2 "
+                           type="text" inputmode="numeric"
+                           name="date-of-birth-day" value="03"
+
+                             autocomplete="bday-day"
+
+                         >
+                       </div>
+                     </div>
+
+
+                     <div class="govuk-date-input__item">
+                       <div class="govuk-form-group">
+                         <label class="govuk-label" for="date-of-birth-month">Month</label>
+                         <input
+                           maxlength="2"
+                           id="date-of-birth-month"
+
+                           class="govuk-input govuk-date-input__input govuk-input--width-2 "
+                           type="text" inputmode="numeric"
+                           name="date-of-birth-month" value="03"
+
+                             autocomplete="bday-month"
+
+                         >
+                       </div>
+                     </div>
+
+                     <div class="govuk-date-input__item">
+                       <div class="govuk-form-group">
+
+                           <label class="govuk-label" for="date-of-birth-year">Year</label>
+
+                         <input
+                           maxlength="4"
+                           id="date-of-birth-year"
+
+                           class="govuk-input govuk-date-input__input govuk-input--width-4 "
+                           type="text" inputmode="numeric"
+                           name="date-of-birth-year" value="1980"
+
+                             autocomplete="bday-year"
+
+                         >
+                       </div>
+                     </div>
+                   </div>
+
+                   </fieldset>
+
+               </div>
+
+
+
+
+               <input type="hidden" name="_csrf" value="KCjmvCyO-CEnd52CFTQZejD-T7ckoILfExQ4" />
+
+               <a href="offline-home-address" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+
+
+               </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

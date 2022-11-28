@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="auth-create-email2" method="post" class="form">
+
+    <h1 class="govuk-heading-xl page-heading">You need a GOV.UK One Login to continue</h1>
+
+    <p>You can use your GOV.UK One Login to access some government services.</p>
+
+    <p>In the future, you'll be able to use it with all servcies on GOV.UK.</p>
+
+    <h2 class="govuk-heading-m page-heading">Create your GOV.UK One Login or sign in</h2>
+
+    <p>You'll need:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+  <li>an email address</li>
+  <li>a way to get security codes - this can be a UK mobile phone number or an authenticator app</li>
+</ul>
+
+<div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button">
+    Create your GOV.UK One Login
+  </button>
+
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button" href="auth-create-email2">
+    Sign in
+  </button>
+</div>
+
+</form>
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

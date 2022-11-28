@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-ni-number" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+
+
+
+
+
+
+
+
+               <h1 class="govuk-heading-xl page-heading">What is your current full name?</h1>
+
+
+               <form action="" method="post" class="form">
+
+
+
+               <div class="govuk-form-group ">
+
+
+
+                   <label class="govuk-label" for="first-name-input">
+                     First name
+                   </label>
+
+
+
+
+
+
+
+
+                 <input
+                   class="govuk-input govuk-input--width-20 "
+                   name="first-name-input"
+
+
+                   type="text"
+                   id="first-name-input"
+                   value="John"
+                   autocomplete="given-name"
+                   >
+
+
+               </div>
+
+
+
+
+
+               <div class="govuk-form-group ">
+
+
+
+                   <label class="govuk-label" for="middle-names-input">
+                     Middle name(s)
+                   </label>
+
+
+
+
+
+
+
+
+                 <input
+                   class="govuk-input govuk-input--width-20 "
+                   name="middle-names-input"
+
+
+                   type="text"
+                   id="middle-names-input"
+                   value=""
+                   autocomplete="additional-name"
+                   >
+
+
+               </div>
+
+
+
+
+
+               <div class="govuk-form-group ">
+
+
+
+                   <label class="govuk-label" for="last-name-input">
+                     Last name
+                   </label>
+
+
+
+
+
+
+
+
+                 <input
+                   class="govuk-input govuk-input--width-20 "
+                   name="last-name-input"
+
+
+                   type="text"
+                   id="last-name-input"
+                   value="Doe"
+                   autocomplete="family-name"
+                   >
+
+
+               </div>
+
+
+
+
+
+               <input type="hidden" name="_csrf" value="POiYShu5-5RkOca7e5QqXIwECT2TO-0gcAk8" />
+
+
+
+
+                         <a href="offline-name-match" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+
+               </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

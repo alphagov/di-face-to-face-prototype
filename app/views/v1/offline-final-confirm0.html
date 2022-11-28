@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-name-match" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+
+           <form action="" method="post" class="form">
+
+
+
+
+
+
+           <h1 class="govuk-heading-xl page-heading">By continuing with your application you confirm that:</h1>
+
+
+             <div class="govuk-form-group">
+               <ul class="govuk-list govuk-list--bullet">
+                 <li>the information you&#39;ve given is true</li>
+
+
+                   <li>you&#39;ll pay £18 for your application</li>
+
+               </ul>
+             </div>
+
+
+           <div class="govuk-warning-text">
+             <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+
+             <strong class="govuk-warning-text__text">
+               <span class="govuk-warning-text__assistive">Warning</span>
+               You could be prosecuted if you knowingly give false information in your application
+             </strong>
+           </div>
+
+
+
+
+           <div class="govuk-form-group ">
+
+
+
+
+
+               <div class="govuk-checkboxes">
+
+
+
+
+
+
+
+           <div class="govuk-checkboxes__item">
+             <input
+               class="govuk-checkboxes__input"
+               type="checkbox"
+               id="check-box-1"
+               name="check-group-agree"
+               value="declaration"
+
+             >
+             <label class="govuk-label govuk-checkboxes__label" for="check-box-1">
+
+                 I agree to the <a href="/terms-and-conditions" target="_blank">terms and conditions</a> (opens in a new tab)
+
+             </label>
+           </div>
+
+
+
+               </div>
+
+           </div>
+
+
+
+
+           <input type="hidden" name="_csrf" value="05gzBlT0-rdacLJUGFCLDimpAgpbtOC6r17g" />
+
+
+             <button
+               type="submit"
+               class="govuk-button"
+               id="save-and-continue"
+               role="button"
+             >
+
+                 Continue to payment
+
+             </button>
+           </form>
+
+  </div>
+</div>
+
+{% endblock %}

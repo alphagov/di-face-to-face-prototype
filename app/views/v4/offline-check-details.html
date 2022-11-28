@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="nearest-po-list" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+               <h1 class="govuk-heading-xl page-heading">Check your details</h1>
+
+
+
+
+               <form action="" method="post" class="form">
+                 <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+
+
+                   <div id="text-number" class="govuk-summary-list__row">
+                     <dt class="govuk-summary-list__key">
+                       Selected method to prove your identity
+                     </dt>
+                     <dd class="govuk-summary-list__value">
+
+                       In-person at a Post Office
+                     </dd>
+                     <dd class="govuk-summary-list__actions">
+                       <a href="id-decide-triage" id="edit-text-number">
+                         Change<span class="govuk-visually-hidden"> Selected method to prove your identity</span>
+                       </a>
+                     </dd>
+                   </div>
+
+
+
+
+                   <div id="email" class="govuk-summary-list__row">
+                     <dt class="govuk-summary-list__key">
+                       Selected Post Office branch
+                     </dt>
+                     <dd class="govuk-summary-list__value">
+                       <p>Branch name<br>
+                          Address<br>
+                          0.3 miles away
+                       </p>
+
+
+                     </dd>
+                     <dd class="govuk-summary-list__actions">
+                       <a href="nearest-po-list" id="edit-text-number">
+                         Change<span class="govuk-visually-hidden"> Selected method to prove your identity</span>
+                     </dd>
+                   </div>
+
+
+
+                   <!-- <a href="/questions/edit/email" id="edit-email">
+                     Change<span class="govuk-visually-hidden"> Email address</span>
+                   </a> -->
+
+                   <!-- <div id="who-is-paying" class="govuk-summary-list__row">
+                     <dt class="govuk-summary-list__key">
+                       Payment choice
+                     </dt>
+                     <dd class="govuk-summary-list__value">
+
+                       I am paying
+                     </dd>
+                     <dd class="govuk-summary-list__actions">
+                       <a href="/questions/edit/who-is-paying" id="edit-who-is-paying">
+                         Change<span class="govuk-visually-hidden"> Payment choice</span>
+                       </a>
+                     </dd>
+                   </div> -->
+                 </dl>
+
+                <br>
+                <br>
+
+                <h2 class="govuk-heading-l">Personal details</h2>
+
+
+               <input type="hidden" name="_csrf" value="J6kEZSxd-1xxseLbAYGbY5epiThrQJ6IYO7M" />
+
+
+
+               <a href="offline-review-application" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+                 </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

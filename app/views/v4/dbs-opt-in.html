@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Prove your identity - Submit a basic check application
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "../includes/phase-banner.html" %}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="./preauth-identity-welcome" method="post">
+
+      <h1 class="govuk-heading-xl">Prove your identity</h1>
+
+      <p>To sign a mortgage deed, you need to first prove your identity.</p>
+
+      <p>You need to sign in to or create an account to do this.</p>
+
+      <p>When you prove your identity, you help protect yourself from online identity theft.</p>
+
+      <p>By continuing with your application, you confirm that:</p>
+
+      {{ govukCheckboxes({
+      idPrefix: "id-documents",
+      name: "dbs-accept",
+      classes: "govuk-checkboxes",
+      fieldset: {
+      },
+      items: [
+        {
+          value: "dbs-accept-privacy",
+          html: "I have read and understood the <a href='#'>privacy policy (opens in a new tab)</a>. I understand how GOV.UK will process my personal data when I'm applying online, before my application has been submitted",
+          checked:  checked("dbs-accept", "dbs-accept-privacy")
+        }
+      ]
+    }) }}
+
+      <input class="govuk-input" id="optin" name="optin" type="hidden" value="yes">
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+    {% if data['devMode'] === 'true' %}
+    {# DEVMODE SCENARIOS #}
+
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Journey scenarios
+        </span>
+      </summary>
+      <div class="nhsuk-details__text govuk-!-margin-top-4">
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="dbs-opt-in?scenario=signin-closed">GOV.UK Signin IS NOT accepting new identity verifications</a>
+          </li>
+          <li>
+            <a href="dbs-opt-in?scenario=signin-open">GOV.UK Signin IS accepting new identity verifications</a>
+          </li>
+        </ul>
+      </div>
+    </details>
+    {% endif %}
+
+  </div>
+
+</div>
+{% endblock %}

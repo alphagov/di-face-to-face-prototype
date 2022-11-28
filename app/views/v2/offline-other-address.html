@@ -1,0 +1,207 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-address-details" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+               <form action="" method="post" class="form">
+                 <fieldset class="govuk-fieldset">
+                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                     <h1 class="govuk-fieldset__heading">Have you lived anywhere else from 2017 to now?</h1>
+                   </legend>
+
+
+                     <div class="govuk-form-group ">
+
+
+
+                 <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+
+
+
+
+
+
+
+
+                     <div class="govuk-radios__item">
+                       <input
+                         class="govuk-radios__input"
+                         type="radio"
+                         id="radio-option-yes"
+                         name="radio-group-addresses-av"
+                         value="yes"
+
+
+                           data-aria-controls="address-options"
+
+                       />
+                       <label
+                         class="govuk-label govuk-radios__label"
+                         for="radio-option-yes"
+                         id="for-radio-option-yes"
+                       >
+
+
+                           Yes
+
+                       </label>
+                     </div>
+
+
+
+
+
+
+
+
+
+
+                     <div class="govuk-radios__item">
+                       <input
+                         class="govuk-radios__input"
+                         type="radio"
+                         id="radio-option-no"
+                         name="radio-group-addresses-av"
+                         value="no"
+
+
+                       />
+                       <label
+                         class="govuk-label govuk-radios__label"
+                         for="radio-option-no"
+                         id="for-radio-option-no"
+                       >
+
+
+                           No
+
+                       </label>
+                     </div>
+
+
+
+                 </div>
+
+
+
+
+                     </div>
+
+
+                   <ul
+                     id="address-options"
+                     class="govuk-list app__conditional govuk-radios__conditional--hidden"
+                   >
+                     <li><a href="addresses/add/standard/lookup/new" id="add-lookup-address">Add another address</a></li>
+                     <li><a href="addresses/add/bfpo/new" id="add-bfpo-address">Add a British Forces Post Office (BFPO) address</a></li>
+                     <li><a href="addresses/add/other/new" id="add-other-address">I was homeless or travelling and didn&#39;t have an address</a></li>
+                   </ul>
+
+                   <div class="govuk-form-group">
+                     <p>You must tell us about all the addresses you&#39;ve lived at in the last 5 years. You can&#39;t leave any gaps but it&#39;s fine to have overlapping dates.</p>
+
+                     <p>You need to include any secondary addresses, for example student accommodation or if you work away from home.</p>
+
+
+
+               <div class="govuk-form-group">
+                 <details class="govuk-details" data-module="govuk-details">
+                   <summary class="govuk-details__summary help-text-link">
+                     <span class="govuk-details__summary-text">What is a secondary address?</span>
+                   </summary>
+                   <div class="govuk-details__text">
+
+
+                         <p>If you're a student and live in student accommodation during term time, but live with your parents (or a similar permanent home address) in the period between academic years, you need to tell us both addresses.</p>
+                       <p>If, for example, you work away from home and spend months living at an alternative address that's not your permanent home address, you need to tell us this alternative address.</p>
+                       <p>If the nature of your work means that you often spend 1 or 2 days in different places away from your permanent address, we don't need details of each of the places you visit.</p>
+
+
+                   </div>
+                 </details>
+               </div>
+
+
+
+
+
+
+
+
+                     <table class="govuk-table">
+                       <thead class="govuk-table__head">
+                         <tr class="govuk-table__row">
+                           <th scope="col" class="govuk-table__header">Address</th>
+                           <th scope="col" class="govuk-table__header">Dates you lived there</th>
+
+                         </tr>
+                       </thead>
+                       <tbody class="govuk-table__body">
+
+
+
+
+               <tr class="govuk-table__row">
+
+                   <td class="govuk-table__cell">
+                    10 Whitechapel High Street
+
+
+                     <br>London
+
+
+                       <br>United Kingdom
+
+
+                       <br>E1 8QS
+
+                   </td>
+
+
+                 <td class="govuk-table__cell">
+                   <span>1990 to now</span>
+                 </td>
+
+               </tr>
+
+
+
+
+                       </tbody>
+                     </table>
+                   </div>
+                 </fieldset>
+
+               <input type="hidden" name="_csrf" value="L9yRuArb-QMp9CGfwl1uvHJheiFZ-eSpqxjo" />
+
+
+
+               <a href="offline-delivery-address" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+
+               </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

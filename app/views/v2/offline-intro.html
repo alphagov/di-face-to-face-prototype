@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+  <!-- {% if prevURL === "http://localhost:3000/preauth/mvp/create-spinner" or prevURL === "https://gds-identity.herokuapp.com/preauth/mvp/create-spinner" or prevURL === "https://gds-identity-ur.herokuapp.com/preauth/mvp/create-spinner" %}
+    <a class="govuk-back-link" href="{{ preAuth }}">Back</a>
+  {% else %}
+    <a href="gov-account" class="govuk-back-link">Back</a>
+  {% endif %} -->
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+     <h1 class="govuk-heading-xl page-heading">Prove your identity at a Post Office</h1>
+    <p>Based on your answers, you will need to prove your identity in person.</p>
+
+     <p>To prove your identity at a Post Office, you need to: </p>
+     <ol class="govuk-list govuk-list--number">
+       <li><p>Select which identity document you can take. You will need to have this to hand now.</p></li>
+       <li><p>Complete this online form to get a confirmation email with a QR code.</p></li>
+       <li><p>Take your identity document and your confirmation email to a Post Office within 10 days.</p></li>
+     </ol>
+
+<p>Not all Post Offices offer this service. You can <a href="https://www.postoffice.co.uk/identity/in-branch-verification-service" target="_blank" class="govuk-link" rel="noreferrer noopener"> find your nearest Post Office that offers in branch verification here. (opens in new tab)</a></p>
+
+
+     <a class="govuk-button govuk-!-margin-top-4" role="button" href="./offline-select-document-triage">Continue</a>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

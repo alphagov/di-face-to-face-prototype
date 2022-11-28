@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a href="find-nearest-po" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+             <h1 class="govuk-heading-xl page-heading">Select a Post Office branch that offers this service</h1>
+
+             <h2 class="govuk-heading-m page-heading">Postcode</h2>
+
+             <h2
+             class="govuk-heading-m page-heading">SW2 1AA&emsp;<a href="find-nearest-po" class="govuk-link">Change</a>
+             </h2>
+
+
+
+
+               <p>We will include details of your selected Post Office on your confirmation email, but you can go to any branch which offers the in branch verification service.</p>
+
+               <br>
+
+
+               <form class="form" method="post">
+
+<!--
+                 {{ govukRadios({
+                   classes: "govuk-radios",
+                   idPrefix: "offline-doc-check",
+                   name: "offline-doc-check",
+
+                   items: [
+                     {
+                       value: "UK passport~./offline-passport-details",
+                       text: "Brixton Hill | 0.3 miles away"
+                              ,
+                       hint: {
+                         text: "104-106 Brixton Hill, SW2 1AH"
+                       },
+                       checked: checked("id-documents", "UK passport")
+                     },
+                     {
+                       value: "Other~./offline-passport-details",
+                       text: "Elm Park | 0.5 miles away",
+                       hint: {
+                         text: "66 Elm Park, SW2 2UB"
+                       },
+                       checked: checked("id-documents", "Other")
+                     },
+                     {
+                       value: "Biometric residence permit~./offline-brp-details",
+                       text: "Herne Hill | 0.6 miles away",
+                       hint: {
+                         text: "31-39 Norwood Road, SE24 9QG"
+                       },
+                       checked: checked("id-documents", "BRP")
+                     }
+                   ]
+                 }) }}
+-->
+                 <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          Brixton Hill
+        </label>
+        <div id="address1" class="govuk-hint govuk-radios__hint">
+          104-106 Brixton Hill, SW2 1AH
+        </div>
+      </div>
+      <br>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          Elm Park
+        </label>
+        <div id="address2" class="govuk-hint govuk-radios__hint">
+          66 Elm Park, SW2 2UB
+        </div>
+      </div>
+      <br>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+          Herne Hill
+        </label>
+        <div id="address3" class="govuk-hint govuk-radios__hint">
+          31-39 Norwood Road, SE24 9QG
+        </div>
+      </div>
+      <br>
+
+  </fieldset>
+</div>
+
+
+
+               <a href="offline-review-application" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+           </form>
+
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

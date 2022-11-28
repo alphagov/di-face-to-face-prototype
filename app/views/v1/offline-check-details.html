@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-enter-phone" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+               <h1 class="govuk-heading-xl page-heading">Check your details</h1>
+
+
+
+
+
+
+               <p>Please check your mobile number and email address are correct.</p>
+               <p>You will need a correct mobile number to receive updates about the progress of your application and to receive a code that enables you to view your certificate online.</p>
+
+
+                 <p>You can complete payment at the end of this online application.</p>
+
+
+               <form action="" method="post" class="form">
+                 <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+
+
+                   <div id="text-number" class="govuk-summary-list__row">
+                     <dt class="govuk-summary-list__key">
+                       Mobile number to send text updates to
+                     </dt>
+                     <dd class="govuk-summary-list__value">
+
+                       I don&#39;t want to provide my mobile number
+                     </dd>
+                     <dd class="govuk-summary-list__actions">
+                       <a href="/questions/edit/contact-number" id="edit-text-number">
+                         Change<span class="govuk-visually-hidden"> Mobile number to send text updates to</span>
+                       </a>
+                     </dd>
+                   </div>
+
+
+
+
+                   <div id="email" class="govuk-summary-list__row">
+                     <dt class="govuk-summary-list__key">
+                       Email address
+                     </dt>
+                     <dd class="govuk-summary-list__value">
+
+                       example@gmail.com
+                     </dd>
+                     <dd class="govuk-summary-list__actions">
+                       <a href="/questions/edit/email" id="edit-email">
+                         Change<span class="govuk-visually-hidden"> Email address</span>
+                       </a>
+                     </dd>
+                   </div>
+
+
+                   <div id="who-is-paying" class="govuk-summary-list__row">
+                     <dt class="govuk-summary-list__key">
+                       Payment choice
+                     </dt>
+                     <dd class="govuk-summary-list__value">
+
+                       I am paying
+                     </dd>
+                     <dd class="govuk-summary-list__actions">
+                       <a href="/questions/edit/who-is-paying" id="edit-who-is-paying">
+                         Change<span class="govuk-visually-hidden"> Payment choice</span>
+                       </a>
+                     </dd>
+                   </div>
+                 </dl>
+
+
+               <input type="hidden" name="_csrf" value="J6kEZSxd-1xxseLbAYGbY5epiThrQJ6IYO7M" />
+
+
+
+               <a href="offline-review-application" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+                 <p><a href="javascript: window.print()" id="print-page">Print this page</a></p>
+               </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

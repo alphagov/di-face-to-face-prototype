@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+  <a href="offline-select-document-third" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+         <h1 class="govuk-heading-xl page-heading">Post Office identity documents</h1>
+
+
+         <p>You must take these 3 documents (originals, not photocopies) to the Post Office after you have completed the rest of your application:</p>
+
+         <form action="" method="post" class="form start-declaration">
+
+           <ul class="govuk-list">
+             <li class="govuk-table__cell" name="document1">Driving licence</li>
+             <li class="govuk-table__cell" name="document2">Bank or building society statement</li>
+             <li class="govuk-table__cell" name="document3">Council Tax statement</li>
+           </ul>
+
+           <h2 class="govuk-heading-l page-heading">By continuing with your application you must confirm:</h2>
+
+
+
+
+
+
+       <div class="govuk-form-group">
+
+         <div class="govuk-checkboxes govuk-checkboxes--small"
+           data-module="govuk-checkboxes">
+
+
+
+
+
+
+
+
+                 <div class="govuk-checkboxes__item">
+                   <input class="govuk-checkboxes__input" id="post-office-declaration" name="post-office-declaration" type="checkbox" value="declaration">
+                   <label class="govuk-label govuk-checkboxes__label" for="post-office-declaration">
+               I have all of the documents listed above to hand
+             </label>
+
+                 </div>
+
+
+
+
+         </div>
+
+       </div>
+
+
+
+         <input type="hidden" name="_csrf" value="ePfG29PC-VajTWZPPA19de1Xjcrwgl_-OQoM" />
+
+
+
+         <a href="offline-driving-licence" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+
+         </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

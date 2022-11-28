@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Enter your details exactly as they appear on your UK passport
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "../includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="./pyi-kbv-intro">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+<!--        <span class="govuk-caption-l">Step 1 of 3</span>-->
+        Enter your details exactly as they appear on your UK passport</h1>
+
+      <form class="form" action="/pyi/v12/passport-details-post" method="post">
+
+        <p>Your passport includes a lot of information that we can check to make sure that you are who you say you are.</p>
+
+        <p>We'll check your details with the HM Passport Office to make sure your passport has not been cancelled or reported as lost or stolen.</p>
+
+        <div class="govuk-inset-text">
+          If you do not have a UK passport or you cannot remember your details, you can <a href="error?errorcode=pyi-passport-escape">prove your identity another way</a> instead.
+        </div>
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {{ govukInput({
+        label: {
+          text: "Passport number"
+        },
+        classes: "govuk-input--width-10",
+        hint: {
+        text: "This is the 9 digit number in the top right hand corner of the photo page in your passport"
+        },
+        id: "passport-number",
+        name: "passport-number",
+        value: data['passport-number'],
+        spellcheck: false
+      }) }}
+
+        {{ govukInput({
+        label: {
+          text: "Surname"
+        },
+        id: "surname",
+        name: "surname",
+        value: data['surname'],
+        autocomplete: "family-name",
+        spellcheck: false
+      }) }}
+
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend">Given names</legend>
+
+          <div class="govuk-inset-text govuk-!-margin-top-0 govuk-!-padding-top-2" style="border-left-width: 4px;">
+
+        {{ govukInput({
+        label: {
+          text: "First name"
+        },
+        id: "first-name",
+        name: "first-name",
+        value: data['first-name'],
+        autocomplete: "given-name",
+        spellcheck: false
+      }) }}
+
+        {{ govukInput({
+        label: {
+          text: "Middle names"
+        },
+        hint: {
+        text: "Leave this blank if you do not have any middle names"
+        },
+        id: "middle-names",
+        name: "middle-names",
+        value: data['middle-names'],
+        autocomplete: "additional-name",
+        spellcheck: false
+      }) }}
+
+          </div>
+
+        </fieldset>
+
+
+        {{ govukDateInput({
+        id: "dob",
+        namePrefix: "dob",
+        fieldset: {
+          legend: {
+            text: " Date of birth"
+          }
+        },
+        hint: {
+          text: "For example, 5 9 1973"
+        },
+        items: [
+          {
+            name: "day",
+            value: data['dob-day'],
+            classes: "govuk-input--width-2",
+            autocomplete: "bday-day"
+          },
+          {
+            name: "month",
+            value: data['dob-month'],
+            classes: "govuk-input--width-2",
+            autocomplete: "bday-month"
+          },
+          {
+            name: "year",
+            value: data['dob-year'],
+            classes: "govuk-input--width-4",
+            autocomplete: "bday-year"
+          }
+        ]
+      }) }}
+
+        {{ govukDateInput({
+        id: "passport-issued",
+        namePrefix: "passport-expires",
+        fieldset: {
+          legend: {
+            text: "Expiry date"
+          }
+        },
+        hint: {
+          text: "For example, 27 5 2029"
+        }
+      }) }}
+
+        {% if data['errorcode'] %}
+        <input class="govuk-input" id="errorcode" name="errorcode" type="hidden" value="{{ data['errorcode'] }}">
+        {% endif %}
+
+
+        <a href="outside-scope" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">Continue</a>
+      </form>
+
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

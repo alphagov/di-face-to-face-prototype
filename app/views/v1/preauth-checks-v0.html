@@ -1,0 +1,211 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Prove your identity with a GOV.UK account
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+  {% if data['identity-welcome-version'] === 'return' %}
+    <a class="govuk-back-link" href="identity-welcome-return">Back</a>
+  {% elif data['identity-welcome-version'] === 'signedin' %}
+    <a class="govuk-back-link" href="identity-welcome-signedin">Back</a>
+  {% else %}
+    <a class="govuk-back-link" href="identity-welcome">Back</a>
+  {% endif %}
+
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+        About you
+      </h1>
+
+      <p>We need to make sure you'll be able to prove your identity with us before you continue.</p>
+
+      <form action="/preauth/v1/checks" method="post" class="form">
+
+
+
+  <div class="govuk-form-group">
+
+    <fieldset class="govuk-fieldset" aria-describedby="dbs-passport-hint">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+      Do you have a UK passport?
+
+    </legend>
+
+
+    <div id="dbs-passport-hint" class="govuk-hint">
+      <p class='govuk-hint'>If you do not have your passport with you, you might still be able to prove your identity if you can remember the details on it.</p>
+    </div>
+
+
+    <div class="govuk-radios govuk-radios--inline"
+      data-module="govuk-radios">
+
+
+
+
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="dbs-passport" name="preauth-passport" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="dbs-passport">
+          Yes
+        </label>
+
+          </div>
+
+
+
+
+
+
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="dbs-passport-2" name="preauth-passport" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="dbs-passport-2">
+          No
+        </label>
+
+          </div>
+
+
+
+
+    </div>
+
+
+  </fieldset>
+
+
+  </div>
+
+
+
+
+  <div class="govuk-form-group">
+
+    <fieldset class="govuk-fieldset">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+      Are you 20 or over?
+
+    </legend>
+
+
+    <div class="govuk-radios govuk-radios--inline"
+      data-module="govuk-radios">
+
+
+
+
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="dbs-passport" name="preauth-over20" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="dbs-passport">
+          Yes
+        </label>
+
+          </div>
+
+
+
+
+
+
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="dbs-passport-2" name="preauth-over20" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="dbs-passport-2">
+          No
+        </label>
+
+          </div>
+
+
+
+
+    </div>
+
+
+  </fieldset>
+
+
+  </div>
+
+
+
+
+  <div class="govuk-form-group">
+
+    <fieldset class="govuk-fieldset">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+      Do you have a UK mobile phone number?
+
+    </legend>
+
+
+    <div class="govuk-radios govuk-radios--inline"
+      data-module="govuk-radios">
+
+
+
+
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="dbs-passport" name="preauth-uk-mobile" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="dbs-passport">
+          Yes
+        </label>
+
+          </div>
+
+
+
+
+
+
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="dbs-passport-2" name="preauth-uk-mobile" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="dbs-passport-2">
+          No
+        </label>
+
+          </div>
+
+
+
+
+    </div>
+
+
+  </fieldset>
+
+
+  </div>
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+  </div>
+
+</div>
+{% endblock %}

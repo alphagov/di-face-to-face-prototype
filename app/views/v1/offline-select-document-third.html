@@ -1,0 +1,259 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+  <a href="offline-select-document-second" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+             <h1 class="govuk-heading-xl page-heading">Select your identity documents</h1>
+
+
+       <p>Select which of the following documents you have to hand and would be able to take to the Post Office within the next 10 days.</p>
+       <p>You must select at least 3 documents. These can be a combination of documents from any of the 3 document lists.</p>
+
+       <p>The documents must:
+         <ul class="govuk-list govuk-list--bullet">
+           <li>be in your current name (except your birth certificate, which is also acceptable in a different name)</li>
+           <li>be in your current address (where an address is included)</li>
+           <li>include your date of birth (at least 1 document should include this)</li>
+           <li>be original documents (you cannot use photocopies)</li>
+         </ul>
+       </p>
+
+       <form action="" method="post" class="form">
+
+
+
+
+
+       <div class="govuk-form-group ">
+
+
+
+           <fieldset class="govuk-fieldset">
+
+
+
+               <legend id="check-group-po-documents" class="govuk-fieldset__legend">
+
+
+                 <span class="govuk-visually-hidden">Select your identity documents</span>
+
+
+
+
+               </legend>
+
+
+
+           <div class="govuk-checkboxes">
+
+
+
+
+
+
+
+       <div class="govuk-checkboxes__item">
+         <input
+           class="govuk-checkboxes__input"
+           type="checkbox"
+           id="check-box-1"
+           name="check-group-po-documents"
+           value="p60"
+
+         >
+         <label class="govuk-label govuk-checkboxes__label" for="check-box-1">
+
+             P60 end of year certificate (UK and Channel Islands - issued in last 12 months)
+
+         </label>
+       </div>
+
+
+
+
+
+
+
+
+
+       <div class="govuk-checkboxes__item">
+         <input
+           class="govuk-checkboxes__input"
+           type="checkbox"
+           id="check-box-2"
+           name="check-group-po-documents"
+           value="giving-statement"
+
+         >
+         <label class="govuk-label govuk-checkboxes__label" for="check-box-2">
+
+             Central or local government entitlement document, for example HMRC or Jobcentre (UK - issued in last 3 months)
+
+         </label>
+       </div>
+
+
+
+
+
+
+
+
+
+       <div class="govuk-checkboxes__item">
+         <input
+           class="govuk-checkboxes__input"
+           type="checkbox"
+           id="check-box-3"
+           name="check-group-po-documents"
+           value="marriage-certificate"
+
+         >
+         <label class="govuk-label govuk-checkboxes__label" for="check-box-3">
+
+             Marriage of civil partnership certificate (UK and Channel Islands)
+
+         </label>
+       </div>
+
+
+
+
+
+
+
+
+
+       <div class="govuk-checkboxes__item">
+         <input
+           class="govuk-checkboxes__input"
+           type="checkbox"
+           id="check-box-4"
+           name="check-group-po-documents"
+           value="hm-forces-card"
+
+         >
+         <label class="govuk-label govuk-checkboxes__label" for="check-box-4">
+
+             HM Forces ID card (UK)
+
+         </label>
+       </div>
+
+
+
+
+
+
+
+
+
+       <div class="govuk-checkboxes__item">
+         <input
+           class="govuk-checkboxes__input"
+           type="checkbox"
+           id="check-box-5"
+           name="check-group-po-documents"
+           value="pass-card"
+
+         >
+         <label class="govuk-label govuk-checkboxes__label" for="check-box-5">
+
+             Cards carrying the PASS accreditation logo (UK, Isle of Man and Channel Islands)
+
+         </label>
+       </div>
+
+
+
+
+
+
+
+
+
+       <div class="govuk-checkboxes__item">
+         <input
+           class="govuk-checkboxes__input"
+           type="checkbox"
+           id="check-box-6"
+           name="check-group-po-documents"
+           value="adoption-certificate"
+
+         >
+         <label class="govuk-label govuk-checkboxes__label" for="check-box-6">
+
+             Adoption certificate (UK and Channel Islands)
+
+         </label>
+       </div>
+
+
+
+
+
+
+
+
+
+       <div class="govuk-checkboxes__item">
+         <input
+           class="govuk-checkboxes__input"
+           type="checkbox"
+           id="check-box-7"
+           name="check-group-po-documents"
+           value="firearms-licence"
+
+         >
+         <label class="govuk-label govuk-checkboxes__label" for="check-box-7">
+
+             Firearms Licence (UK, Channel Islands and Isle of Man)
+
+         </label>
+       </div>
+
+
+
+           </div>
+
+           </fieldset>
+
+       </div>
+
+
+
+
+
+
+       <input type="hidden" name="_csrf" value="iNC0fu1H-yLfRIQU_4hwdTcnlrS4livPkKfU" />
+
+       <a href="./offline-review-documents" class="govuk-button" class="govuk-body">
+                          Continue
+                          </a>
+
+       <!-- <input type="submit" class="govuk-button" id="save-and-continue" value="Continue" role="button"> -->
+
+
+       </form>
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

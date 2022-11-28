@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Prove your identity with a GOV.UK account
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="./pyi-start">Back</a>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/app-photoid" method="post">
+
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+      {{ govukCheckboxes({
+        idPrefix: "id-documents",
+        name: "id-documents",
+        fieldset: {
+          legend: {
+            text: "What type of photo ID do you have?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "You can use any of the following to confirm your identity. Select all that apply."
+        },
+        items: [
+          {
+            value: "UK passport",
+            text: "UK passport",
+            hint: {
+              text: "If your passport has expired, you can still use it to prove your identity up until 18 months after the expiry date."
+            },
+            checked: checked("id-documents", "UK passport")
+          },
+          {
+            value: "Other",
+            text: "Other passport with a biometric chip",
+            checked: checked("id-documents", "Other")
+          },
+          {
+            value: "Biometric residence permit",
+            text: "Biometric residence permit (BRP)",
+            checked: checked("id-documents", "BRP")
+          },
+          {
+            value: "UK driving licence",
+            text: "UK driving licence",
+            checked: checked("id-documents", "UK driving licence")
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "none",
+            text: "None, I do not have any of these types of photo ID",
+            behaviour: "exclusive",
+            checked: checked("id-documents", "none")
+          }
+        ]
+      }) }}
+
+
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+</form>
+
+  </div>
+
+</div>
+{% endblock %}

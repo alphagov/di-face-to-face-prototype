@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-select-document-triage" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Your photo ID has expired
+    </h1>
+
+    <p>We can only accept photo IDs that are currently in date.</p>
+
+    <p>Expired UK passports are acceptable up until 18 months after the expiry date.</p>
+
+    <p>To select another valid photo ID, click Continue.
+
+    <form action="" method="post" class="form">
+
+
+      <a href="offline-select-document-triage" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+  </form>
+
+  </div>
+
+  </div>
+{% endblock %}

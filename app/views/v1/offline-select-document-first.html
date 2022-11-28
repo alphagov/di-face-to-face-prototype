@@ -1,0 +1,292 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a href="offline-intro" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+             <h1 class="govuk-heading-xl page-heading">Select your identity documents</h1>
+
+
+               <p>Select which of the following documents you have to hand and would be able to take to the Post Office within the next 10 days.</p>
+               <p>You must select at least 3 documents. These can be a combination of documents from any of the 3 document lists.</p>
+
+               <p>The documents must:
+                 <ul class="govuk-list govuk-list--bullet">
+                   <li>be in your current name (except your birth certificate, which is also acceptable in a different name)</li>
+                   <li>be in your current address (where an address is included)</li>
+                   <li>include your date of birth (at least 1 document should include this)</li>
+                   <li>be original documents (you cannot use photocopies)</li>
+                 </ul>
+               </p>
+
+               <form action="" method="post" class="form">
+
+
+
+
+
+               <div class="govuk-form-group ">
+
+
+
+                   <fieldset class="govuk-fieldset">
+
+
+
+                       <legend id="check-group-po-documents" class="govuk-fieldset__legend">
+
+
+                         <span class="govuk-visually-hidden">Select your identity documents</span>
+
+
+
+
+                       </legend>
+
+
+
+                   <div class="govuk-checkboxes">
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-1"
+                   name="check-group-po-documents"
+                   value="driving-licence"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-1">
+
+                     Driving licence (any photocard or paper, full or provisional)
+
+                 </label>
+               </div>
+
+
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-2"
+                   name="check-group-po-documents"
+                   value="passport"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-2">
+
+                     Passport (any current UK or overseas. UK passports that have expired within the last 6 months are still allowed)
+
+                 </label>
+               </div>
+
+
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-3"
+                   name="check-group-po-documents"
+                   value="irish-passport"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-3">
+
+                     Irish passport card (current and valid)
+
+                 </label>
+               </div>
+
+
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-4"
+                   name="check-group-po-documents"
+                   value="bank-statement"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-4">
+
+                     Bank or building society statement (UK and Channel Islands – issued in last 3 months)
+
+                 </label>
+               </div>
+
+
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-5"
+                   name="check-group-po-documents"
+                   value="birth-certificate"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-5">
+
+                     Birth certificate (UK, Isle of Man and Channel Islands)
+
+                 </label>
+               </div>
+
+
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-6"
+                   name="check-group-po-documents"
+                   value="utility-bill"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-6">
+
+                     Utility bill, for example water, electricity or gas (UK - issued in last 3 months)
+
+                 </label>
+               </div>
+
+
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-7"
+                   name="check-group-po-documents"
+                   value="credit-card"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-7">
+
+                     Credit card statement (UK - issued in last 3 months)
+
+                 </label>
+               </div>
+
+
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-8"
+                   name="check-group-po-documents"
+                   value="biometric-residence-permit"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-8">
+
+                     Current biometric residence permit (UK)
+
+                 </label>
+               </div>
+
+
+
+                   </div>
+
+                   </fieldset>
+
+               </div>
+
+
+
+<p>
+
+<a href="./offline-select-document-second"  class="govuk-body">
+                   I want to see a second list of documents
+                   </a>
+
+</p>
+
+               <input type="hidden" name="_csrf" value="FHT6UI9F-dBq-eQl0lzS2xttSBewGqTMDqyM" />
+
+
+               <a href="./offline-select-document-second" class="govuk-button" class="govuk-body">
+                                  Continue
+                                  </a>
+
+
+               <!-- <input type="submit" class="govuk-button" id="save-and-continue" value="Continue" role="button">
+ -->
+
+               </form>
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

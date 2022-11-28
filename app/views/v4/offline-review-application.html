@@ -1,0 +1,371 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v2.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="nearest-po-list" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+     <h1 class="govuk-heading-xl page-heading">Check your answers</h1>
+
+
+     <form action="" method="post" class="form">
+       <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+       <!--   * `cya-questions-short` for short questions -->
+       <!--   * `cya-questions-long` for long questions -->
+       <!--   * none for single group of q&a -->
+<!--
+       <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+
+         <div id="selected-method" class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Selected method to prove your identity
+           </dt>
+           <dd class="govuk-summary-list__value">
+
+
+             In-person at a Post Office
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a
+
+                 href="id-decide-triage"
+
+               id="edit-method"
+             >
+               Change<span class="govuk-visually-hidden"> Name</span>
+             </a>
+           </dd>
+         </div>
+
+
+         <div id="PO list" class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Selected Post Office branch
+           </dt>
+           <dd class="govuk-summary-list__value">
+
+
+               Brixton Hill<br>
+               104-106 Brixton Hill, SW2 1AH
+
+
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a href="nearest-po-list">
+               Change<span class="govuk-visually-hidden"> PO list</span>
+             </a>
+           </dd>
+         </div>
+
+<!--
+
+         <div id="sex" class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Sex
+           </dt>
+           <dd class="govuk-summary-list__value">
+
+             Male
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a
+
+                 href="/questions/edit/sex"
+
+               id="edit-sex"
+             >
+               Change<span class="govuk-visually-hidden"> Sex</span>
+             </a>
+           </dd>
+         </div>
+
+
+         <div id="date-of-birth" class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Date of birth
+           </dt>
+           <dd class="govuk-summary-list__value">
+
+
+
+      3 March 1980
+
+
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a
+
+                 href="/post-office/edit/po-date-of-birth"
+
+               id="edit-date-of-birth"
+             >
+               Change<span class="govuk-visually-hidden"> Date of birth</span>
+             </a>
+           </dd>
+         </div>
+
+
+         <div id="place-of-birth" class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Place of birth
+           </dt>
+           <dd class="govuk-summary-list__value">
+
+             United Kingdom<br>
+
+             London
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a href="/questions/edit/place-of-birth" id="edit-place-of-birth">
+               Change<span class="govuk-visually-hidden"> Place of birth</span>
+             </a>
+           </dd>
+         </div>
+
+
+         <div id="addresses" class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Address history (last 5 years)
+           </dt>
+           <dd class="govuk-summary-list__value">
+
+
+
+
+
+     From 1990 to now
+       <span class="govuk-visually-hidden">lived at</span><br>
+
+
+
+             10 Whitechapel High Street<br>
+
+
+           London<br>
+
+
+             United Kingdom<br>
+
+
+             E1 8QS<br>
+
+
+
+
+
+
+
+
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a href="/questions/edit/addresses" id="edit-addresses">
+               Change<span class="govuk-visually-hidden"> Address history (last 5 years)</span>
+             </a>
+           </dd>
+         </div>
+
+       </dl>
+
+<!--
+       <h2 class="govuk-heading-m page-heading" id="postoffice-documents">Personal details</h2>
+
+         <!-- <h3 class="govuk-heading-m" id="bank-statement">Passport details</h3> -->
+<!--
+   <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+
+
+                  <div id="full-name" class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Full current name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+
+
+           John Alan Doe
+
+        <br/>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a href="offline-full-name" id="edit-name">
+                        Change<span class="govuk-visually-hidden"> Full current name</span>
+                      </a>
+                    </dd>
+                  </div>
+
+
+             <div id="Date of birth" class="govuk-summary-list__row">
+               <dt class="govuk-summary-list__key">
+                 Date of birth
+               </dt>
+               <dd class="govuk-summary-list__value">
+
+
+      09 8 1967
+
+   <br/>
+               </dd>
+               <dd class="govuk-summary-list__actions">
+                 <a href="offline-dob" id="edit-dob">
+                   Change<span class="govuk-visually-hidden"> Date of birth</span>
+                 </a>
+               </dd>
+             </div>
+
+             <div id="home-address" class="govuk-summary-list__row">
+               <dt class="govuk-summary-list__key">
+                 Home address
+               </dt>
+               <dd class="govuk-summary-list__value">
+
+
+      12 Example Street<br>
+      SW2 1AA
+
+   <br/>
+               </dd>
+               <dd class="govuk-summary-list__actions">
+                 <a href="offline-home-address" id="edit-home-address">
+                   Change<span class="govuk-visually-hidden"> Home address</span>
+                 </a>
+               </dd>
+             </div>
+
+
+         </dl>
+
+         <h2 class="govuk-heading-m page-heading" id="postoffice-documents">Identity document details</h2>
+
+         <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+
+
+                        <div id="select-doc" class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            Selected identity document
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+
+
+                 UK passport
+
+              <br/>
+                          </dd>
+                          <dd class="govuk-summary-list__actions">
+                            <a href="offline-select-document-triage" id="edit-doc">
+                              Change<span class="govuk-visually-hidden"> UK passport</span>
+                            </a>
+                          </dd>
+                        </div>
+
+
+                   <div id="date-of-expiry" class="govuk-summary-list__row">
+                     <dt class="govuk-summary-list__key">
+                       Date of expiry
+                     </dt>
+                     <dd class="govuk-summary-list__value">
+
+
+            08 12 2029
+
+         <br/>
+                     </dd>
+                     <dd class="govuk-summary-list__actions">
+                       <a href="offline-passport-details" id="edit-doe">
+                         Change<span class="govuk-visually-hidden"> Date of expiry</span>
+                       </a>
+                     </dd>
+                   </div>
+
+
+
+               </dl>
+-->
+<!--               <h2 class="govuk-heading-m page-heading" id="postoffice-documents">Communication details</h2> -->
+
+               <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+
+
+
+                         <div id="enter-email" class="govuk-summary-list__row">
+                           <dt class="govuk-summary-list__key">
+                             Email address
+                           </dt>
+                           <dd class="govuk-summary-list__value">
+
+
+                  abc@gmail.com
+
+               <br/>
+                           </dd>
+                           <dd class="govuk-summary-list__actions">
+                             <!--<a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+                               Change<span class="govuk-visually-hidden"> Date of birth</span>
+                             </a> -->
+                           </dd>
+                           <dd class="govuk-summary-list__actions">
+                             <a href="offline-your-email" class="govuk-link--no-visited-state">
+                               Change<span class="govuk-visually-hidden"> Offline your email</span>
+                             </a>
+                           </dd>
+                         </div>
+
+                         <div id="enter-po" class="govuk-summary-list__row">
+                           <dt class="govuk-summary-list__key">
+                             Selected Post Office branch
+                           </dt>
+                           <dd class="govuk-summary-list__value">
+
+                             Brixton Hill<br>
+                             104-106 Brixton Hill, SW2 1AH
+
+
+
+
+               <br/>
+                           </dd>
+                           <dd class="govuk-summary-list__actions">
+                             <!--<a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+                               Change<span class="govuk-visually-hidden"> Date of birth</span>
+                             </a> -->
+                           </dd>
+                           <dd class="govuk-summary-list__actions">
+                             <a href="offline-your-email" class="govuk-link--no-visited-state">
+                               Change<span class="govuk-visually-hidden"> PO list</span>
+                             </a>
+                           </dd>
+                         </div>
+
+
+
+
+
+                     </dl>
+
+
+
+     <input type="hidden" name="_csrf" value="FfwQ72tV-H9h3OqJX3pxZDmQJ56_UAUeYE9g" />
+
+     <a href="offline-final-confirm" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+     </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

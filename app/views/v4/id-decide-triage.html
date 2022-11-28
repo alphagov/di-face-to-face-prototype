@@ -1,0 +1,139 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v2.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+ <div class="govuk-grid-column-two-thirds">
+
+   <h1 class="govuk-heading-xl">
+     Ways to prove your identity
+   </h1>
+
+  <!-- <p class="govuk-body-m">There are a few ways you can prove your identity.</p> -->
+
+   <h2 class="govuk-heading-s">Prove your identity online</h2>
+
+   <p>The quickest way to prove your identity is through downloading a GOV.UK smartphone app.</p>
+   <p>If you cannot download a smartphone app, you can still prove your identity online by answering some security questions.</p>
+
+
+   <!-- <h2 class="govuk-heading-m">What you'll need</h2>
+
+   <p>You might need to create an account and prove your identity before you can apply for a basic DBS check.</p> -->
+<!--
+   <p>You’ll also need:</p> -->
+
+
+   <h2 class="govuk-heading-s">Prove your identity in person</h2>
+
+   <p>You will need to take a photo ID to a Post Office. A member of staff will take a photo of your face to verify your identity. Once your identity has been proven, you must return online to your GOV.UK account to access the service you need.</p>
+
+
+
+
+
+<!--<p><a href="./fallback" class="govuk-link" rel="noreferrer noopener">I do not have any of these documents</a></p>-->
+
+   <br/>
+
+   <h1 class="govuk-heading-m">
+     How do you want to prove your identity?
+   </h1>
+
+{% from "govuk/components/radios/macro.njk"              import govukRadios %}
+<div class="">
+<form action="id-decide-triage-error" method="post">
+
+     {{ govukRadios({
+     classes: "govuk-radios",
+     idPrefix: "identity-method",
+     name: "identity-method",
+
+     items: [
+
+       {
+         value: "Online~./app-intro",
+         text: "Online"
+       },
+       {
+         value: "In person~./offline-intro",
+         text: "In person"
+       }
+     ]
+   }) }}
+
+       <!-- <input class="govuk-input" id="service" name="service" type="hidden" value="dbs"> -->
+
+       <!--fieldset: {
+         legend: {
+           text: "How do you want to prove your identity?",
+           isPageHeading: true,
+           classes: "govuk-fieldset__legend--s"
+         }
+       },
+       hint: {
+         text: ""
+       }, -->
+
+<!--       <a href="" class="govuk-button" id="save-and-continue" role="button">Continue</a> -->
+       <button class="govuk-button">Continue</button>
+
+       </form>
+
+
+
+     </div>
+
+
+<!--
+<div class="govuk-form-group">
+           <details class="govuk-details" data-module="govuk-details">
+             <summary class="govuk-details__summary help-text-link">
+
+               <span class="govuk-details__summary-text"> I want to prove my identity another way</span>
+             </summary>
+             <div class="govuk-details__text">
+
+               <p>If you are not able to prove your identity online, you can <a href='./offline-intro'>prove your identity in person.</a></p>
+
+               <p>This process will take a lot longer than proving your identity online.</p>
+
+               <p>You will need to complete a short online form, and take your identity document to a Post Office.</p>
+
+
+
+             </div>
+           </details>
+           -->
+</div>
+
+<!-- {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+{{ govukInsetText({
+text: "It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+}) }} -->
+
+
+
+     </div>
+
+
+
+ </div>
+
+
+{% endblock %}

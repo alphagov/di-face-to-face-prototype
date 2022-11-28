@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{# if coming in from a service - find out which one #}
+
+{% block pageTitle %}
+Create a GOV.UK account or sign in
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+  {% if data['use-govuk-account'] %}
+<!--    <a class="govuk-back-link" href="/preauth/mvp/identity-welcome">Back</a>-->
+  {% else %}
+
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="./auth-create-email" method="post" class="form">
+
+      <h1 class="govuk-heading-l">Create a GOV.UK account or sign in
+        {% if data.prototype['serviceType'] === 'identity' %}
+        <!-- to prove your identity -->
+        {% elif data.prototype['serviceType'] === 'save' %}
+        to save your progress
+        {% elif data.prototype['serviceType'] === 'account' %}
+        <!-- to create your account -->
+        {% endif %}
+      </h1>
+
+      <p>You’ll need:<p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>an email address</li>
+        <li>a UK mobile phone number</li>
+      </ul>
+
+      <button class="govuk-button" style="margin-bottom: 20px;">
+        <!--<img src="/public/images/govuk-crown.svg" class="sso-crown__icon-button" alt="GOV.UK Crown icon">-->
+        Create a GOV.UK account
+      </button>
+
+      <p class="govuk-body">If you already have a GOV.UK account you can <a href="#" class="govuk-link">sign in</a>.</p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">About GOV.UK accounts</span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>GOV.UK accounts are new. They are a first step towards creating a single account that you can use to sign in to all government services.</p>
+          <p>GOV.UK accounts will eventually replace all other government accounts. We’re working on adding more features and services.</p>
+          <p>For now, you need to use different accounts to access different government services.</p>
+        </div>
+      </details>
+
+    </form>
+
+
+  </div>
+</div>
+
+
+
+{% endblock %}

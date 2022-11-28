@@ -1,0 +1,199 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Enter your details exactly as they appear on your UK passport
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v2.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "../includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="./offline-select-document-triage">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        When does your UK passport expire?</h1>
+
+        <p>We need this information to check that your photo ID is valid.</p><br>
+
+      <form class="form" action="offline-full-name" method="post">
+
+
+
+        <!-- <p>Your passport includes a lot of information that we can check to make sure that you are who you say you are.</p> -->
+
+        <!-- <p>We'll check your details with the HM Passport Office to make sure your passport has not been cancelled or reported as lost or stolen.</p> -->
+
+        <!-- <div class="govuk-inset-text">
+          If you do not have a UK passport or you cannot remember your details, you can <a href="error?errorcode=pyi-passport-escape">prove your identity another way</a> instead.
+        </div> -->
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        <!-- {{ govukInput({
+        label: {
+          text: "Passport number"
+        },
+        classes: "govuk-input--width-10",
+        hint: {
+        text: "This is the 9 digit number in the top right hand corner of the photo page in your passport"
+        },
+        id: "passport-number",
+        name: "passport-number",
+        value: data['passport-number'],
+        spellcheck: false
+      }) }} -->
+
+        <!-- {{ govukInput({
+        label: {
+          text: "Surname"
+        },
+        id: "surname",
+        name: "surname",
+        value: data['surname'],
+        autocomplete: "family-name",
+        spellcheck: false
+      }) }} -->
+
+        <!-- <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend">Given names</legend>
+
+          <div class="govuk-inset-text govuk-!-margin-top-0 govuk-!-padding-top-2" style="border-left-width: 4px;">
+
+        {{ govukInput({
+        label: {
+          text: "First name"
+        },
+        id: "first-name",
+        name: "first-name",
+        value: data['first-name'],
+        autocomplete: "given-name",
+        spellcheck: false
+      }) }}
+
+        {{ govukInput({
+        label: {
+          text: "Middle names"
+        },
+        hint: {
+        text: "Leave this blank if you do not have any middle names"
+        },
+        id: "middle-names",
+        name: "middle-names",
+        value: data['middle-names'],
+        autocomplete: "additional-name",
+        spellcheck: false
+      }) }}
+
+          </div>
+
+        </fieldset> -->
+
+
+        <!-- {{ govukDateInput({
+        id: "dob",
+        namePrefix: "dob",
+        fieldset: {
+          legend: {
+            text: " Date of birth"
+          }
+        },
+        hint: {
+          text: "For example, 5 9 1973"
+        },
+        items: [
+          {
+            name: "day",
+            value: data['dob-day'],
+            classes: "govuk-input--width-2",
+            autocomplete: "bday-day"
+          },
+          {
+            name: "month",
+            value: data['dob-month'],
+            classes: "govuk-input--width-2",
+            autocomplete: "bday-month"
+          },
+          {
+            name: "year",
+            value: data['dob-year'],
+            classes: "govuk-input--width-4",
+            autocomplete: "bday-year"
+          }
+        ]
+      }) }} -->
+<!--
+        {{ govukDateInput({
+        id: "passport-issued",
+        namePrefix: "passport-expires",
+        fieldset: {
+          legend: {
+            text: "Expiry date"
+          }
+        },
+        hint: {
+          text: "For example, 27 5 2029"
+        }
+      }) }}
+-->
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend">
+      Expiry date
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 31 3 2025
+    </div>
+    <br>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+
+
+<button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form>
+
+
+
+    </div>
+  </div>
+
+
+
+
+{% endblock %}

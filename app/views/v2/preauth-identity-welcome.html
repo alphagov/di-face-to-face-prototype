@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Prove your identity with a GOV.UK account
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="preauth-route" method="post">
+
+      <h1 class="govuk-heading-l">Prove your identity with a GOV.UK account</h1>
+
+      <p>It will take you about 10 minutes to prove your identity this way.</p>
+
+      <div class="govuk-inset-text">
+        This service is also available in <a href="#">Welsh (Cymraeg).</a>
+      </div>
+
+      <p>You'll need:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>a GOV.UK account - we'll ask you to create or sign in to your account when you continue</li>
+        <li>your current home address (you might also need your previous address if you've recently moved)</li>
+        <!-- <li>your photo ID</li> -->
+      </ul>
+
+      <!-- <p>You can then either:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>upload a picture of your photo ID using the GOV.UK ID Check app</li>
+        <li>enter the details from your photo ID and answer some security questions that only you should know the answers to</li>
+      </ul> -->
+
+      <p>We'll only use the information you give us to make sure that you are who you say you are.</p>
+
+      <!-- {{ govukRadios({
+      classes: "govuk-radios--inline",
+      idPrefix: "use-govuk-account",
+      name: "use-govuk-account",
+      fieldset: {
+        legend: {
+          text: "Choose a way to prove your identity",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Continue to sign in or create a GOV.UK account",
+          hint: {
+            text: "You'll need your photo ID to prove your identity this way."
+          },
+          checked: checked("use-govuk-account", "yes")
+        },
+        {
+          value: "no",
+          text: "Prove your identity another way",
+          hint: {
+            text: "You can prove your identity online with GOV.UK Verify or take your identity documents to be checked in person."
+          },
+          checked: checked("use-govuk-account", "no")
+        }
+      ]
+    }) }} -->
+
+    <button class="govuk-button">Continue</button>
+
+</form>
+
+    {% if data['devMode'] === 'true' %}
+    {# DEVMODE SCENARIOS #}
+
+    <details class="nhsuk-details dev-mode govuk-!-margin-bottom-5" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <h4>Alternate versions</h4>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="identity-welcome">Standard page (signed out)</a>
+          </li>
+          <li>
+            <a href="identity-welcome-signedin">Signed in version</a>
+          </li>
+        </ul>
+      </div>
+    </details>
+    {% endif %}
+
+  </div>
+
+</div>
+{% endblock %}

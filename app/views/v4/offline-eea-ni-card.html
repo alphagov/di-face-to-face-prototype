@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Enter your details exactly as they appear on your UK passport
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v2.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "../includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="./offline-select-document-triage">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+<!--        <span class="govuk-caption-l">Step 1 of 3</span>-->
+        When does your EEA permanent residency card expire?</h1>
+
+        <p>We need this information to check that your photo ID is in date.</p><br>
+
+
+      <form class="form" action="" method="post">
+
+<!--
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {{ govukDateInput({
+        id: "passport-issued",
+        namePrefix: "passport-expires",
+        fieldset: {
+          legend: {
+            text: "Expiry date"
+          }
+        },
+        hint: {
+          text: "For example, 27 5 2029"
+        }
+      }) }}
+-->
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend">
+      Expiry date
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 31 3 2025
+    </div>
+    <br>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+
+        {% if data['errorcode'] %}
+        <input class="govuk-input" id="errorcode" name="errorcode" type="hidden" value="{{ data['errorcode'] }}">
+        {% endif %}
+
+        <a href="offline-full-name" id="button" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">Continue</a>
+</form>
+
+
+
+    </div>
+  </div>
+
+
+{% endblock %}

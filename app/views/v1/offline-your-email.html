@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-delivery-address" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+               <form action="" method="post" class="form">
+                 <h1 class="govuk-heading-xl page-heading">
+                   <label for="email-input">What is your email address?</label>
+                 </h1>
+
+                 <p>The email address you provide should be your personal one.
+                     If, for example, you provide a shared email address, others may be able to view the result of your check.</p>
+
+
+
+               <div class="govuk-form-group ">
+
+
+
+
+
+
+
+
+                 <input
+                   class="govuk-input govuk-input--width-20 "
+                   name="email-input"
+
+
+                   type="text"
+                   id="email-input"
+                   value=""
+                   autocomplete="email"
+                   >
+
+
+               </div>
+
+
+
+                 <div id="email-confirmation" class="govuk-inset-text govuk-visually-hidden" aria-hidden="true">
+                   <p>
+                     <span class="govuk-hint govuk-!-margin-bottom-1">An email will be sent to:</span>
+                     <span class="input-confirmation govuk-!-font-size-24"></span>
+                   </p>
+                 </div>
+
+
+
+                 <p>We&#39;ll use your email address to:</p>
+
+                 <ul class="govuk-list govuk-list--bullet">
+                   <li>send you general information about your application</li>
+                   <li>send you links to track, view and share your result online</li>
+                 </ul>
+
+                 <div class="govuk-inset-text">
+                   <p>You will not be able to view your result online if your check reveals a criminal record.</p>
+                 </div>
+
+
+               <input type="hidden" name="_csrf" value="I1PjW8qj-klKZkET21Eo1F7Sr6u-r8UZtsvs" />
+
+
+
+               <a href="offline-enter-phone" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+
+               </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

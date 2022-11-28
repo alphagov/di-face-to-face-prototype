@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-name-match" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+
+
+
+               <form action="" method="post" class="form">
+
+                 <fieldset class="govuk-fieldset">
+                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                     <h1 class="govuk-fieldset__heading">What is your sex?</h1>
+                   </legend>
+
+                   <p>We need to know your sex so that we can check police records.</p>
+
+
+
+               <div class="govuk-form-group">
+                 <details class="govuk-details" data-module="govuk-details">
+                   <summary class="govuk-details__summary help-text-link">
+                     <span class="govuk-details__summary-text">What personal details will appear on my certificate?</span>
+                   </summary>
+                   <div class="govuk-details__text">
+
+
+                         <p>Your sex will be printed on your paper certificate. However, it will not be displayed on your online result.</p>
+                       <p>If you’re transgender or non-binary and are concerned about completing this application, you can read our
+                     <a href="https://www.gov.uk/guidance/transgender-applications" rel="nofollow">guidance on transgender applications</a>.
+                     You can contact the DBS sensitive applications team if you do not want to reveal details of your previous identity on your paper certificate.</p>
+
+
+                   </div>
+                 </details>
+               </div>
+
+
+
+                   <div class="govuk-form-group ">
+
+
+
+                 <div class="govuk-radios " data-module="govuk-radios">
+
+
+
+
+
+
+
+
+                     <div class="govuk-radios__item">
+                       <input
+                         class="govuk-radios__input"
+                         type="radio"
+                         id="radio-option-female"
+                         name="radio-group-sex"
+                         value="female"
+
+
+                       />
+                       <label
+                         class="govuk-label govuk-radios__label"
+                         for="radio-option-female"
+                         id="for-radio-option-female"
+                       >
+
+
+                           Female
+
+                       </label>
+                     </div>
+
+
+
+
+
+
+
+
+
+
+                     <div class="govuk-radios__item">
+                       <input
+                         class="govuk-radios__input"
+                         type="radio"
+                         id="radio-option-male"
+                         name="radio-group-sex"
+                         value="male"
+                          checked="checked"
+
+                       />
+                       <label
+                         class="govuk-label govuk-radios__label selected"
+                         for="radio-option-male"
+                         id="for-radio-option-male"
+                       >
+
+
+                           Male
+
+                       </label>
+                     </div>
+
+
+
+                 </div>
+
+
+
+
+                   </div>
+                 </fieldset>
+
+
+               <input type="hidden" name="_csrf" value="s6ZWihfB-JmLyZNGiPdv1xlJ_JI5rYjYVWCg" />
+
+
+
+               <a href="offline-dob" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+               </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

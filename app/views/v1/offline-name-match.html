@@ -1,0 +1,191 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-full-name" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+
+
+
+               <form action="" method="post" class="form">
+                 <fieldset class="govuk-fieldset">
+                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                     <h1 class="govuk-fieldset__heading">Have you ever been known by any other names?</h1>
+                   </legend>
+
+
+                   <div class="govuk-form-group ">
+
+
+
+                 <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+
+
+
+
+
+
+
+
+                     <div class="govuk-radios__item">
+                       <input
+                         class="govuk-radios__input"
+                         type="radio"
+                         id="radio-option-yes"
+                         name="radio-group-names-av"
+                         value="yes"
+
+
+                           data-aria-controls="name-options"
+
+                       />
+                       <label
+                         class="govuk-label govuk-radios__label"
+                         for="radio-option-yes"
+                         id="for-radio-option-yes"
+                       >
+
+
+                           Yes
+
+                       </label>
+                     </div>
+
+
+
+
+
+
+
+
+
+
+                     <div class="govuk-radios__item">
+                       <input
+                         class="govuk-radios__input"
+                         type="radio"
+                         id="radio-option-no"
+                         name="radio-group-names-av"
+                         value="no"
+
+
+                       />
+                       <label
+                         class="govuk-label govuk-radios__label"
+                         for="radio-option-no"
+                         id="for-radio-option-no"
+                       >
+
+
+                           No
+
+                       </label>
+                     </div>
+
+
+
+                 </div>
+
+
+
+
+                   </div>
+
+
+                   <p class="app__conditional govuk-radios__conditional--hidden" id="name-options">
+                     <a href="names/add/name">Add another name</a>
+                   </p>
+
+                   <div class="govuk-form-group">
+                     <p>You must tell us about all other names you&#39;ve used, including middle names.</p>
+                     <p>For example, you may have changed your name through marriage or deed poll.</p>
+
+                     <div class="govuk-inset-text">
+                       <p>Only your current name will be displayed on your online result.</p>
+                     </div>
+
+
+
+               <div class="govuk-form-group">
+                 <details class="govuk-details" data-module="govuk-details">
+                   <summary class="govuk-details__summary help-text-link">
+                     <span class="govuk-details__summary-text">Which names should I include?</span>
+                   </summary>
+                   <div class="govuk-details__text">
+
+
+                         <p>You must include all names that are on your official documents. For example, your driving licence or passport.</p>
+                           <p>We need these names so we can check your application against police records.</p>
+                           <p>Your other names will be printed on your paper certificate. However, they will not be displayed on your online result.</p>
+                           <p>If you're transgender or non-binary, and do not want the paper certificate to
+                       show details of your previous identity you can contact the <a
+                         href="https://www.gov.uk/guidance/transgender-applications"
+                         rel="nofollow"
+                       >DBS sensitive applications team</a>.</p>
+
+
+                   </div>
+                 </details>
+               </div>
+
+
+
+                     <table class="govuk-table">
+                       <thead  class="govuk-table__head">
+                       <tr class="govuk-table__row">
+                         <th scope="col" class="govuk-table__header">Name</th>
+                         <th scope="col" class="govuk-table__header">Dates you used this name</th>
+
+                       </tr>
+                       </thead>
+                       <tbody class="govuk-table__body">
+                       <tr class="govuk-table__row">
+                         <td class="govuk-table__cell">
+                           John
+
+                           Doe
+                         </td>
+                         <td class="govuk-table__cell">
+                           Current name
+                         </td>
+
+                       </tr>
+
+
+                       </tbody>
+                     </table>
+                   </div>
+                 </fieldset>
+
+
+               <input type="hidden" name="_csrf" value="uspPggNU-ZME2vOhsZ3t7CptOxHf5Bq7cQGg" />
+
+
+
+               <a href="offline-sex" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+
+               </form>
+  </div>
+</div>
+
+{% endblock %}

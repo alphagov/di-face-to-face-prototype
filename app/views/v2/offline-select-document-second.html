@@ -1,0 +1,265 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a href="offline-select-document-first" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+             <h1 class="govuk-heading-xl page-heading">Select your identity documents</h1>
+
+
+               <p>Select which of the following documents you have to hand and would be able to take to the Post Office within the next 10 days.</p>
+               <p>You must select at least 3 documents. These can be a combination of documents from any of the 3 document lists.</p>
+
+               <p>The documents must:
+                 <ul class="govuk-list govuk-list--bullet">
+                   <li>be in your current name (except your birth certificate, which is also acceptable in a different name)</li>
+                   <li>be in your current address (where an address is included)</li>
+                   <li>include your date of birth (at least 1 document should include this)</li>
+                   <li>be original documents (you cannot use photocopies)</li>
+                 </ul>
+               </p>
+
+               <form action="" method="post" class="form">
+
+
+
+
+
+               <div class="govuk-form-group ">
+
+
+
+                   <fieldset class="govuk-fieldset">
+
+
+
+                       <legend id="check-group-po-documents" class="govuk-fieldset__legend">
+
+
+                         <span class="govuk-visually-hidden">Select your identity documents</span>
+
+
+
+
+                       </legend>
+
+
+
+                   <div class="govuk-checkboxes">
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-1"
+                   name="check-group-po-documents"
+                   value="council-tax"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-1">
+
+                     Council Tax statement (UK and Channel Islands - issued in last 12 months)
+
+                 </label>
+               </div>
+
+
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-2"
+                   name="check-group-po-documents"
+                   value="eu-card"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-2">
+
+                     EEA National ID card (Must still be valid)
+
+                 </label>
+               </div>
+
+
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-3"
+                   name="check-group-po-documents"
+                   value="p45"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-3">
+
+                     P45 (UK and Channel Islands - issued in last 12 months)
+
+                 </label>
+               </div>
+
+
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-4"
+                   name="check-group-po-documents"
+                   value="bank-opening-letter"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-4">
+
+                     Bank or building society account opening confirmation letter (UK - issued in last 3 months)
+
+                 </label>
+               </div>
+
+
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-5"
+                   name="check-group-po-documents"
+                   value="financial-statement"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-5">
+
+                     Financial statement, for example pension or endowment (UK - issued in last 12 months)
+
+                 </label>
+               </div>
+
+
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-6"
+                   name="check-group-po-documents"
+                   value="benefit-statement"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-6">
+
+                     Benefit statement, for example Child Benefit, pension (UK - issued in last 3 months)
+
+                 </label>
+               </div>
+
+
+
+
+
+
+
+
+
+               <div class="govuk-checkboxes__item">
+                 <input
+                   class="govuk-checkboxes__input"
+                   type="checkbox"
+                   id="check-box-7"
+                   name="check-group-po-documents"
+                   value="mortgage-statement"
+
+                 >
+                 <label class="govuk-label govuk-checkboxes__label" for="check-box-7">
+
+                     Mortgage statement (UK - issued in last 12 months)
+
+                 </label>
+               </div>
+
+
+
+                   </div>
+
+                   </fieldset>
+
+               </div>
+
+
+
+               <p>
+
+               <a href="./offline-select-document-third"  class="govuk-body">
+                                  I want to see a third list of documents
+                                  </a>
+
+               </p>
+
+
+               <input type="hidden" name="_csrf" value="jtNjnqFl-LgyI6woTa0gCq-z_tFdpFP3CPoE" />
+
+               <a href="./offline-select-document-third" class="govuk-button" class="govuk-body">
+                                  Continue
+                                  </a>
+<!--
+               <input type="submit" class="govuk-button" id="save-and-continue" value="Continue" role="button">
+ -->
+
+               </form>
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

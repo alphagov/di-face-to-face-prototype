@@ -1,0 +1,194 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-council-tax" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+
+
+                 <form action="" method="post" class="form">
+
+                   <div class="govuk-form-group ">
+                     <fieldset class="govuk-fieldset">
+                       <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                         <h1 class="govuk-fieldset__heading">Do you have a UK National Insurance number?</h1>
+                       </legend>
+
+                       <p>If you can&#39;t provide a UK National Insurance number you can still carry on with your application, but it might take us longer to process your check.</p>
+
+
+
+
+
+
+                   <div class="govuk-radios " data-module="govuk-radios">
+
+
+
+
+
+
+
+
+                       <div class="govuk-radios__item">
+                         <input
+                           class="govuk-radios__input"
+                           type="radio"
+                           id="radio-option-yes"
+                           name="radio-group-ni-av"
+                           value="yes"
+
+
+                             data-aria-controls="ni-number"
+
+                         />
+                         <label
+                           class="govuk-label govuk-radios__label"
+                           for="radio-option-yes"
+                           id="for-radio-option-yes"
+                         >
+
+
+                             Yes
+
+                         </label>
+                       </div>
+
+
+                         <div
+                           class="govuk-radios__conditional govuk-radios__conditional--hidden govuk-!-margin-top-2"
+                           id="ni-number"
+                         >
+
+
+                 <div class="govuk-form-group ">
+
+
+
+                     <label class="govuk-label" for="ni-number-input">
+                       UK National Insurance number
+                     </label>
+
+
+                       <span class="govuk-hint govuk-!-margin-bottom-1">For example, QQ123456C.</span>
+
+
+
+
+
+
+
+                   <input
+                     class="govuk-input govuk-input--width-20 "
+                     name="ni-number-input"
+
+
+                     type="text"
+                     id="ni-number-input"
+                     value=""
+
+                     >
+
+
+                 </div>
+
+
+                         </div>
+
+
+
+
+
+
+
+
+
+                       <div class="govuk-radios__item">
+                         <input
+                           class="govuk-radios__input"
+                           type="radio"
+                           id="radio-option-no"
+                           name="radio-group-ni-av"
+                           value="no"
+
+
+                         />
+                         <label
+                           class="govuk-label govuk-radios__label"
+                           for="radio-option-no"
+                           id="for-radio-option-no"
+                         >
+
+
+                             No / I cannot provide the details right now
+
+                         </label>
+                       </div>
+
+
+
+                   </div>
+
+
+
+
+                     </fieldset>
+                   </div>
+
+
+
+                 <div class="govuk-form-group">
+                   <details class="govuk-details" data-module="govuk-details">
+                     <summary class="govuk-details__summary help-text-link">
+                       <span class="govuk-details__summary-text">I don&#39;t know my UK National Insurance number</span>
+                     </summary>
+                     <div class="govuk-details__text">
+
+
+                           <p>You can find your UK National Insurance number on your payslip or letters about tax, pensions or benefits.</p>
+                       <p>Or you can find out <a href='https://www.gov.uk/apply-national-insurance-number'>how to apply for a UK National Insurance number</a>.
+                         You can only apply once you're in the UK.</p>
+
+
+                     </div>
+                   </details>
+                 </div>
+
+
+
+
+                 <input type="hidden" name="_csrf" value="eiyvDvyG-gwJmGL0nraFXcaJJxh-NHXl9QY0" />
+
+
+
+
+          <a href="offline-full-name" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+
+               </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

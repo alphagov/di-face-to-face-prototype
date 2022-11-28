@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Does your phone have a working camera?
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a class="govuk-back-link" href="app-photoid">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="device" method="post">
+
+      {{ govukRadios({
+      classes: "govuk-radios",
+      idPrefix: "device-check",
+      name: "device-check",
+      fieldset: {
+        legend: {
+          text: "What devices are you viewing this website on?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: ""
+      },
+      items: [
+
+        {
+          value: "iphone~./app-doc-check-j1",
+          text: "iPhone"
+        },
+        {
+          value: "android~./app-doc-check-j1",
+          text: "Android phone (for example Samsung, Google Pixel, OPPO)"
+        },
+        {
+          divider: "or"
+        },
+        {
+          value: "other~./pyi-kbv-intro",
+          text: "None of these"
+        }
+      ]
+    }) }}
+
+      <button class="govuk-button">Continue</button>
+
+    </form>
+  </div>
+</div>
+{% endblock %}

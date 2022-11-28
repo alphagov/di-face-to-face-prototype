@@ -1,0 +1,255 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v2.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a href="offline-intro" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+             {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: [
+              {
+                text: "Select a photo ID you can take to a Post Office",
+                href: "#offline-doc-check1"
+              }
+            ]
+          }) }}
+
+             <h1 class="govuk-heading-xl page-heading">Select a photo ID you can take to a Post Office</h1>
+
+
+               <p>Your photo ID must be an original, you cannot use a photocopy. We can only accept photo IDs that are currently in date (see guidelines below for UK passports).</p>
+               <br>
+
+               <!-- <p>The document must be an original and in your current name. Photo or scanned copies will not be accepted.</p> -->
+
+               <form action="offline-select-document-triage-error" method="post">
+
+
+<!--
+
+                 {{ govukRadios({
+                   classes: "govuk-radios",
+                   idPrefix: "offline-doc-check1",
+                   name: "offline-doc-check1",
+
+                   items: [
+                     {
+                       value: "UK passport~./offline-passport-details",
+                       text: "UK passport",
+                       checked: checked("id-documents", "UK passport"),
+                       hint: {
+                        text: "If your UK passport has expired, you can still use it to prove your identity up until 18 months after the expiry date"
+                       }
+                     }
+                       ]
+
+                     }) }}
+
+                     {{ govukRadios({
+                       classes: "govuk-radios",
+                       idPrefix: "offline-doc-check2",
+                       name: "offline-doc-check2",
+
+                       items: [
+                       {
+                         value: "Biometric residence permit~./offline-brp-details",
+                         text: "Biometric residence permit (BRP)",
+                         checked: checked("id-documents", "BRP")
+                       }
+
+                           ]
+
+                         }) }}
+
+                         {{ govukRadios({
+                           classes: "govuk-radios",
+                           idPrefix: "offline-doc-check3",
+                           name: "offline-doc-check3",
+
+                           items: [
+                           {
+                             value: "UK photocard driving licence~./offline-driving-licence",
+                             text: "UK photocard driving licence",
+                             checked: checked("id-documents", "UK photocard driving licence")
+                           }
+
+                               ]
+
+                             }) }}
+
+                             {{ govukRadios({
+                               classes: "govuk-radios",
+                               idPrefix: "offline-doc-check4",
+                               name: "offline-doc-check4",
+
+                               items: [
+                               {
+                                 value: "Non-UK passport~./offline-passport-details",
+                                 text: "Non-UK passport",
+                                 checked: checked("id-documents", "Non-UK")
+                               }
+
+                                   ]
+
+                                 }) }}
+
+-->
+
+                                 {{ govukRadios({
+                                   classes: "govuk-radios",
+                                   idPrefix: "offline-doc-check1",
+                                   name: "offline-doc-check1",
+
+                                   items: [
+                                     {
+                                       value: "UK passport~./offline-passport-details",
+                                       text: "UK passport",
+                                       hint: {
+                                        text: "If your UK passport has expired, you can still use it to prove your identity up until 18 months after the expiry date"
+                                       }
+                                     },
+                                     {
+                                       value: "Non-UK passport~./offline-other-passport-details",
+                                       html: "<p>Non-UK passport</p>"
+                                     },
+                                     {
+                                       value: "Biometric residence permit~./offline-brp-details",
+                                       html: "<p>Biometric residence permit (BRP)</p>"
+                                     },
+                                     {
+                                       value: "UK driving licence~./offline-driving-licence",
+                                       html: "<p>UK photocard driving licence</p>"
+                                     },
+                                     {
+                                       value: "EU photocard driving licence~./offline-eu-driving-licence",
+                                       html: "<p>EU photocard driving licence</p>"
+                                     },
+                                     {
+                                       value: "EEA/EU national identity card~./offline-eea-ni-card",
+                                       html: "<p>EEA/EU national identity card</p>"
+                                     },
+                                     {
+                                       value: "Citizen pass card~./offline-citizen-pass-card",
+                                       html: "<p>Citizen pass card</p>"
+                                     },
+                                     {
+                                       value: "Young Scot pass card~./offline-young-scot",
+                                       html: "<p>Young Scot pass card</p>"
+                                     }
+                                       ],
+                                       errorMessage: {
+                                         text: "Select a photo ID you can take to a Post Office"
+                                       }
+
+                                     }) }}
+
+<!--
+                       },
+                       {
+                         value: "Other~./offline-passport-details",
+                         text: "Other passport",
+                         checked: checked("id-documents", "Other")
+                       },
+                       {
+                         value: "Biometric residence permit~./offline-brp-details",
+                         text: "Biometric residence permit (BRP)",
+                         checked: checked("id-documents", "BRP")
+                       },
+                       {
+                         value: "UK driving licence~./offline-driving-licence",
+                         text: "UK driving licence",
+                         checked: checked("id-documents", "UK driving licence")
+                       }
+-->
+
+
+
+                 <!-- ,
+                 {
+                   value: "Other~./offline-passport-details",
+                   text: "Other passport",
+                   checked: checked("id-documents", "Other")
+                 },
+                 {
+                   value: "Biometric residence permit~./offline-brp-details",
+                   text: "Biometric residence permit (BRP)",
+                   checked: checked("id-documents", "BRP")
+                 },
+                 {
+                   value: "UK driving licence~./offline-driving-licence",
+                   text: "UK driving licence",
+                   checked: checked("id-documents", "UK driving licence")
+                 }
+
+                 hint: {
+                   text: "If your passport has expired, you can still use it to prove your identity up until 18 months after the expiry date."
+                 }, -->
+<!--
+                 <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-radios" data-module="govuk-radios">
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          UK passport
+        </label>
+        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          If your UK passport has expired, you can still use it to prove your identity up until 18 months after the expiry date
+        </div>
+      </div>
+      <br>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          Biometric residence permit (BRP)
+        </label>
+      </div>
+      <br>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+          UK photocard driving licence
+        </label>
+      </div>
+      <br>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+          Other passport
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+-->
+<br>
+               <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+           </form>
+
+
+               <a href="./fallback"  class="govuk-body govuk-link--no-visited-state">
+                                  I do not have any of these documents
+                                  </a>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

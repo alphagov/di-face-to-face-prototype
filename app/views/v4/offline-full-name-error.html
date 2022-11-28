@@ -1,0 +1,174 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-passport-details" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+             {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: [
+              {
+                text: "Enter your surname",
+                href: "#offline-full-name-error"
+              }
+            ]
+          }) }}
+
+
+
+               <h1 class="govuk-heading-xl page-heading">What is your name?</h1>
+
+               <p>Enter your full name as it appears on your photo ID.</p>
+
+
+               <form action="offline-full-name-error" method="post" class="form">
+
+
+
+                 <div class="govuk-form-group govuk-form-group--error">
+
+
+
+                     <label class="govuk-label" for="last-name-input">
+                       Surname
+                     </label>
+
+                     <p id="event-name-error" class="govuk-error-message">
+                       <span class="govuk-visually-hidden">Error:</span> Enter your surname
+                     </p>
+
+
+
+
+
+
+
+
+
+                   <input
+                     class="govuk-input govuk-input--width-20 govuk-input govuk-input--error "
+                     name="last-name-input"
+
+
+                     type="text"
+                     id="last-name-input"
+                     value=""
+                     autocomplete="family-name"
+                     >
+
+
+                 </div>
+
+                 <p>Given names</p>
+
+                 <div class="govuk-inset-text">
+
+
+
+               <div class="govuk-form-group ">
+
+
+
+                   <label class="govuk-label" for="first-name-input">
+                     First name
+                   </label>
+
+
+
+
+
+
+
+
+                 <input
+                   class="govuk-input govuk-input--width-20 "
+                   name="first-name-input"
+
+
+                   type="text"
+                   id="first-name-input"
+                   value="John"
+                   autocomplete="given-name"
+                   >
+
+
+               </div>
+
+
+
+
+
+               <div class="govuk-form-group ">
+
+
+
+                   <label class="govuk-label" for="middle-names-input">
+                     Middle names
+                   </label>
+
+                   <div id="middle-name-hint" class="govuk-hint">
+                     Leave this blank if you do not have any middle names
+                   </div>
+
+
+
+
+
+
+
+
+                 <input
+                   class="govuk-input govuk-input--width-20 "
+                   name="middle-names-input"
+
+
+                   type="text"
+                   id="middle-names-input"
+                   value=""
+                   autocomplete="additional-name"
+                   >
+
+
+               </div>
+               </div>
+
+
+
+
+
+
+
+
+
+
+
+               <input type="hidden" name="_csrf" value="POiYShu5-5RkOca7e5QqXIwECT2TO-0gcAk8" />
+
+
+
+
+                         <a href="offline-dob" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+
+               </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

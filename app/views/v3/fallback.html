@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a href="offline-select-document-triage" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="" method="post">
+
+      <h1 class="govuk-heading-xl">You must have a photo ID to prove your identity this way</h1>
+
+
+
+      <p>You can currently only prove your identity with your GOV.UK account if you have a photo ID.</p>
+      <br>
+
+
+      <p class="govuk-body govuk-!-font-weight-bold">What you can do</p>
+
+      <p>If your passport has expired, you can still use it to prove your identity up until 18 months after the expiry date. </p>
+
+<!--      <button class="govuk-button" data-module="govuk-button">Continue</button>  -->
+
+      <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+
+
+
+<!--
+      <ul class="govuk-list govuk-list--bullet">
+        <li>UK passport</li>
+        <li>Other passport</li>
+        <li>Biometric residence permit (BRP)</li>
+        <li>UK driving licence</li>
+      </ul>
+
+
+        <h2 class="govuk-heading-m">Apply for identity documents</h2>
+<p>If you do not have any of these identity documents, you might be able to apply: </p>
+<p><a href="#">apply online for a UK passport</a></p>
+<p><a href="#">apply for a replacement biometric residence permit (BRP)</a></p>
+<p><a href="#">apply for a UK driving licence</a></p>
+-->
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

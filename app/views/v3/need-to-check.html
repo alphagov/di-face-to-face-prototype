@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-address-details" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      We need to check your details
+    </h1>
+
+    <p>Your details will be checked against information held by another organisation.</p>
+
+    <p>This will help us protect you against online identity theft.</p>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Who we check your details with
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        We'll check your details with <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Experian (opens in new tab)</a>. This is because companies like Experian have access to information
+        about interactions you've previously had with other organisations.
+        <br>
+        <br>
+        <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Read our privacy notice (opens in new tab)</a> if you'd like to find out more about how your details will be used to prove your identity.
+      </div>
+    </details>
+
+    <a href="offline-your-email" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+  </div>
+
+  </div>
+{% endblock %}

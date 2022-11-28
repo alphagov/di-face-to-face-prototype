@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="./offline-intro" method="post">
+
+      <h1 class="govuk-heading-l">We are unable to prove your identity</h1>
+
+
+
+      <p>You must have at least one of these documents to prove your identity through this service:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>UK passport</li>
+        <li>Other passport</li>
+        <li>Biometric residence permit (BRP)</li>
+        <li>UK driving licence</li>
+      </ul>
+
+
+        <h2 class="govuk-heading-m">Apply for identity documents</h2>
+<p>If you do not have any of these identity documents, you might be able to apply: </p>
+<p><a href="#">apply online for a UK passport</a></p>
+<p><a href="#">apply for a replacement biometric residence permit (BRP)</a></p>
+<p><a href="#">apply for a UK driving licence</a></p>
+
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

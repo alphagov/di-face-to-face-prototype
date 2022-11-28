@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v2.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+    .govuk-panel--confirmation {
+        background-color: #f3f2f1;
+        color:#000000;
+
+      }
+  </style>
+
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+     {{ govukPanel({
+       titleText: "You now need to go to a Post Office"
+     }) }}
+
+     <p class="govuk-body">We have sent you a confirmation email with an attachment.</p>
+
+     <h2 class="govuk-heading-m">What you need bring</h2>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>Your chosen photo ID</li>
+  <li>Confirmation email attachment</li>
+</ul>
+
+          <p class="govuk-body">You can bring a printed copy of the attachment or display it on your smartphone.<br>
+            <br>
+             A member of staff will process your photo ID and take a photo of your face to verify your identity. </p>
+
+<!--
+          <p class="govuk-body">
+           You can bring your authenticaiton email as a printed copy or display your QR code attachment on your smartphone at the Post Office.
+          </p>
+
+          <p class="govuk-body">
+         At the Post Office, a member of staff will scan the QR code to process your document.
+          </p>
+-->
+          <h2 class="govuk-heading-m">What happens after the Post Office</h2>
+
+          <p>Once your identity has been proven, you must return online to your GOV.UK account to access the government service you need.</p>
+<!--
+          <p>Once successfully verified, you will need to sign into your GOV. UK account online to continue your application.</p>
+-->
+     <br/><br/><br/>
+          <p class="govuk-body">
+            <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+          </p>
+         <!-- <p> Link to  <a href="offline-email-confirmation">email</a> confirmation (for UR purpose)</p> -->
+
+        </div>
+      </div>
+
+
+{% endblock %}

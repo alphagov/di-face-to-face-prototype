@@ -1,0 +1,263 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-bank-society" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+
+
+
+   <h1 class="govuk-heading-xl page-heading">Council Tax statement details</h1>
+
+
+
+   <form action="" method="post" class="form">
+
+
+
+       <p>Must be issued in the UK or Channel Islands.</p>
+
+
+
+
+
+       <p>The statement must have been issued within the last 12 months</p>
+
+
+
+       <p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="govuk-form-group ">
+     <fieldset class="govuk-fieldset">
+
+
+         <legend>
+           <span class="govuk-label">Account or reference number</span>
+         </legend>
+
+
+           <span class="govuk-hint govuk-!-margin-bottom-1">Enter the last 4 digits of the number</span>
+
+
+
+
+
+
+       <div class="form-uid">
+         <input
+           class="govuk-input govuk-date-input__input govuk-input--width-2 "
+           id="uid-input-1"
+           name="uid-input-1"
+
+           type="text"
+           id="uid-input-1"
+           value=""
+           title="Account or reference number 1"
+           maxlength="1"
+         >
+         &nbsp;&nbsp;
+         <input
+           class="govuk-input govuk-date-input__input govuk-input--width-2 "
+           id="uid-input-2"
+           name="uid-input-2"
+
+           type="text"
+           id="uid-input-2"
+           value=""
+           title="Account or reference number 2"
+           maxlength="1"
+         >
+         &nbsp;&nbsp;
+         <input
+           class="govuk-input govuk-date-input__input govuk-input--width-2 "
+           id="uid-input-3"
+           name="uid-input-3"
+
+           type="text"
+           id="uid-input-3"
+           value=""
+           title="Account or reference number 3"
+           maxlength="1"
+         >
+         &nbsp;&nbsp;
+         <input
+           class="govuk-input govuk-date-input__input govuk-input--width-2 "
+           id="uid-input-4"
+           name="uid-input-4"
+
+           type="text"
+           id="uid-input-4"
+           value=""
+           title="Account or reference number 4"
+           maxlength="1"
+         >
+       </div>
+     </fieldset>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="govuk-form-group ">
+
+       <fieldset class="govuk-fieldset">
+         <legend>
+
+
+
+
+
+           <span class="govuk-label">Statement date</span>
+
+
+
+
+         </legend>
+
+
+
+
+         <span class="govuk-hint govuk-!-margin-bottom-1">For example, 15 02 2022</span>
+
+
+
+
+
+       <div class="govuk-date-input">
+
+         <div class="govuk-date-input__item">
+           <div class="govuk-form-group">
+             <label class="govuk-label" for="issue-date-day">Day</label>
+             <input
+               maxlength="2"
+               id="issue-date-day"
+
+               class="govuk-input govuk-date-input__input govuk-input--width-2 "
+               type="text" inputmode="numeric"
+               name="issue-date-day" value=""
+
+             >
+           </div>
+         </div>
+
+
+         <div class="govuk-date-input__item">
+           <div class="govuk-form-group">
+             <label class="govuk-label" for="issue-date-month">Month</label>
+             <input
+               maxlength="2"
+               id="issue-date-month"
+
+               class="govuk-input govuk-date-input__input govuk-input--width-2 "
+               type="text" inputmode="numeric"
+               name="issue-date-month" value=""
+
+             >
+           </div>
+         </div>
+
+         <div class="govuk-date-input__item">
+           <div class="govuk-form-group">
+
+               <label class="govuk-label" for="issue-date-year">Year</label>
+
+             <input
+               maxlength="4"
+               id="issue-date-year"
+
+               class="govuk-input govuk-date-input__input govuk-input--width-4 "
+               type="text" inputmode="numeric"
+               name="issue-date-year" value=""
+
+             >
+           </div>
+         </div>
+       </div>
+
+       </fieldset>
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+   <input type="hidden" name="_csrf" value="94ZQiU21-fiwB02KCUzsd2yL7z6jOt7GVllc" />
+
+
+
+
+   <a href="offline-ni-number" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+
+   </form>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

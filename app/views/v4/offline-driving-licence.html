@@ -1,0 +1,2697 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v2.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="./offline-select-document-triage" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+             <h1 class="govuk-heading-xl page-heading">When does your UK photocard driving licence expire?</h1>
+
+             <p>We need this information to check that your photo ID is valid.</p><br>
+
+
+
+<!--
+               <form action="" method="post" class="form">
+
+                   <p></p>
+
+             <input type="hidden" value="" name="from" />
+
+                   <p>The driving licence you provide can be any current full or provisional driving licence (photocard or paper).</p>
+-->
+
+               <div class="govuk-form-group ">
+
+                   <fieldset class="govuk-fieldset">
+                     <legend>
+
+
+
+
+
+                       <span class="govuk-label">Expiry date</span>
+
+
+
+
+                     </legend>
+
+
+
+
+
+                       <span class="govuk-hint govuk-!-margin-bottom-1">For example, 31 3 2025</span>
+                       <br>
+                       <br>
+
+
+
+
+
+
+                   <div class="govuk-date-input">
+
+                     <div class="govuk-date-input__item">
+                       <div class="govuk-form-group">
+                         <label class="govuk-label" for="expiry-date-day">Day</label>
+                         <input
+                           maxlength="2"
+                           id="expiry-date-day"
+
+                           class="govuk-input govuk-date-input__input govuk-input--width-2 "
+                           type="text" inputmode="numeric"
+                           name="expiry-date-day" value=""
+
+                         >
+                       </div>
+                     </div>
+
+
+                     <div class="govuk-date-input__item">
+                       <div class="govuk-form-group">
+                         <label class="govuk-label" for="expiry-date-month">Month</label>
+                         <input
+                           maxlength="2"
+                           id="expiry-date-month"
+
+                           class="govuk-input govuk-date-input__input govuk-input--width-2 "
+                           type="text" inputmode="numeric"
+                           name="expiry-date-month" value=""
+
+                         >
+                       </div>
+                     </div>
+
+                     <div class="govuk-date-input__item">
+                       <div class="govuk-form-group">
+
+                           <label class="govuk-label" for="expiry-date-year">Year</label>
+
+                         <input
+                           maxlength="4"
+                           id="expiry-date-year"
+
+                           class="govuk-input govuk-date-input__input govuk-input--width-4 "
+                           type="text" inputmode="numeric"
+                           name="expiry-date-year" value=""
+
+                         >
+                       </div>
+                     </div>
+                   </div>
+
+                   </fieldset>
+
+               </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+               <div class="govuk-form-group ">
+
+
+                 <label class="govuk-label" for="country-of-issue-input">Country of issue</label>
+                 <br>
+
+
+
+
+
+                 <select
+                   name="country-of-issue-input"
+                   id="country-of-issue-input"
+                   title="Country of issue"
+
+                   autocorrect="off"
+                   autocomplete="off"
+                   class="govuk-input govuk-input--width-10 "
+                 >
+                   <option value="" selected="selected">Select country</option>
+
+
+                       <option
+                         value="United Kingdom"
+
+                         data-alternative-spellings="GB Great Britain Prydain Fawr England Lloegr UK DU Wales Cymru Scotland Yr Alban Northern Ireland Gogledd Iwerddon"
+                         data-relevancy-booster="5"
+                         data-country-code="GB"
+                       >United Kingdom</option>
+
+
+
+                       <option
+                         value="Afghanistan"
+
+                         data-alternative-spellings="AF افغانستان"
+
+                         data-country-code="AF"
+                       >Afghanistan</option>
+
+
+
+                       <option
+                         value="Aland Islands"
+
+                         data-alternative-spellings="AX Åland Aaland"
+                         data-relevancy-booster="0.5"
+                         data-country-code="AX"
+                       >Aland Islands</option>
+
+
+
+                       <option
+                         value="Albania"
+
+                         data-alternative-spellings="AL"
+
+                         data-country-code="AL"
+                       >Albania</option>
+
+
+
+                       <option
+                         value="Algeria"
+
+                         data-alternative-spellings="DZ الجزائر"
+
+                         data-country-code="DZ"
+                       >Algeria</option>
+
+
+
+                       <option
+                         value="American Samoa"
+
+                         data-alternative-spellings="AS"
+                         data-relevancy-booster="0.5"
+                         data-country-code="AS"
+                       >American Samoa</option>
+
+
+
+                       <option
+                         value="Andorra"
+
+                         data-alternative-spellings="AD"
+                         data-relevancy-booster="0.5"
+                         data-country-code="AD"
+                       >Andorra</option>
+
+
+
+                       <option
+                         value="Angola"
+
+                         data-alternative-spellings="AO"
+
+                         data-country-code="AO"
+                       >Angola</option>
+
+
+
+                       <option
+                         value="Anguilla"
+
+                         data-alternative-spellings="AI"
+                         data-relevancy-booster="0.5"
+                         data-country-code="AI"
+                       >Anguilla</option>
+
+
+
+                       <option
+                         value="Antarctica"
+
+                         data-alternative-spellings="AQ"
+                         data-relevancy-booster="0.5"
+                         data-country-code=""
+                       >Antarctica</option>
+
+
+
+                       <option
+                         value="Antigua and Barbuda"
+
+                         data-alternative-spellings="AG"
+                         data-relevancy-booster="0.5"
+                         data-country-code="AG"
+                       >Antigua and Barbuda</option>
+
+
+
+                       <option
+                         value="Argentina"
+
+                         data-alternative-spellings="AR"
+
+                         data-country-code="AR"
+                       >Argentina</option>
+
+
+
+                       <option
+                         value="Armenia"
+
+                         data-alternative-spellings="AM Հայաստան"
+
+                         data-country-code="AM"
+                       >Armenia</option>
+
+
+
+                       <option
+                         value="Aruba"
+
+                         data-alternative-spellings="AW"
+                         data-relevancy-booster="0.5"
+                         data-country-code="AW"
+                       >Aruba</option>
+
+
+
+                       <option
+                         value="Australia"
+
+                         data-alternative-spellings="AU"
+                         data-relevancy-booster="1.5"
+                         data-country-code="AU"
+                       >Australia</option>
+
+
+
+                       <option
+                         value="Austria"
+
+                         data-alternative-spellings="AT Österreich Osterreich Oesterreich"
+
+                         data-country-code="AT"
+                       >Austria</option>
+
+
+
+                       <option
+                         value="Azerbaijan"
+
+                         data-alternative-spellings="AZ"
+
+                         data-country-code="AZ"
+                       >Azerbaijan</option>
+
+
+
+                       <option
+                         value="Bahamas"
+
+                         data-alternative-spellings="BS"
+
+                         data-country-code="BS"
+                       >Bahamas</option>
+
+
+
+                       <option
+                         value="Bahrain"
+
+                         data-alternative-spellings="BH البحرين"
+
+                         data-country-code="BH"
+                       >Bahrain</option>
+
+
+
+                       <option
+                         value="Bangladesh"
+
+                         data-alternative-spellings="BD বাংলাদেশ"
+                         data-relevancy-booster="2"
+                         data-country-code="BD"
+                       >Bangladesh</option>
+
+
+
+                       <option
+                         value="Barbados"
+
+                         data-alternative-spellings="BB"
+
+                         data-country-code="BB"
+                       >Barbados</option>
+
+
+
+                       <option
+                         value="Belarus"
+
+                         data-alternative-spellings="BY Беларусь"
+
+                         data-country-code="BY"
+                       >Belarus</option>
+
+
+
+                       <option
+                         value="Belgium"
+
+                         data-alternative-spellings="BE België Belgie Belgien Belgique"
+                         data-relevancy-booster="1.5"
+                         data-country-code="BE"
+                       >Belgium</option>
+
+
+
+                       <option
+                         value="Belize"
+
+                         data-alternative-spellings="BZ"
+
+                         data-country-code="BZ"
+                       >Belize</option>
+
+
+
+                       <option
+                         value="Benin"
+
+                         data-alternative-spellings="BJ"
+
+                         data-country-code="BJ"
+                       >Benin</option>
+
+
+
+                       <option
+                         value="Bermuda"
+
+                         data-alternative-spellings="BM"
+                         data-relevancy-booster="0.5"
+                         data-country-code="BM"
+                       >Bermuda</option>
+
+
+
+                       <option
+                         value="Bhutan"
+
+                         data-alternative-spellings="BT भूटान"
+
+                         data-country-code="BT"
+                       >Bhutan</option>
+
+
+
+                       <option
+                         value="Bolivia"
+
+                         data-alternative-spellings="BO"
+
+                         data-country-code="BO"
+                       >Bolivia</option>
+
+
+
+                       <option
+                         value="Bonaire, Sint Eustatius and Saba"
+
+                         data-alternative-spellings="BQ Caribbean Netherlands"
+
+                         data-country-code="BQ"
+                       >Bonaire, Sint Eustatius and Saba</option>
+
+
+
+                       <option
+                         value="Bosnia and Herzegovina"
+
+                         data-alternative-spellings="BA BiH Bosna i Hercegovina Босна и Херцеговина"
+
+                         data-country-code="BA"
+                       >Bosnia and Herzegovina</option>
+
+
+
+                       <option
+                         value="Botswana"
+
+                         data-alternative-spellings="BW"
+
+                         data-country-code="BW"
+                       >Botswana</option>
+
+
+
+                       <option
+                         value="Bouvet Island"
+
+                         data-alternative-spellings="BV"
+
+                         data-country-code=""
+                       >Bouvet Island</option>
+
+
+
+                       <option
+                         value="Brazil"
+
+                         data-alternative-spellings="BR Brasil"
+                         data-relevancy-booster="2"
+                         data-country-code="BR"
+                       >Brazil</option>
+
+
+
+                       <option
+                         value="British Indian Ocean Territory"
+
+                         data-alternative-spellings="IO"
+
+                         data-country-code="IO"
+                       >British Indian Ocean Territory</option>
+
+
+
+                       <option
+                         value="Brunei Darussalam"
+
+                         data-alternative-spellings="BN"
+
+                         data-country-code="BN"
+                       >Brunei Darussalam</option>
+
+
+
+                       <option
+                         value="Bulgaria"
+
+                         data-alternative-spellings="BG България"
+
+                         data-country-code="BG"
+                       >Bulgaria</option>
+
+
+
+                       <option
+                         value="Burkina Faso"
+
+                         data-alternative-spellings="BF"
+
+                         data-country-code="BF"
+                       >Burkina Faso</option>
+
+
+
+                       <option
+                         value="Burundi"
+
+                         data-alternative-spellings="BI"
+
+                         data-country-code="BI"
+                       >Burundi</option>
+
+
+
+                       <option
+                         value="Cambodia"
+
+                         data-alternative-spellings="KH កម្ពុជា"
+
+                         data-country-code="KH"
+                       >Cambodia</option>
+
+
+
+                       <option
+                         value="Cameroon"
+
+                         data-alternative-spellings="CM"
+
+                         data-country-code="CM"
+                       >Cameroon</option>
+
+
+
+                       <option
+                         value="Canada"
+
+                         data-alternative-spellings="CA"
+                         data-relevancy-booster="2"
+                         data-country-code="CA"
+                       >Canada</option>
+
+
+
+                       <option
+                         value="Cape Verde"
+
+                         data-alternative-spellings="CV Cabo"
+
+                         data-country-code="CV"
+                       >Cape Verde</option>
+
+
+
+                       <option
+                         value="Cayman Islands"
+
+                         data-alternative-spellings="KY"
+                         data-relevancy-booster="0.5"
+                         data-country-code="KY"
+                       >Cayman Islands</option>
+
+
+
+                       <option
+                         value="Central African Republic"
+
+                         data-alternative-spellings="CF"
+
+                         data-country-code="CF"
+                       >Central African Republic</option>
+
+
+
+                       <option
+                         value="Chad"
+
+                         data-alternative-spellings="TD تشاد‎ Tchad"
+
+                         data-country-code="TD"
+                       >Chad</option>
+
+
+
+                       <option
+                         value="Chile"
+
+                         data-alternative-spellings="CL"
+
+                         data-country-code="CL"
+                       >Chile</option>
+
+
+
+                       <option
+                         value="China"
+
+                         data-alternative-spellings="CN Zhongguo Zhonghua Peoples Republic 中国/中华"
+                         data-relevancy-booster="3.5"
+                         data-country-code="CN"
+                       >China</option>
+
+
+
+                       <option
+                         value="Christmas Island"
+
+                         data-alternative-spellings="CX"
+                         data-relevancy-booster="0.5"
+                         data-country-code="CX"
+                       >Christmas Island</option>
+
+
+
+                       <option
+                         value="Cocos (Keeling) Islands"
+
+                         data-alternative-spellings="CC"
+                         data-relevancy-booster="0.5"
+                         data-country-code="CC"
+                       >Cocos (Keeling) Islands</option>
+
+
+
+                       <option
+                         value="Colombia"
+
+                         data-alternative-spellings="CO"
+
+                         data-country-code="CO"
+                       >Colombia</option>
+
+
+
+                       <option
+                         value="Comoros"
+
+                         data-alternative-spellings="KM جزر القمر"
+
+                         data-country-code="KM"
+                       >Comoros</option>
+
+
+
+                       <option
+                         value="Congo (Brazzaville)"
+
+                         data-alternative-spellings="CG Congo-Brazzaville"
+
+                         data-country-code="CG"
+                       >Congo (Brazzaville)</option>
+
+
+
+                       <option
+                         value="Congo, Democratic Republic of the"
+
+                         data-alternative-spellings="CD Repubilika ya Kongo"
+
+                         data-country-code="CD"
+                       >Congo, Democratic Republic of the</option>
+
+
+
+                       <option
+                         value="Cook Islands"
+
+                         data-alternative-spellings="CK"
+                         data-relevancy-booster="0.5"
+                         data-country-code="CK"
+                       >Cook Islands</option>
+
+
+
+                       <option
+                         value="Costa Rica"
+
+                         data-alternative-spellings="CR"
+
+                         data-country-code="CR"
+                       >Costa Rica</option>
+
+
+
+                       <option
+                         value="Côte d&#39;Ivoire"
+
+                         data-alternative-spellings="CI Cote dIvoire"
+
+                         data-country-code="CI"
+                       >Côte d&#39;Ivoire</option>
+
+
+
+                       <option
+                         value="Croatia"
+
+                         data-alternative-spellings="HR Hrvatska"
+
+                         data-country-code="HR"
+                       >Croatia</option>
+
+
+
+                       <option
+                         value="Cuba"
+
+                         data-alternative-spellings="CU"
+
+                         data-country-code="CU"
+                       >Cuba</option>
+
+
+
+                       <option
+                         value="Curaçao"
+
+                         data-alternative-spellings="CW Curacao"
+
+                         data-country-code="CW"
+                       >Curaçao</option>
+
+
+
+                       <option
+                         value="Cyprus"
+
+                         data-alternative-spellings="CY Κύπρος Kýpros Kıbrıs"
+
+                         data-country-code="CY"
+                       >Cyprus</option>
+
+
+
+                       <option
+                         value="Czech Republic"
+
+                         data-alternative-spellings="CZ Česká Ceska"
+
+                         data-country-code="CZ"
+                       >Czech Republic</option>
+
+
+
+                       <option
+                         value="Denmark"
+
+                         data-alternative-spellings="DK Danmark"
+                         data-relevancy-booster="1.5"
+                         data-country-code="DK"
+                       >Denmark</option>
+
+
+
+                       <option
+                         value="Djibouti"
+
+                         data-alternative-spellings="DJ جيبوتي‎ Jabuuti Gabuuti"
+
+                         data-country-code="DJ"
+                       >Djibouti</option>
+
+
+
+                       <option
+                         value="Dominica"
+
+                         data-alternative-spellings="DM Dominique"
+                         data-relevancy-booster="0.5"
+                         data-country-code="DM"
+                       >Dominica</option>
+
+
+
+                       <option
+                         value="Dominican Republic"
+
+                         data-alternative-spellings="DO"
+
+                         data-country-code="DO"
+                       >Dominican Republic</option>
+
+
+
+                       <option
+                         value="Ecuador"
+
+                         data-alternative-spellings="EC"
+
+                         data-country-code="EC"
+                       >Ecuador</option>
+
+
+
+                       <option
+                         value="Egypt"
+
+                         data-alternative-spellings="EG"
+                         data-relevancy-booster="1.5"
+                         data-country-code="EG"
+                       >Egypt</option>
+
+
+
+                       <option
+                         value="El Salvador"
+
+                         data-alternative-spellings="SV"
+
+                         data-country-code="SV"
+                       >El Salvador</option>
+
+
+
+                       <option
+                         value="Equatorial Guinea"
+
+                         data-alternative-spellings="GQ"
+
+                         data-country-code="GQ"
+                       >Equatorial Guinea</option>
+
+
+
+                       <option
+                         value="Eritrea"
+
+                         data-alternative-spellings="ER إرتريا ኤርትራ"
+
+                         data-country-code="ER"
+                       >Eritrea</option>
+
+
+
+                       <option
+                         value="Estonia"
+
+                         data-alternative-spellings="EE Eesti"
+
+                         data-country-code="EE"
+                       >Estonia</option>
+
+
+
+                       <option
+                         value="Ethiopia"
+
+                         data-alternative-spellings="ET ኢትዮጵያ"
+
+                         data-country-code="ET"
+                       >Ethiopia</option>
+
+
+
+                       <option
+                         value="Falkland Islands (Malvinas)"
+
+                         data-alternative-spellings="FK"
+                         data-relevancy-booster="0.5"
+                         data-country-code="FK"
+                       >Falkland Islands (Malvinas)</option>
+
+
+
+                       <option
+                         value="Faroe Islands"
+
+                         data-alternative-spellings="FO Føroyar Færøerne"
+                         data-relevancy-booster="0.5"
+                         data-country-code="FO"
+                       >Faroe Islands</option>
+
+
+
+                       <option
+                         value="Fiji"
+
+                         data-alternative-spellings="FJ Viti फ़िजी"
+
+                         data-country-code="FJ"
+                       >Fiji</option>
+
+
+
+                       <option
+                         value="Finland"
+
+                         data-alternative-spellings="FI Suomi"
+
+                         data-country-code="FI"
+                       >Finland</option>
+
+
+
+                       <option
+                         value="France"
+
+                         data-alternative-spellings="FR République française"
+                         data-relevancy-booster="2.5"
+                         data-country-code="FR"
+                       >France</option>
+
+
+
+                       <option
+                         value="French Guiana"
+
+                         data-alternative-spellings="GF"
+
+                         data-country-code="GF"
+                       >French Guiana</option>
+
+
+
+                       <option
+                         value="French Polynesia"
+
+                         data-alternative-spellings="PF Polynésie française"
+
+                         data-country-code="PF"
+                       >French Polynesia</option>
+
+
+
+                       <option
+                         value="French Southern Territories"
+
+                         data-alternative-spellings="TF"
+
+                         data-country-code=""
+                       >French Southern Territories</option>
+
+
+
+                       <option
+                         value="Gabon"
+
+                         data-alternative-spellings="GA République Gabonaise"
+
+                         data-country-code="GA"
+                       >Gabon</option>
+
+
+
+                       <option
+                         value="Gambia"
+
+                         data-alternative-spellings="GM"
+
+                         data-country-code="GM"
+                       >Gambia</option>
+
+
+
+                       <option
+                         value="Georgia"
+
+                         data-alternative-spellings="GE საქართველო"
+
+                         data-country-code="GE"
+                       >Georgia</option>
+
+
+
+                       <option
+                         value="Germany"
+
+                         data-alternative-spellings="DE Bundesrepublik Deutschland"
+                         data-relevancy-booster="3"
+                         data-country-code="DE"
+                       >Germany</option>
+
+
+
+                       <option
+                         value="Ghana"
+
+                         data-alternative-spellings="GH"
+
+                         data-country-code="GH"
+                       >Ghana</option>
+
+
+
+                       <option
+                         value="Gibraltar"
+
+                         data-alternative-spellings="GI"
+                         data-relevancy-booster="0.5"
+                         data-country-code="GI"
+                       >Gibraltar</option>
+
+
+
+                       <option
+                         value="Greece"
+
+                         data-alternative-spellings="GR Ελλάδα"
+                         data-relevancy-booster="1.5"
+                         data-country-code="GR"
+                       >Greece</option>
+
+
+
+                       <option
+                         value="Greenland"
+
+                         data-alternative-spellings="GL grønland"
+                         data-relevancy-booster="0.5"
+                         data-country-code="GL"
+                       >Greenland</option>
+
+
+
+                       <option
+                         value="Grenada"
+
+                         data-alternative-spellings="GD"
+
+                         data-country-code="GD"
+                       >Grenada</option>
+
+
+
+                       <option
+                         value="Guadeloupe"
+
+                         data-alternative-spellings="GP"
+
+                         data-country-code="GP"
+                       >Guadeloupe</option>
+
+
+
+                       <option
+                         value="Guam"
+
+                         data-alternative-spellings="GU"
+
+                         data-country-code="GU"
+                       >Guam</option>
+
+
+
+                       <option
+                         value="Guatemala"
+
+                         data-alternative-spellings="GT"
+
+                         data-country-code="GT"
+                       >Guatemala</option>
+
+
+
+                       <option
+                         value="Guernsey"
+
+                         data-alternative-spellings="GG"
+                         data-relevancy-booster="0.5"
+                         data-country-code="GG"
+                       >Guernsey</option>
+
+
+
+                       <option
+                         value="Guinea"
+
+                         data-alternative-spellings="GN"
+
+                         data-country-code="GN"
+                       >Guinea</option>
+
+
+
+                       <option
+                         value="Guinea-Bissau"
+
+                         data-alternative-spellings="GW"
+
+                         data-country-code="GW"
+                       >Guinea-Bissau</option>
+
+
+
+                       <option
+                         value="Guyana"
+
+                         data-alternative-spellings="GY"
+
+                         data-country-code="GY"
+                       >Guyana</option>
+
+
+
+                       <option
+                         value="Haiti"
+
+                         data-alternative-spellings="HT"
+
+                         data-country-code="HT"
+                       >Haiti</option>
+
+
+
+                       <option
+                         value="Heard Island and Mcdonald Islands"
+
+                         data-alternative-spellings="HM"
+
+                         data-country-code=""
+                       >Heard Island and Mcdonald Islands</option>
+
+
+
+                       <option
+                         value="Holy See (Vatican City State)"
+
+                         data-alternative-spellings="VA"
+                         data-relevancy-booster="0.5"
+                         data-country-code="VA"
+                       >Holy See (Vatican City State)</option>
+
+
+
+                       <option
+                         value="Honduras"
+
+                         data-alternative-spellings="HN"
+
+                         data-country-code="HN"
+                       >Honduras</option>
+
+
+
+                       <option
+                         value="Hong Kong, Special Administrative Region of China"
+
+                         data-alternative-spellings="HK 香港"
+
+                         data-country-code="HK"
+                       >Hong Kong, Special Administrative Region of China</option>
+
+
+
+                       <option
+                         value="Hungary"
+
+                         data-alternative-spellings="HU Magyarország"
+
+                         data-country-code="HU"
+                       >Hungary</option>
+
+
+
+                       <option
+                         value="Iceland"
+
+                         data-alternative-spellings="IS Island"
+
+                         data-country-code="IS"
+                       >Iceland</option>
+
+
+
+                       <option
+                         value="India"
+
+                         data-alternative-spellings="IN भारत गणराज्य Hindustan"
+                         data-relevancy-booster="3"
+                         data-country-code="IN"
+                       >India</option>
+
+
+
+                       <option
+                         value="Indonesia"
+
+                         data-alternative-spellings="ID"
+                         data-relevancy-booster="2"
+                         data-country-code="ID"
+                       >Indonesia</option>
+
+
+
+                       <option
+                         value="Iran, Islamic Republic of"
+
+                         data-alternative-spellings="IR ایران"
+
+                         data-country-code="IR"
+                       >Iran, Islamic Republic of</option>
+
+
+
+                       <option
+                         value="Iraq"
+
+                         data-alternative-spellings="IQ العراق‎"
+
+                         data-country-code="IQ"
+                       >Iraq</option>
+
+
+
+                       <option
+                         value="Ireland"
+
+                         data-alternative-spellings="IE Éire"
+                         data-relevancy-booster="1.2"
+                         data-country-code="IE"
+                       >Ireland</option>
+
+
+
+                       <option
+                         value="Isle of Man"
+
+                         data-alternative-spellings="IM"
+                         data-relevancy-booster="0.5"
+                         data-country-code="IM"
+                       >Isle of Man</option>
+
+
+
+                       <option
+                         value="Israel"
+
+                         data-alternative-spellings="IL إسرائيل ישראל"
+
+                         data-country-code="IL"
+                       >Israel</option>
+
+
+
+                       <option
+                         value="Italy"
+
+                         data-alternative-spellings="IT Italia"
+                         data-relevancy-booster="2"
+                         data-country-code="IT"
+                       >Italy</option>
+
+
+
+                       <option
+                         value="Jamaica"
+
+                         data-alternative-spellings="JM"
+
+                         data-country-code="JM"
+                       >Jamaica</option>
+
+
+
+                       <option
+                         value="Japan"
+
+                         data-alternative-spellings="JP Nippon Nihon 日本"
+                         data-relevancy-booster="2.5"
+                         data-country-code="JP"
+                       >Japan</option>
+
+
+
+                       <option
+                         value="Jersey"
+
+                         data-alternative-spellings="JE"
+                         data-relevancy-booster="0.5"
+                         data-country-code="JE"
+                       >Jersey</option>
+
+
+
+                       <option
+                         value="Jordan"
+
+                         data-alternative-spellings="JO الأردن"
+
+                         data-country-code="JO"
+                       >Jordan</option>
+
+
+
+                       <option
+                         value="Kazakhstan"
+
+                         data-alternative-spellings="KZ Қазақстан Казахстан"
+
+                         data-country-code="KZ"
+                       >Kazakhstan</option>
+
+
+
+                       <option
+                         value="Kenya"
+
+                         data-alternative-spellings="KE"
+
+                         data-country-code="KE"
+                       >Kenya</option>
+
+
+
+                       <option
+                         value="Kosovo"
+
+                         data-alternative-spellings="XK"
+
+                         data-country-code="XK"
+                       >Kosovo</option>
+
+
+
+                       <option
+                         value="Kiribati"
+
+                         data-alternative-spellings="KI"
+
+                         data-country-code="KI"
+                       >Kiribati</option>
+
+
+
+                       <option
+                         value="Korea, Democratic People&#39;s Republic of"
+
+                         data-alternative-spellings="KP North Korea"
+
+                         data-country-code="KP"
+                       >Korea, Democratic People&#39;s Republic of</option>
+
+
+
+                       <option
+                         value="Korea, Republic of"
+
+                         data-alternative-spellings="KR South Korea"
+                         data-relevancy-booster="1.5"
+                         data-country-code="KR"
+                       >Korea, Republic of</option>
+
+
+
+                       <option
+                         value="Kuwait"
+
+                         data-alternative-spellings="KW الكويت"
+
+                         data-country-code="KW"
+                       >Kuwait</option>
+
+
+
+                       <option
+                         value="Kyrgyzstan"
+
+                         data-alternative-spellings="KG Кыргызстан"
+
+                         data-country-code="KG"
+                       >Kyrgyzstan</option>
+
+
+
+                       <option
+                         value="Lao PDR"
+
+                         data-alternative-spellings="LA Laos"
+
+                         data-country-code="LA"
+                       >Lao PDR</option>
+
+
+
+                       <option
+                         value="Latvia"
+
+                         data-alternative-spellings="LV Latvija"
+
+                         data-country-code="LV"
+                       >Latvia</option>
+
+
+
+                       <option
+                         value="Lebanon"
+
+                         data-alternative-spellings="LB لبنان"
+
+                         data-country-code="LB"
+                       >Lebanon</option>
+
+
+
+                       <option
+                         value="Lesotho"
+
+                         data-alternative-spellings="LS"
+
+                         data-country-code="LS"
+                       >Lesotho</option>
+
+
+
+                       <option
+                         value="Liberia"
+
+                         data-alternative-spellings="LR"
+
+                         data-country-code="LR"
+                       >Liberia</option>
+
+
+
+                       <option
+                         value="Libya"
+
+                         data-alternative-spellings="LY ليبيا"
+
+                         data-country-code="LY"
+                       >Libya</option>
+
+
+
+                       <option
+                         value="Liechtenstein"
+
+                         data-alternative-spellings="LI"
+
+                         data-country-code="LI"
+                       >Liechtenstein</option>
+
+
+
+                       <option
+                         value="Lithuania"
+
+                         data-alternative-spellings="LT Lietuva"
+
+                         data-country-code="LT"
+                       >Lithuania</option>
+
+
+
+                       <option
+                         value="Luxembourg"
+
+                         data-alternative-spellings="LU"
+
+                         data-country-code="LU"
+                       >Luxembourg</option>
+
+
+
+                       <option
+                         value="Macao, Special Administrative Region of China"
+
+                         data-alternative-spellings="MO"
+
+                         data-country-code="MO"
+                       >Macao, Special Administrative Region of China</option>
+
+
+
+                       <option
+                         value="Macedonia, Republic of"
+
+                         data-alternative-spellings="MK Македонија"
+
+                         data-country-code="MK"
+                       >Macedonia, Republic of</option>
+
+
+
+                       <option
+                         value="Madagascar"
+
+                         data-alternative-spellings="MG Madagasikara"
+
+                         data-country-code="MG"
+                       >Madagascar</option>
+
+
+
+                       <option
+                         value="Malawi"
+
+                         data-alternative-spellings="MW"
+
+                         data-country-code="MW"
+                       >Malawi</option>
+
+
+
+                       <option
+                         value="Malaysia"
+
+                         data-alternative-spellings="MY"
+
+                         data-country-code="MY"
+                       >Malaysia</option>
+
+
+
+                       <option
+                         value="Maldives"
+
+                         data-alternative-spellings="MV"
+
+                         data-country-code="MV"
+                       >Maldives</option>
+
+
+
+                       <option
+                         value="Mali"
+
+                         data-alternative-spellings="ML"
+
+                         data-country-code="ML"
+                       >Mali</option>
+
+
+
+                       <option
+                         value="Malta"
+
+                         data-alternative-spellings="MT"
+
+                         data-country-code="MT"
+                       >Malta</option>
+
+
+
+                       <option
+                         value="Marshall Islands"
+
+                         data-alternative-spellings="MH"
+                         data-relevancy-booster="0.5"
+                         data-country-code="MH"
+                       >Marshall Islands</option>
+
+
+
+                       <option
+                         value="Martinique"
+
+                         data-alternative-spellings="MQ"
+
+                         data-country-code="MQ"
+                       >Martinique</option>
+
+
+
+                       <option
+                         value="Mauritania"
+
+                         data-alternative-spellings="MR الموريتانية"
+
+                         data-country-code="MR"
+                       >Mauritania</option>
+
+
+
+                       <option
+                         value="Mauritius"
+
+                         data-alternative-spellings="MU"
+
+                         data-country-code="MU"
+                       >Mauritius</option>
+
+
+
+                       <option
+                         value="Mayotte"
+
+                         data-alternative-spellings="YT"
+
+                         data-country-code="YT"
+                       >Mayotte</option>
+
+
+
+                       <option
+                         value="Mexico"
+
+                         data-alternative-spellings="MX Mexicanos"
+                         data-relevancy-booster="1.5"
+                         data-country-code="MX"
+                       >Mexico</option>
+
+
+
+                       <option
+                         value="Micronesia, Federated States of"
+
+                         data-alternative-spellings="FM"
+
+                         data-country-code="FM"
+                       >Micronesia, Federated States of</option>
+
+
+
+                       <option
+                         value="Moldova"
+
+                         data-alternative-spellings="MD"
+
+                         data-country-code="MD"
+                       >Moldova</option>
+
+
+
+                       <option
+                         value="Monaco"
+
+                         data-alternative-spellings="MC"
+
+                         data-country-code="MC"
+                       >Monaco</option>
+
+
+
+                       <option
+                         value="Mongolia"
+
+                         data-alternative-spellings="MN Mongγol ulus Монгол улс"
+
+                         data-country-code="MN"
+                       >Mongolia</option>
+
+
+
+                       <option
+                         value="Montenegro"
+
+                         data-alternative-spellings="ME"
+
+                         data-country-code="ME"
+                       >Montenegro</option>
+
+
+
+                       <option
+                         value="Montserrat"
+
+                         data-alternative-spellings="MS"
+                         data-relevancy-booster="0.5"
+                         data-country-code="MS"
+                       >Montserrat</option>
+
+
+
+                       <option
+                         value="Morocco"
+
+                         data-alternative-spellings="MA المغرب"
+
+                         data-country-code="MA"
+                       >Morocco</option>
+
+
+
+                       <option
+                         value="Mozambique"
+
+                         data-alternative-spellings="MZ Moçambique"
+
+                         data-country-code="MZ"
+                       >Mozambique</option>
+
+
+
+                       <option
+                         value="Myanmar"
+
+                         data-alternative-spellings="MM"
+
+                         data-country-code="MM"
+                       >Myanmar</option>
+
+
+
+                       <option
+                         value="Namibia"
+
+                         data-alternative-spellings="NA Namibië"
+
+                         data-country-code="NA"
+                       >Namibia</option>
+
+
+
+                       <option
+                         value="Nauru"
+
+                         data-alternative-spellings="NR Naoero"
+                         data-relevancy-booster="0.5"
+                         data-country-code="NR"
+                       >Nauru</option>
+
+
+
+                       <option
+                         value="Nepal"
+
+                         data-alternative-spellings="NP नेपाल"
+
+                         data-country-code="NP"
+                       >Nepal</option>
+
+
+
+                       <option
+                         value="Netherlands"
+
+                         data-alternative-spellings="NL Holland Nederland"
+                         data-relevancy-booster="1.5"
+                         data-country-code="NL"
+                       >Netherlands</option>
+
+
+
+                       <option
+                         value="Netherlands Antilles"
+
+                         data-alternative-spellings="AN Netherlands Antilles"
+
+                         data-country-code=""
+                       >Netherlands Antilles</option>
+
+
+
+                       <option
+                         value="New Caledonia"
+
+                         data-alternative-spellings="NC"
+                         data-relevancy-booster="0.5"
+                         data-country-code="NC"
+                       >New Caledonia</option>
+
+
+
+                       <option
+                         value="New Zealand"
+
+                         data-alternative-spellings="NZ Aotearoa"
+
+                         data-country-code="NZ"
+                       >New Zealand</option>
+
+
+
+                       <option
+                         value="Nicaragua"
+
+                         data-alternative-spellings="NI"
+
+                         data-country-code="NI"
+                       >Nicaragua</option>
+
+
+
+                       <option
+                         value="Niger"
+
+                         data-alternative-spellings="NE Nijar"
+
+                         data-country-code="NE"
+                       >Niger</option>
+
+
+
+                       <option
+                         value="Nigeria"
+
+                         data-alternative-spellings="NG Nijeriya Naíjíríà"
+                         data-relevancy-booster="1.5"
+                         data-country-code="NG"
+                       >Nigeria</option>
+
+
+
+                       <option
+                         value="Niue"
+
+                         data-alternative-spellings="NU"
+                         data-relevancy-booster="0.5"
+                         data-country-code="NU"
+                       >Niue</option>
+
+
+
+                       <option
+                         value="Norfolk Island"
+
+                         data-alternative-spellings="NF"
+                         data-relevancy-booster="0.5"
+                         data-country-code="NF"
+                       >Norfolk Island</option>
+
+
+
+                       <option
+                         value="Northern Mariana Islands"
+
+                         data-alternative-spellings="MP"
+                         data-relevancy-booster="0.5"
+                         data-country-code="MP"
+                       >Northern Mariana Islands</option>
+
+
+
+                       <option
+                         value="Norway"
+
+                         data-alternative-spellings="NO Norge Noreg"
+                         data-relevancy-booster="1.5"
+                         data-country-code="NO"
+                       >Norway</option>
+
+
+
+                       <option
+                         value="Oman"
+
+                         data-alternative-spellings="OM عمان"
+
+                         data-country-code="OM"
+                       >Oman</option>
+
+
+
+                       <option
+                         value="Pakistan"
+
+                         data-alternative-spellings="PK پاکستان"
+                         data-relevancy-booster="2"
+                         data-country-code="PK"
+                       >Pakistan</option>
+
+
+
+                       <option
+                         value="Palau"
+
+                         data-alternative-spellings="PW"
+                         data-relevancy-booster="0.5"
+                         data-country-code="PW"
+                       >Palau</option>
+
+
+
+                       <option
+                         value="Palestinian Territory, Occupied"
+
+                         data-alternative-spellings="PS فلسطين"
+
+                         data-country-code="PS"
+                       >Palestinian Territory, Occupied</option>
+
+
+
+                       <option
+                         value="Panama"
+
+                         data-alternative-spellings="PA"
+
+                         data-country-code="PA"
+                       >Panama</option>
+
+
+
+                       <option
+                         value="Papua New Guinea"
+
+                         data-alternative-spellings="PG"
+
+                         data-country-code="PG"
+                       >Papua New Guinea</option>
+
+
+
+                       <option
+                         value="Paraguay"
+
+                         data-alternative-spellings="PY"
+
+                         data-country-code="PY"
+                       >Paraguay</option>
+
+
+
+                       <option
+                         value="Peru"
+
+                         data-alternative-spellings="PE"
+
+                         data-country-code="PE"
+                       >Peru</option>
+
+
+
+                       <option
+                         value="Philippines"
+
+                         data-alternative-spellings="PH Pilipinas"
+                         data-relevancy-booster="1.5"
+                         data-country-code="PH"
+                       >Philippines</option>
+
+
+
+                       <option
+                         value="Pitcairn"
+
+                         data-alternative-spellings="PN"
+                         data-relevancy-booster="0.5"
+                         data-country-code=""
+                       >Pitcairn</option>
+
+
+
+                       <option
+                         value="Poland"
+
+                         data-alternative-spellings="PL Polska"
+                         data-relevancy-booster="1.25"
+                         data-country-code="PL"
+                       >Poland</option>
+
+
+
+                       <option
+                         value="Portugal"
+
+                         data-alternative-spellings="PT Portuguesa"
+                         data-relevancy-booster="1.5"
+                         data-country-code="PT"
+                       >Portugal</option>
+
+
+
+                       <option
+                         value="Puerto Rico"
+
+                         data-alternative-spellings="PR"
+
+                         data-country-code="PR"
+                       >Puerto Rico</option>
+
+
+
+                       <option
+                         value="Qatar"
+
+                         data-alternative-spellings="QA قطر"
+
+                         data-country-code="QA"
+                       >Qatar</option>
+
+
+
+                       <option
+                         value="Réunion"
+
+                         data-alternative-spellings="RE Reunion"
+
+                         data-country-code="RE"
+                       >Réunion</option>
+
+
+
+                       <option
+                         value="Romania"
+
+                         data-alternative-spellings="RO Rumania Roumania România"
+
+                         data-country-code="RO"
+                       >Romania</option>
+
+
+
+                       <option
+                         value="Russian Federation"
+
+                         data-alternative-spellings="RU Rossiya Российская Россия"
+                         data-relevancy-booster="2.5"
+                         data-country-code="RU"
+                       >Russian Federation</option>
+
+
+
+                       <option
+                         value="Rwanda"
+
+                         data-alternative-spellings="RW"
+
+                         data-country-code="RW"
+                       >Rwanda</option>
+
+
+
+                       <option
+                         value="Saint-Barthélemy"
+
+                         data-alternative-spellings="BL St. Barthelemy"
+
+                         data-country-code="BL"
+                       >Saint-Barthélemy</option>
+
+
+
+                       <option
+                         value="Saint Helena"
+
+                         data-alternative-spellings="SH St."
+
+                         data-country-code="SH"
+                       >Saint Helena</option>
+
+
+
+                       <option
+                         value="Saint Kitts and Nevis"
+
+                         data-alternative-spellings="KN St."
+
+                         data-country-code="KN"
+                       >Saint Kitts and Nevis</option>
+
+
+
+                       <option
+                         value="Saint Lucia"
+
+                         data-alternative-spellings="LC St."
+
+                         data-country-code="LC"
+                       >Saint Lucia</option>
+
+
+
+                       <option
+                         value="Saint-Martin (French part)"
+
+                         data-alternative-spellings="MF St."
+
+                         data-country-code="MF"
+                       >Saint-Martin (French part)</option>
+
+
+
+                       <option
+                         value="Saint Pierre and Miquelon"
+
+                         data-alternative-spellings="PM St."
+
+                         data-country-code="PM"
+                       >Saint Pierre and Miquelon</option>
+
+
+
+                       <option
+                         value="Saint Vincent and Grenadines"
+
+                         data-alternative-spellings="VC St."
+
+                         data-country-code="VC"
+                       >Saint Vincent and Grenadines</option>
+
+
+
+                       <option
+                         value="Samoa"
+
+                         data-alternative-spellings="WS"
+
+                         data-country-code="WS"
+                       >Samoa</option>
+
+
+
+                       <option
+                         value="San Marino"
+
+                         data-alternative-spellings="SM RSM Repubblica"
+
+                         data-country-code="SM"
+                       >San Marino</option>
+
+
+
+                       <option
+                         value="Sao Tome and Principe"
+
+                         data-alternative-spellings="ST"
+
+                         data-country-code="ST"
+                       >Sao Tome and Principe</option>
+
+
+
+                       <option
+                         value="Saudi Arabia"
+
+                         data-alternative-spellings="SA السعودية"
+
+                         data-country-code="SA"
+                       >Saudi Arabia</option>
+
+
+
+                       <option
+                         value="Senegal"
+
+                         data-alternative-spellings="SN Sénégal"
+
+                         data-country-code="SN"
+                       >Senegal</option>
+
+
+
+                       <option
+                         value="Serbia"
+
+                         data-alternative-spellings="RS Србија Srbija"
+
+                         data-country-code="RS"
+                       >Serbia</option>
+
+
+
+                       <option
+                         value="Seychelles"
+
+                         data-alternative-spellings="SC"
+                         data-relevancy-booster="0.5"
+                         data-country-code="SC"
+                       >Seychelles</option>
+
+
+
+                       <option
+                         value="Sierra Leone"
+
+                         data-alternative-spellings="SL"
+
+                         data-country-code="SL"
+                       >Sierra Leone</option>
+
+
+
+                       <option
+                         value="Singapore"
+
+                         data-alternative-spellings="SG Singapura சிங்கப்பூர் குடியரசு 新加坡共和国"
+
+                         data-country-code="SG"
+                       >Singapore</option>
+
+
+
+                       <option
+                         value="Sint Maarten (Dutch part)"
+
+                         data-alternative-spellings="SX"
+
+                         data-country-code="SX"
+                       >Sint Maarten (Dutch part)</option>
+
+
+
+                       <option
+                         value="Slovakia"
+
+                         data-alternative-spellings="SK Slovenská Slovensko"
+
+                         data-country-code="SK"
+                       >Slovakia</option>
+
+
+
+                       <option
+                         value="Slovenia"
+
+                         data-alternative-spellings="SI Slovenija"
+
+                         data-country-code="SI"
+                       >Slovenia</option>
+
+
+
+                       <option
+                         value="Solomon Islands"
+
+                         data-alternative-spellings="SB"
+
+                         data-country-code="SB"
+                       >Solomon Islands</option>
+
+
+
+                       <option
+                         value="Somalia"
+
+                         data-alternative-spellings="SO الصومال"
+
+                         data-country-code="SO"
+                       >Somalia</option>
+
+
+
+                       <option
+                         value="South Africa"
+
+                         data-alternative-spellings="ZA RSA Suid-Afrika"
+
+                         data-country-code="ZA"
+                       >South Africa</option>
+
+
+
+                       <option
+                         value="South Georgia and the South Sandwich Islands"
+
+                         data-alternative-spellings="GS"
+
+                         data-country-code=""
+                       >South Georgia and the South Sandwich Islands</option>
+
+
+
+                       <option
+                         value="South Sudan"
+
+                         data-alternative-spellings="SS"
+
+                         data-country-code="SS"
+                       >South Sudan</option>
+
+
+
+                       <option
+                         value="Spain"
+
+                         data-alternative-spellings="ES España"
+                         data-relevancy-booster="2"
+                         data-country-code="ES"
+                       >Spain</option>
+
+
+
+                       <option
+                         value="Sri Lanka"
+
+                         data-alternative-spellings="LK ශ්‍රී ලංකා இலங்கை Ceylon"
+
+                         data-country-code="LK"
+                       >Sri Lanka</option>
+
+
+
+                       <option
+                         value="Sudan"
+
+                         data-alternative-spellings="SD السودان"
+
+                         data-country-code="SD"
+                       >Sudan</option>
+
+
+
+                       <option
+                         value="Suriname"
+
+                         data-alternative-spellings="SR शर्नम् Sarnam Sranangron"
+
+                         data-country-code="SR"
+                       >Suriname</option>
+
+
+
+                       <option
+                         value="Svalbard and Jan Mayen Islands"
+
+                         data-alternative-spellings="SJ"
+                         data-relevancy-booster="0.5"
+                         data-country-code="SJ"
+                       >Svalbard and Jan Mayen Islands</option>
+
+
+
+                       <option
+                         value="Swaziland"
+
+                         data-alternative-spellings="SZ weSwatini Swatini Eswatini Ngwane"
+
+                         data-country-code="SZ"
+                       >Swaziland</option>
+
+
+
+                       <option
+                         value="Sweden"
+
+                         data-alternative-spellings="SE Sverige"
+                         data-relevancy-booster="1.5"
+                         data-country-code="SE"
+                       >Sweden</option>
+
+
+
+                       <option
+                         value="Switzerland"
+
+                         data-alternative-spellings="CH Swiss Confederation Schweiz Suisse Svizzera Svizra"
+                         data-relevancy-booster="1.5"
+                         data-country-code="CH"
+                       >Switzerland</option>
+
+
+
+                       <option
+                         value="Syrian Arab Republic (Syria)"
+
+                         data-alternative-spellings="SY Syria سورية"
+
+                         data-country-code="SY"
+                       >Syrian Arab Republic (Syria)</option>
+
+
+
+                       <option
+                         value="Taiwan"
+
+                         data-alternative-spellings="TW 台灣 臺灣"
+
+                         data-country-code="TW"
+                       >Taiwan</option>
+
+
+
+                       <option
+                         value="Tajikistan"
+
+                         data-alternative-spellings="TJ Тоҷикистон Toçikiston"
+
+                         data-country-code="TJ"
+                       >Tajikistan</option>
+
+
+
+                       <option
+                         value="Tanzania, United Republic of"
+
+                         data-alternative-spellings="TZ"
+
+                         data-country-code="TZ"
+                       >Tanzania, United Republic of</option>
+
+
+
+                       <option
+                         value="Thailand"
+
+                         data-alternative-spellings="TH ประเทศไทย Prathet Thai"
+
+                         data-country-code="TH"
+                       >Thailand</option>
+
+
+
+                       <option
+                         value="Timor-Leste"
+
+                         data-alternative-spellings="TL"
+
+                         data-country-code="TL"
+                       >Timor-Leste</option>
+
+
+
+                       <option
+                         value="Togo"
+
+                         data-alternative-spellings="TG Togolese"
+
+                         data-country-code="TG"
+                       >Togo</option>
+
+
+
+                       <option
+                         value="Tokelau"
+
+                         data-alternative-spellings="TK"
+                         data-relevancy-booster="0.5"
+                         data-country-code="TK"
+                       >Tokelau</option>
+
+
+
+                       <option
+                         value="Tonga"
+
+                         data-alternative-spellings="TO"
+
+                         data-country-code="TO"
+                       >Tonga</option>
+
+
+
+                       <option
+                         value="Trinidad and Tobago"
+
+                         data-alternative-spellings="TT"
+
+                         data-country-code="TT"
+                       >Trinidad and Tobago</option>
+
+
+
+                       <option
+                         value="Tunisia"
+
+                         data-alternative-spellings="TN تونس"
+
+                         data-country-code="TN"
+                       >Tunisia</option>
+
+
+
+                       <option
+                         value="Turkey"
+
+                         data-alternative-spellings="TR Türkiye Turkiye"
+
+                         data-country-code="TR"
+                       >Turkey</option>
+
+
+
+                       <option
+                         value="Turkmenistan"
+
+                         data-alternative-spellings="TM Türkmenistan"
+
+                         data-country-code="TM"
+                       >Turkmenistan</option>
+
+
+
+                       <option
+                         value="Turks and Caicos Islands"
+
+                         data-alternative-spellings="TC"
+                         data-relevancy-booster="0.5"
+                         data-country-code="TC"
+                       >Turks and Caicos Islands</option>
+
+
+
+                       <option
+                         value="Tuvalu"
+
+                         data-alternative-spellings="TV"
+                         data-relevancy-booster="0.5"
+                         data-country-code="TV"
+                       >Tuvalu</option>
+
+
+
+                       <option
+                         value="Uganda"
+
+                         data-alternative-spellings="UG"
+
+                         data-country-code="UG"
+                       >Uganda</option>
+
+
+
+                       <option
+                         value="Ukraine"
+
+                         data-alternative-spellings="UA Ukrayina Україна"
+
+                         data-country-code="UA"
+                       >Ukraine</option>
+
+
+
+                       <option
+                         value="United Arab Emirates"
+
+                         data-alternative-spellings="AE UAE الإمارات"
+
+                         data-country-code="AE"
+                       >United Arab Emirates</option>
+
+
+
+                       <option
+                         value="United States of America"
+
+                         data-alternative-spellings="US USA United States of America"
+                         data-relevancy-booster="3.5"
+                         data-country-code="US"
+                       >United States of America</option>
+
+
+
+                       <option
+                         value="United States Minor Outlying Islands"
+
+                         data-alternative-spellings="UM"
+
+                         data-country-code=""
+                       >United States Minor Outlying Islands</option>
+
+
+
+                       <option
+                         value="Uruguay"
+
+                         data-alternative-spellings="UY"
+
+                         data-country-code="UY"
+                       >Uruguay</option>
+
+
+
+                       <option
+                         value="Uzbekistan"
+
+                         data-alternative-spellings="UZ Ўзбекистон O&#39;zbekstan O‘zbekiston"
+
+                         data-country-code="UZ"
+                       >Uzbekistan</option>
+
+
+
+                       <option
+                         value="Vanuatu"
+
+                         data-alternative-spellings="VU"
+
+                         data-country-code="VU"
+                       >Vanuatu</option>
+
+
+
+                       <option
+                         value="Venezuela (Bolivarian Republic of)"
+
+                         data-alternative-spellings="VE"
+
+                         data-country-code="VE"
+                       >Venezuela (Bolivarian Republic of)</option>
+
+
+
+                       <option
+                         value="Viet Nam"
+
+                         data-alternative-spellings="VN Việt Nam Vietnam"
+                         data-relevancy-booster="1.5"
+                         data-country-code="VN"
+                       >Viet Nam</option>
+
+
+
+                       <option
+                         value="British Virgin Islands"
+
+                         data-alternative-spellings="VG"
+                         data-relevancy-booster="0.5"
+                         data-country-code="VG"
+                       >British Virgin Islands</option>
+
+
+
+                       <option
+                         value="Virgin Islands, US"
+
+                         data-alternative-spellings="VI"
+                         data-relevancy-booster="0.5"
+                         data-country-code="VI"
+                       >Virgin Islands, US</option>
+
+
+
+                       <option
+                         value="Wallis and Futuna Islands"
+
+                         data-alternative-spellings="WF"
+                         data-relevancy-booster="0.5"
+                         data-country-code="WF"
+                       >Wallis and Futuna Islands</option>
+
+
+
+                       <option
+                         value="Western Sahara"
+
+                         data-alternative-spellings="EH لصحراء الغربية"
+
+                         data-country-code="EH"
+                       >Western Sahara</option>
+
+
+
+                       <option
+                         value="Yemen"
+
+                         data-alternative-spellings="YE اليمن"
+
+                         data-country-code="YE"
+                       >Yemen</option>
+
+
+
+                       <option
+                         value="Zambia"
+
+                         data-alternative-spellings="ZM"
+
+                         data-country-code="ZM"
+                       >Zambia</option>
+
+
+
+                       <option
+                         value="Zimbabwe"
+
+                         data-alternative-spellings="ZW"
+
+                         data-country-code="ZW"
+                       >Zimbabwe</option>
+
+
+                 </select>
+               </div>
+-->
+
+
+
+
+
+
+
+               <input type="hidden" name="_csrf" value="JxANdSOO-n4GleBk5xdybmrEuvUHt2MWjFMQ" />
+
+
+
+               <a href="offline-full-name" id="button" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">Continue</a>
+
+
+<!--               </form>-->
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

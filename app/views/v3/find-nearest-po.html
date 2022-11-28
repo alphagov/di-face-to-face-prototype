@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-enter-phone" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Find your nearest Post Office branch that offers this service
+    </h1>
+
+    <form action="" method="post" class="form">
+
+
+
+
+    <div class="govuk-form-group ">
+
+
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="postcode-input">
+          Enter your postcode
+        </label>
+      </h1>
+
+        <div id="event-name-hint" class="govuk-hint">
+          This must be a UK postcode, for example SW1A 2AA
+        </div>
+
+
+        <input
+        class="govuk-input govuk-input--width-10 "
+        name="postcode-input"
+
+
+        type="text"
+        id="postcode-input"
+        value=""
+        autocomplete="postal-code"
+        >
+
+
+    </div>
+
+
+
+      <!-- <input type="submit" class="govuk-button" value="Look up address" id="lookup"> -->
+
+
+      <a href="nearest-po-list" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+  </form>
+
+  </div>
+
+  </div>
+{% endblock %}

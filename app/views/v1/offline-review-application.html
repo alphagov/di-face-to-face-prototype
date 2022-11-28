@@ -1,0 +1,375 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_dbs.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="offline-check-details" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+     <h1 class="govuk-heading-xl page-heading">Review your application</h1>
+
+
+
+
+
+
+     <form action="" method="post" class="form">
+       <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+       <!--   * `cya-questions-short` for short questions -->
+       <!--   * `cya-questions-long` for long questions -->
+       <!--   * none for single group of q&a -->
+       <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+
+         <div id="name" class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Name
+           </dt>
+           <dd class="govuk-summary-list__value">
+
+
+             John
+
+             Doe
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a
+
+                 href="/post-office/edit/po-current-name"
+
+               id="edit-name"
+             >
+               Change<span class="govuk-visually-hidden"> Name</span>
+             </a>
+           </dd>
+         </div>
+
+
+         <div id="other-names" class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Other names
+           </dt>
+           <dd class="govuk-summary-list__value">
+
+
+               I haven&#39;t used any other names
+
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a href="/questions/edit/names" id="edit-names">
+               Change<span class="govuk-visually-hidden"> Other names</span>
+             </a>
+           </dd>
+         </div>
+
+
+         <div id="sex" class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Sex
+           </dt>
+           <dd class="govuk-summary-list__value">
+
+             Male
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a
+
+                 href="/questions/edit/sex"
+
+               id="edit-sex"
+             >
+               Change<span class="govuk-visually-hidden"> Sex</span>
+             </a>
+           </dd>
+         </div>
+
+
+         <div id="date-of-birth" class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Date of birth
+           </dt>
+           <dd class="govuk-summary-list__value">
+
+
+
+      3 March 1980
+
+
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a
+
+                 href="/post-office/edit/po-date-of-birth"
+
+               id="edit-date-of-birth"
+             >
+               Change<span class="govuk-visually-hidden"> Date of birth</span>
+             </a>
+           </dd>
+         </div>
+
+
+         <div id="place-of-birth" class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Place of birth
+           </dt>
+           <dd class="govuk-summary-list__value">
+
+             United Kingdom<br>
+
+             London
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a href="/questions/edit/place-of-birth" id="edit-place-of-birth">
+               Change<span class="govuk-visually-hidden"> Place of birth</span>
+             </a>
+           </dd>
+         </div>
+
+
+         <div id="addresses" class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Address history (last 5 years)
+           </dt>
+           <dd class="govuk-summary-list__value">
+
+
+
+
+
+     From 1990 to now
+       <span class="govuk-visually-hidden">lived at</span><br>
+
+
+
+             10 Whitechapel High Street<br>
+
+
+           London<br>
+
+
+             United Kingdom<br>
+
+
+             E1 8QS<br>
+
+
+
+
+
+
+
+
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a href="/questions/edit/addresses" id="edit-addresses">
+               Change<span class="govuk-visually-hidden"> Address history (last 5 years)</span>
+             </a>
+           </dd>
+         </div>
+
+       </dl>
+
+       <h2 class="govuk-heading-l page-heading" id="postoffice-documents">Identity document details</h2>
+
+         <h3 class="govuk-heading-m" id="bank-statement">Bank or building society statement</h3>
+
+         <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+         <!--   * `cya-questions-short` for short questions -->
+         <!--   * `cya-questions-long` for long questions -->
+         <!--   * none for single group of q&a -->
+         <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+
+           <div id="uid-bank-statement" class="govuk-summary-list__row">
+             <dt class="govuk-summary-list__key">
+               Account number
+             </dt>
+             <dd class="govuk-summary-list__value">
+                 1343<br/>
+             </dd>
+             <dd class="govuk-summary-list__actions">
+               <a href="/post-office/po-document-detail/edit/bank-statement" id="edit-bank-statement">
+                 Change<span class="govuk-visually-hidden"> Bank or building society statement</span>
+               </a>
+             </dd>
+           </div>
+
+
+             <div id="issue-date-bank-statement" class="govuk-summary-list__row">
+               <dt class="govuk-summary-list__key">
+                 Issue date
+               </dt>
+               <dd class="govuk-summary-list__value">
+
+
+      18 July 2022
+
+   <br/>
+               </dd>
+               <dd class="govuk-summary-list__actions">
+                 <a href="/post-office/po-document-detail/edit/bank-statement" id="edit-bank-statement">
+                   Change<span class="govuk-visually-hidden"> Bank or building society statement</span>
+                 </a>
+               </dd>
+             </div>
+
+
+         </dl>
+
+
+         <h3 class="govuk-heading-m" id="birth-certificate">Birth certificate</h3>
+
+         <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+         <!--   * `cya-questions-short` for short questions -->
+         <!--   * `cya-questions-long` for long questions -->
+         <!--   * none for single group of q&a -->
+         <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+
+           <div id="uid-birth-certificate" class="govuk-summary-list__row">
+             <dt class="govuk-summary-list__key">
+               Certificate number
+             </dt>
+             <dd class="govuk-summary-list__value">
+                 2234<br/>
+             </dd>
+             <dd class="govuk-summary-list__actions">
+               <a href="/post-office/po-document-detail/edit/birth-certificate" id="edit-birth-certificate">
+                 Change<span class="govuk-visually-hidden"> Birth certificate</span>
+               </a>
+             </dd>
+           </div>
+
+
+
+         </dl>
+
+
+         <h3 class="govuk-heading-m" id="council-tax">Council Tax statement</h3>
+
+         <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+         <!--   * `cya-questions-short` for short questions -->
+         <!--   * `cya-questions-long` for long questions -->
+         <!--   * none for single group of q&a -->
+         <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+
+           <div id="uid-council-tax" class="govuk-summary-list__row">
+             <dt class="govuk-summary-list__key">
+               Account or reference number
+             </dt>
+             <dd class="govuk-summary-list__value">
+                 3333<br/>
+             </dd>
+             <dd class="govuk-summary-list__actions">
+               <a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+                 Change<span class="govuk-visually-hidden"> Council Tax statement</span>
+               </a>
+             </dd>
+           </div>
+
+
+             <div id="issue-date-council-tax" class="govuk-summary-list__row">
+               <dt class="govuk-summary-list__key">
+                 Issue date
+               </dt>
+               <dd class="govuk-summary-list__value">
+
+
+      23 February 2022
+
+   <br/>
+               </dd>
+               <dd class="govuk-summary-list__actions">
+                 <a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+                   Change<span class="govuk-visually-hidden"> Council Tax statement</span>
+                 </a>
+               </dd>
+             </div>
+
+
+         </dl>
+
+
+
+       <h2 class="govuk-heading-l">Application details</h2>
+
+       <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+
+
+         <div id="ni-number" class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             UK National Insurance number
+           </dt>
+           <dd class="govuk-summary-list__value">
+
+             I don&#39;t have a UK National Insurance number / I cannot provide the details right now
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a href="/questions/edit/national-insurance" id="edit-national-insurance">
+               Change<span class="govuk-visually-hidden"> UK National Insurance number</span>
+             </a>
+           </dd>
+         </div>
+
+
+         <div id="send-cert" class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Address to send your certificate to
+           </dt>
+           <dd class="govuk-summary-list__value">
+
+
+         10 Whitechapel High Street<br>
+
+
+       London<br>
+
+
+         United Kingdom<br>
+
+
+         E1 8QS<br>
+
+
+
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a href="/questions/edit/send-cert" id="edit-send-cert">
+               Change<span class="govuk-visually-hidden"> Address to send your certificate to</span>
+             </a>
+           </dd>
+         </div>
+       </dl>
+
+
+     <input type="hidden" name="_csrf" value="FfwQ72tV-H9h3OqJX3pxZDmQJ56_UAUeYE9g" />
+
+
+
+     <a href="offline-final-confirm" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+
+       <p><a href="javascript: window.print()" id="print-page">Print this page</a></p>
+     </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}
