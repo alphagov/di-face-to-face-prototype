@@ -1,0 +1,186 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Using the ID Check app
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v2.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+  <!-- <a class="govuk-back-link" href="app-doc-check">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+    .slides {
+        background-color: #1d70b8;
+        color: #ffffff;
+        /*margin-top: 15px;*/
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        /*min-height: 480px;*/
+        padding: 30px; }
+    @media (min-width: 40.0625em) {
+        .slides {
+            /*margin-top: 30px;*/ } }
+    @media (min-width: 40.0625em) {
+        .slides {
+            padding: 45px; } }
+    @media (min-width: 48.0625em) {
+        .slides {
+            padding: 75px 70px; } }
+    .slides h1 {
+        margin-top: 0;
+        margin-bottom: 30px;
+        color: #ffffff; }
+    @media (min-width: 20em) and (max-width: 19.99em) {
+        .slides h1 {
+            margin-top: 15px;
+            margin-bottom: 15px; } }
+    .slides h2,
+    .slides span {
+        color: #ffffff; }
+    .slides p,
+    .slides label,
+    .slides ul {
+        color: #ffffff;
+        font-family: "GDS Transport", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+        font-size: 18px;
+        font-size: 1.125rem;
+        line-height: 1.11111; }
+    @media (min-width: 40.0625em) {
+        .slides p,
+        .slides label,
+        .slides ul {
+            font-size: 24px;
+            font-size: 1.5rem;
+            line-height: 1.25; } }
+    .slides a,
+    .slides a:focus,
+    .slides a:hover {
+        color: inherit; }
+    .slides a:focus {
+        color: #1d70b8;
+        box-shadow: 0 -2px #ffffff, 0 4px #003078;
+        background-color: #ffffff; }
+    .slides .actions {
+        margin: 30px 0 15px; }
+    .slides .actions .button {
+        margin-bottom: 0;
+        background: #ffffff;
+        color: #1d70b8;
+        font-weight: bold;
+        box-shadow: 0 2px 0 #134876; }
+    .slides .slides-app-logo {
+        max-width: 200px; }
+    .slides .slides-app-logo img {
+        width: 72px;
+        margin-bottom: 15px; }
+    @media (min-width: 40.0625em) {
+        .slides .slides-app-logo {
+            width: 140px; }
+        .slides .slides-app-logo img {
+            width: 150px; } }
+    .slides details summary {
+        color: #ffffff; }
+    .slides details .panel {
+        border-left-color: #ffffff; }
+    .slides details p,
+    .slides details ul {
+        font-size: 1em; }
+    .slides details summary:hover {
+        color: #f3f2f1; }
+    .slides .govuk-error-summary__list a {
+        color: #ffffff; }
+    @media (min-width: 20em) and (max-width: 40.0525em) {
+        .hide-mobile {
+            display: none; } }
+    @media (min-width: 40.0625em) {
+        .show-mobile {
+            display: none; }
+    }
+</style>
+
+<div class="content-inner slides">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <div class="slides-app-logo">
+        <img src="/public/images/app-logo.svg" alt="GOV.UK App logo">
+      </div>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="disclaimer" method="get">
+
+        <h1 class="govuk-heading-l">Using the ID Check app</h1>
+
+        <p>We will guide you to download and use a GOV.UK app to confirm your identity. </p>
+
+        <h2 class="govuk-heading-m">You will use the app to:</h2>
+
+        <ul>
+          <li>take a photo of your UK driving licence</li>
+          <li>take a scan of your face</li>
+        </ul>
+
+        <div class="actions govuk-!-padding-bottom-3">
+          <a href="outside-scope" class="govuk-button verify-inverse-btn button">Continue</a>
+        </div>
+
+        <!-- <p><a href="/doc-check/app-cri/v1/return?reason=unsuitable">Prove my identity another way</a>. </p> -->
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-s">How we use your data</h2>
+    <p>We collect your data securely and delete it when no longer needed. Read our full <a href="javascript:void(0)">privacy notice</a>. </p>
+
+    <h2 class="govuk-heading-s">Accessibility</h2>
+    <p>Read our <a href="javascript:void(0)">accessibility statement</a>.</p>
+  </div>
+</div>
+
+</br>
+
+<div class="govuk-form-group">
+           <details class="govuk-details" data-module="govuk-details">
+             <summary class="govuk-details__summary help-text-link">
+
+               <span class="govuk-details__summary-text"> I want to prove my identity another way</span>
+             </summary>
+             <div class="govuk-details__text">
+
+               <h2 class="govuk-heading-s">Enter your UK passport details and answer some security questions</h2>
+
+               <p>We can check your UK passport details and ask you some questions that only you will know. </p>
+
+               <p>You can <a href='./outside-scope'>complete this online form.</a> It will take you around 15 minutes.</p>
+
+               <h2 class="govuk-heading-s">Prove your identity in person</h2>
+               <p>If you are not able to prove your identity online, you can <a href='./offline-intro'>prove your identity in person.</a></p>
+
+               <p>This process will take a lot longer than proving your identity online.</p>
+
+               <p>You will need to complete a short online form, and take your identity document to a Post Office.</p>
+
+
+
+
+             </div>
+           </details>
+</div>
+
+
+
+{% endblock %}
