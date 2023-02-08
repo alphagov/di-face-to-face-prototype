@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+               <h1 class="govuk-heading-xl page-heading">Your GOV.UK One Login account</h1>
+
+               <p>You're signed in as <a class="govuk-body govuk-!-font-weight-bold">your.name@example.com</a></p>
+
+               <h2 class="govuk-heading-m page-heading">Services you sign in to with your GOV.UK account</h2>
+
+
+               <style type="text/css">
+                   .govuk-notification-banner {
+                       background-color: #1d70b8;
+                       color:#1d70b8;
+                       border-color:#b1b4b6;
+                       border-width: thin;
+
+                     }
+                 </style>
+
+                 <style type="text/css">
+                     .govuk-notification-banner__title {
+                         color:#0b0c0c;
+                         
+
+                       }
+                   </style>
+
+               
+
+  <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+    
+          </div>
+      <div class="govuk-notification-banner__content">
+        <h2 class="govuk-heading-s">Sign your mortgage deed</h2>
+        <p>Our digital mortgage service allows homeowners who are remortgaging to sign their mortgage deed quickly and securely.</p>
+<p><a class="govuk-notification-banner__link" href="./return-successful-identity">Go to Sign your mortgage deed</a></p>
+<p class="govuk-hint">Last used: 10 January 2023</p>
+
+</div>
+</div>
+
+
+<style type="text/css">
+    .govuk-panel--confirmation {
+        background-color: #f3f2f1;
+        color:#000000;
+        text-align: left;
+
+      }
+  </style>
+
+
+  <div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-heading-m page-heading">
+    About GOV.UK One Login accounts
+  </h1>
+  <div class="govuk-panel__body">
+    <p>GOV.UK One Login accounts are new. At the moment you can only use your GOV.UK One Login account with a few services.</p>
+  
+<p>GOV.UK One Login accounts are currently separate from other government accounts (for example Government Gateway or Universal Credit).</p>
+<p>In the future, you'll be able to use your GOV.UK One Login account to sign in to most services on GOV.UK.</p>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}
