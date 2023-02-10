@@ -5,11 +5,20 @@ We need to check your details
 {% endblock %}
 
 {% block header %}
-{% include "../includes/header_v1.html" %}
+{% include "../includes/header_v3.html" %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
 {% endblock %}
 
 {% block beforeContent %}
-{% include "../includes/phase-banner.html" %}
 {% endblock %}
 
 {% block content %}
@@ -40,12 +49,18 @@ We need to check your details
                        }
                    </style>
 
+                   <style>
+                    .govuk-phase-banner{
+                      padding-left: 20px;
+                    }
+                   </style>
+
                
 
 <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
   <div class="govuk-notification-banner__content">
-  <p><a class="govuk-notification-banner__link" href="./loading-page-short">Sign your mortgage deed</a></p>
-  <p class="govuk-hint">Last used: 15 August 2022</p>
+  <p><a class="govuk-notification-banner__link" href="./loading-page2">Sign your mortgage deed</a></p>
+  <p class="govuk-hint">Last used: 10 February 2023</p>
   
   </div>
   </div>
@@ -69,6 +84,8 @@ We need to check your details
     <p>GOV.UK One Login is new. At the moment you can only use it with:</p>
 
     <ul class="govuk-list govuk-list--bullet">
+     <li>Apply for a vehicle operator licence</li>
+     <li>Apply to become a registered social worker in England</li>
      <li>GOV.UK email subscriptions</li>
      <li>LITE (Licensing for International Trade and Enterprise)</li>
      <li>Sign your mortgage deed</li>
