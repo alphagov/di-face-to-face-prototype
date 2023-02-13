@@ -1,3 +1,4 @@
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -18,26 +19,25 @@
 <div class="govuk-grid-row">
  <div class="govuk-grid-column-two-thirds">
 
-   {{ govukErrorSummary({
-  titleText: "There is a problem",
-  errorList: [
-    {
-      text: "Select a way to prove your identity",
-      href: "#identity-method"
-    }
-  ]
-}) }}
+  {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Select a way to prove your identity",
+        href: "#identity-method"
+      }
+    ]
+  }) }}
 
    <h1 class="govuk-heading-xl">
-     Ways to prove your identity
+     How do you want to prove your identity?
    </h1>
 
-  <!-- <p class="govuk-body-m">There are a few ways you can prove your identity.</p> -->
+  <p>You can prove your identity online or in person at a Post Office. The quickest way to prove your identity is online - this takes around 10 minutes.</p> 
 
    <h2 class="govuk-heading-s">Prove your identity online</h2>
 
-   <p>The quickest way to prove your identity is through downloading a GOV.UK smartphone app.</p>
-   <p>If you cannot download a smartphone app, you can still prove your identity online by answering some security questions.</p>
+   <p>You’ll need to scan your photo ID and take a photo of your face with your selfie camera using a GOV.UK app. If you cannot use an app, you can still prove your identity online by answering some security questions.</p>
 
 
    <!-- <h2 class="govuk-heading-m">What you'll need</h2>
@@ -49,7 +49,7 @@
 
    <h2 class="govuk-heading-s">Prove your identity in person</h2>
 
-   <p>You will need to take a photo ID to a Post Office. A member of staff will take a photo of your face to verify your identity. Once your identity has been proven, you must return online to your GOV.UK account to access the service you need.</p>
+   <p>You’ll need to complete an online form and take a photo ID to a Post Office. A member of staff will scan your photo ID and take a photo of you. You’ll get an email with the outcome of your identity check - usually within a day of visiting the Post Office.</p>
 
 
 
@@ -58,15 +58,14 @@
 <!--<p><a href="./fallback" class="govuk-link" rel="noreferrer noopener">I do not have any of these documents</a></p>-->
 
    <br/>
-
-
-   <h3 class="govuk-heading-m">
+<!--
+   <h1 class="govuk-heading-m">
      How do you want to prove your identity?
-   </h3>
-
+   </h1>
+  -->
 {% from "govuk/components/radios/macro.njk"              import govukRadios %}
 <div class="">
-<form action="device" method="post">
+<form action="id-decide-triage-error" method="post">
 
      {{ govukRadios({
      classes: "govuk-radios",
@@ -85,8 +84,8 @@
        }
      ],
      errorMessage: {
-       text: "Select a way to prove your identity"
-     }
+      text: "Select a way to prove your identity"
+    }
    }) }}
 
        <!-- <input class="govuk-input" id="service" name="service" type="hidden" value="dbs"> -->
