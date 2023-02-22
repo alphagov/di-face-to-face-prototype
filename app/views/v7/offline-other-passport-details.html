@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Enter your details exactly as they appear on your UK passport
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "../includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="./offline-select-document-triage">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        When does your non-UK passport expire?</h1>
+
+        <p>We need this information to check that your photo ID is valid.</p><br>
+
+      <form class="form" action="offline-full-name" method="post">
+
+        <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+      <div id="passport-issued-hint" class="govuk-hint">
+        For example, 31 3 2025
+      </div>
+      <br>
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+  </div>
+
+
+
+  <button href="offline-full-name" class="govuk-button" data-module="govuk-button">Continue</button>
+
+          </form>
+          <p><a href="./offline-full-name" class="govuk-link govuk-link--no-visited-state">My photo ID does not have an expiry date</a></p>
+
+
+
+      </div>
+    </div>
+
+
+
+
+  {% endblock %}
