@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+  <!-- {% if prevURL === "http://localhost:3000/preauth/mvp/create-spinner" or prevURL === "https://gds-identity.herokuapp.com/preauth/mvp/create-spinner" or prevURL === "https://gds-identity-ur.herokuapp.com/preauth/mvp/create-spinner" %}
+    <a class="govuk-back-link" href="{{ preAuth }}">Back</a>
+  {% else %}
+    <a href="gov-account" class="govuk-back-link">Back</a>
+  {% endif %} -->
+{% endblock %}
+
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+     <h1 class="govuk-heading-xl page-heading">How to prove your identity at a Post Office</h1>
+
+
+     <h2 class="govuk-heading-m">1. Enter your details on GOV.UK</h2>
+
+     <p>You'll need to choose a photo ID you can take to a Post Office</p>
+
+     <p>Then you can enter your name, date of birth and current home address (and your previous address if you’ve recently moved).</p>
+
+     <h2 class="govuk-heading-m">2. Take your photo ID and customer letter to a Post Office</h2>
+
+     <p>After entering your details, you’ll get a confirmation email and a customer letter from the Post Office.</p>
+
+     <p>Take your customer letter and photo ID to a Post Office that offers ‘in-branch verification’ within 10 days.</p>
+
+     <p>A member of Post Office staff will scan your photo ID and take a photo of you.</p>
+
+
+
+
+          <div class="govuk-inset-text">
+            Not all Post Offices offer this service. You can <a href="https://www.postoffice.co.uk/identity/in-branch-verification-service#:~:text=Find%20your%20nearest%20branch" class="govuk-link govuk-link--no-visited-state" rel="noreferrer noopener" target="_blank">find your nearest Post Office that offers in branch verification (opens in new tab).</a>
+            </div>
+
+     <h2 class="govuk-heading-m">3. Wait for your result</h2>
+
+     <p>You’ll get an email with the outcome of your identity check - usually within a day of visiting the Post Office.</p>
+
+
+
+     <a class="govuk-button govuk-!-margin-top-4" role="button" href="./offline-select-document-triage">Continue</a>
+
+     <p><a href="id-decide-triage" class="govuk-link govuk-link--no-visited-state"> I want to prove my identity another way</a></p>
+
+
+  </div>
+</div>
+
+{% endblock %}
