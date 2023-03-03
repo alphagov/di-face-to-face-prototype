@@ -18,13 +18,57 @@ We need to check your details
          <div class="govuk-grid-row">
            <div class="govuk-grid-column-two-thirds">
 
+            <style type="text/css">
+              .govuk-notification-banner {
+                  border-color:#0cb02a;
+                  border-width: thick;
 
-     <h1 class="govuk-heading-xl page-heading">You have already proved your identity</h1>
+                }
+            </style>
+
+            <style type="text/css">
+                .govuk-notification-banner__title {
+                    color:#0b0c0c;
+                    
+
+                  }
+              </style>
+
+              <style>
+               .govuk-phase-banner{
+                 padding-left: 20px;
+               }
+              </style>
+
+          
+
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+<div class="govuk-notification-banner__content">
+<h1 class="govuk-heading-l">You have proved your identity</h1>
+<p class="govuk-body">You have already proved your identity with GOV.UK One Login. You would have done this online or in person at the Post Office.</p>
+
+</div>
+</div>
+<!--
+
+            <style type="text/css">
+              .govuk-panel--confirmation {
+                  background-color: #ffffff;
+                  color:#000000;
+          
+                }
+            </style>
+          
+
+            {{ govukPanel({
+              titleText: "Go to a Post Office within 10 days to finish proving your identity"
+            }) }}
+          -->
+
 
 
      <form action="" method="post" class="form">
 
-      <p>You proved your identity when you used your GOV.UK One Login before. You will not need to do it again to use this service.</p>
 
       <h2 class="govuk-heading-m">Check your details</h2>
 
@@ -123,6 +167,30 @@ We need to check your details
                    
                  </div>
 
+                 <div id="enter-id" class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Contact details
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+
+                    07500 123456<br>
+                    
+                    john.doe@example.com
+
+
+              
+         
+
+      
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class= "govuk-link--no-visited-state" href="">
+                      Change<span class="govuk-visually-hidden"> Dob</span>
+                    </a>
+                  </dd>
+                  
+                </div>
+
           
 
              </dl>
@@ -145,7 +213,7 @@ We need to check your details
 
 <input type="hidden" name="_csrf" value="FfwQ72tV-H9h3OqJX3pxZDmQJ56_UAUeYE9g" />
 
-<a href="./loading-page" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+<a href="./return-journey-continue" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
 
 
 

@@ -16,23 +16,40 @@ Prove your identity with a GOV.UK account
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form action="./auth-gov-account" method="post">
+    <form action="./id-decide-triage" method="post">
 
       <h1 class="govuk-heading-l">You must have a photo ID to prove your identity with a GOV.UK One Login</h1>
 
       <p>You can only prove your identity with a GOV.UK One Login if you have one of the following types of photo ID.</p>
 
-      <h2 class="govuk-heading-m">UK photocard driving licence</h2>
+      <h2 class="govuk-heading-m">UK and EU photocard driving licences</h2>
 
       <p>You'll need a valid full or provisional driving licence with your photo on it.</p>
 
-      <h2 class="govuk-heading-m">UK or non-UK biometric passport</h2>
+      <h2 class="govuk-heading-m">UK or non-UK passpors</h2>
 
-      <p>Biometric passports (or 'ePassports') have a small rectangular symbol on the front cover. You can use them to go through eGates at airpots and train stations.</p>
+      <p>You can prove your identity with any type of passport, including biometric passports (or 'ePassports'). These passports have a small rectangular symbol on the front cover. You can use them to go through eGates at airpots and train stations.</p>
 
       <div class="govuk-inset-text">
         If you have an expired UK biometric passport, you can still use it to prove your identity up to 18 months after the expiry date.
       </div>
+
+      <h2 class="govuk-heading-m">Identity cards</h2>
+
+      <p>You can prove your identity with any of the following identity cards:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>biometric residence permit (BRP)</li>
+        <li>CitizenCard</li>
+        <li>national identity card from a European Economic Area (EEA) country</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Proof of age cards</h2>
+
+      <p>You can currently only prove your identity with a Young Scot National Entitlement Card (NEC).</p>
+
+
+
 
       <h2 class="govuk-heading-m">Do you have one of these types of photo ID?</h2>
 
@@ -42,7 +59,7 @@ Prove your identity with a GOV.UK account
         
         items: [
           {
-            value: "yes~./auth-gov-account",
+            value: "yes~./id-decide-triage",
             text: "Yes"
           },
           {
