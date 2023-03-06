@@ -11,7 +11,7 @@ We need to check your details
 {% block beforeContent %}
 {% include "../includes/phase-banner.html" %}
 
-<a href="offline-home-address" class="govuk-back-link">Back</a>
+<a href="offline-previous-address" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,25 +26,21 @@ We need to check your details
 
 
                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                 <h1 class="govuk-fieldset__heading">Choose your address</h1>
+                 <h1 class="govuk-fieldset__heading">Choose your previous address</h1>
                </legend>
 
                <p>Postcode
                 <br>
-                <b>LS1 3BE</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="govuk-link" href="./offline-home-address">Change</a>
+                <b>SS8 8QA</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="govuk-link" href="./offline-home-address">Change</a>
               </p>
 
               <div class="govuk-form-group">
                 <label class="govuk-label" for="sort">
-                  Choose your current home address from the list
+                  Choose your previous address from the list
                 </label>
                 <select class="govuk-select" id="sort" name="sort">
-                  <option value="published">8 Oxford Row, Leeds, LS1 3BE</option>
-                  <option value="published">8 Oxford Row, Leeds, LS1 3BE</option>
-                  <option value="published">7 Oxford Row, Leeds, LS1 3BE</option>
-                  <option value="published">6 Oxford Row, Leeds, LS1 3BE</option>
-                  <option value="published">5 Oxford Row, Leeds, LS1 3BE</option>
-                  <option value="published">4 Oxford Row, Leeds, LS1 3BE</option>
+                  <option value="published">R, 108, Kings Park Creek Road,</option>
+                
                 </select>
               </div>
 
@@ -2746,7 +2742,7 @@ We need to check your details
 
                  </div>
 
-                <p><a class="govuk-link" href="./offline-address-details3">I cannot find my address in the list</a></p>
+                <p><a class="govuk-link" href="./offline-previous-details">I cannot find my address in the list</a></p>
                 
 
 
@@ -2754,7 +2750,7 @@ We need to check your details
 
 
 
-               <a href="./offline-address-check1" type="submit" class="govuk-button" id="save-and-continue" role="button">Choose address</a>
+               <a href="./offline-previous-check" type="submit" class="govuk-button" id="save-and-continue" role="button">Choose address</a>
 
 
                </form>

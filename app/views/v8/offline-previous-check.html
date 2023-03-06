@@ -10,7 +10,7 @@ We need to check your details
 
 {% block beforeContent %}
 {% include "../includes/phase-banner.html" %}
-<a href="offline-address-check1" class="govuk-back-link">Back</a>
+<a href="offline-previous-address1" class="govuk-back-link">Back</a>
 
 {% endblock %}
 
@@ -20,24 +20,43 @@ We need to check your details
          <div class="govuk-grid-row">
            <div class="govuk-grid-column-two-thirds">
 
-             <h1 class="govuk-heading-xl page-heading">When did you start living at your current home address?</h1>
-
-             <p>8 OXFORD ROW<br>
-            LEEDS<br>
-            LS1 3BE</p>
+             <h1 class="govuk-heading-xl page-heading">Check your address</h1>
 
 
              <form action="" method="post" class="form">
 
-             <div class="govuk-form-group">
-                <label class="govuk-label-wrapper"><label class="govuk-label govuk-body" for="event-name">
-                  Year
-                </label>
-                <div id="event-name-hint" class="govuk-hint">
-                  Enter the year you started living at this address, for example 2017</address>
-                </div>
-                <input class="govuk-input govuk-input--width-4" id="event-name" name="event-name" type="text" value="2022">
-              </div>
+                <p>Make sure there are no mistakes in your previous address before you continue.</p>
+
+                <p>R108, 
+                 KINGS PARK CREEK ROAD,<br> 
+                 CANVEY ISLAND,<br>
+                 ESSEX,<br> 
+                 SS8 8QA	
+
+                </p>
+
+
+                {{ govukRadios({
+                    classes: "govuk-radios",
+                    idPrefix: "address-check",
+                    name: "address-check",
+                    fieldset: {
+                        legend: {
+                          text: "Is your previous address correct?",
+                          classes: "govuk-fieldset__legend--s"
+                        }
+                      },
+                    items: [
+                      {
+                        value: "yes~./offline-address-check2",
+                        text: "Yes"
+                      },
+                      {
+                        value: "no~./offline-previous-details",
+                        text: "No - there is a mistake"
+                      }
+                    ]
+                  }) }}
 
 
 
@@ -80,7 +99,7 @@ We need to check your details
                  <! <input type="submit" class="govuk-button" value="Look up address" id="lookup"> -->
 
 
-                 <a href="offline-address-past1" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+                 <button class="govuk-button" data-module="govuk-button">Continue</button>
 
              </form>
 
