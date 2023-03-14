@@ -10,7 +10,7 @@ Please wait
 
 {% block beforeContent %}
 {% include "../includes/phase-banner.html" %}
-<meta http-equiv="refresh" content="1.20;return-successful-identity.html">
+<meta http-equiv="refresh" content="1.20;return-check-success.html">
 {% endblock %}
 
 {% block content %}
@@ -18,11 +18,13 @@ Please wait
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="./return-successful-identity" method="post">
+    <form class="form" action="./return-check-success" method="post">
 
-      <h1 class="govuk-heading-l govuk-!-margin-bottom-9" style="text-align: center;">Please wait</h1>
 
       <div class="ccms-loader ccms-loader__fast govuk-!-margin-bottom-9" style="text-align: center;"></div>
+
+      <h1 class="govuk-body govuk-!-margin-bottom-9" style="text-align: center;">Please wait</h1>
+
 
       <button id="button2" class="govuk-button govuk-!-margin-top-4 govuk-visually-hidden" data-module="govuk-button">Continue</button>
     </form>

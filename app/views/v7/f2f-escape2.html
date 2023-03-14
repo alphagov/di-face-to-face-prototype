@@ -28,119 +28,17 @@ We need to check your details
          <div class="govuk-grid-row">
            <div class="govuk-grid-column-two-thirds">
 
+            <form class="form" action="outside-scope" method="post">
 
 
-     <h1 class="govuk-heading-xl page-heading">You've chosen to prove your identity another way</h1>
+
+     <h1 class="govuk-heading-xl page-heading">Continue to prove your identity another way</h1>
 
 
-     <p class="govuk-body">You will not be able to go back once you've started to prove your identity another way.</p>
-
-     <h2 class="govuk-heading-m">Are you sure you want to continue?</h2>
+     <p class="govuk-body">You'll go back to the service you were trying to use to look for other ways to prove your identity.</p>
 
      
 
-
-<form action="outside-scope" method="post">
-
-
-    <!--
-    
-                     {{ govukRadios({
-                       classes: "govuk-radios",
-                       idPrefix: "offline-doc-check1",
-                       name: "offline-doc-check1",
-    
-                       items: [
-                         {
-                           value: "UK passport~./offline-passport-details",
-                           text: "UK passport",
-                           checked: checked("id-documents", "UK passport"),
-                           hint: {
-                            text: "If your UK passport has expired, you can still use it to prove your identity up until 18 months after the expiry date"
-                           }
-                         }
-                           ]
-    
-                         }) }}
-    
-                         {{ govukRadios({
-                           classes: "govuk-radios",
-                           idPrefix: "offline-doc-check2",
-                           name: "offline-doc-check2",
-    
-                           items: [
-                           {
-                             value: "Biometric residence permit~./offline-brp-details",
-                             text: "Biometric residence permit (BRP)",
-                             checked: checked("id-documents", "BRP")
-                           }
-    
-                               ]
-    
-                             }) }}
-    
-                             {{ govukRadios({
-                               classes: "govuk-radios",
-                               idPrefix: "offline-doc-check3",
-                               name: "offline-doc-check3",
-    
-                               items: [
-                               {
-                                 value: "UK photocard driving licence~./offline-driving-licence",
-                                 text: "UK photocard driving licence",
-                                 checked: checked("id-documents", "UK photocard driving licence")
-                               }
-    
-                                   ]
-    
-                                 }) }}
-    
-                                 {{ govukRadios({
-                                   classes: "govuk-radios",
-                                   idPrefix: "offline-doc-check4",
-                                   name: "offline-doc-check4",
-    
-                                   items: [
-                                   {
-                                     value: "Non-UK passport~./offline-passport-details",
-                                     text: "Non-UK passport",
-                                     checked: checked("id-documents", "Non-UK")
-                                   }
-    
-                                       ]
-    
-                                     }) }}
-    
-                                     hint: {
-                                            text: "If your UK passport has expired, you can still use it to prove your identity up until 18 months after the expiry date"
-                                           }
-    
-    -->
-    
-    {{ govukRadios({
-        classes: "govuk-radios",
-        idPrefix: "expiry-fallback",
-        name: "expiry-fallback",
-        items: [
-          {
-            value: "restart~./f2f-escape2",
-            text: "Yes",
-            hint: {
-              text: "Continue to prove your identity another way"
-            }
-          },
-          {
-            value: "continue~./offline-intro-test",
-            text: "No",
-            hint: {
-              text: "Go back to find out how you can prove your identity in person at a Post Office"
-            }
-          }
-          
-        ]
-      }) }}
-
-      <p><a class="govuk-link" href=#>Contact the GOV.UK One Login team (opens in new tab)</a></p>
 
       
     
@@ -226,6 +124,9 @@ We need to check your details
     -->
     
                    <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+                   <p><a class="govuk-link" href=#>Contact the GOV.UK One Login team (opens in new tab)</a></p>
+
     
                </form>
 

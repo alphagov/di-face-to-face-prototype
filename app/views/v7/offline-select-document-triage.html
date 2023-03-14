@@ -10,7 +10,7 @@ We need to check your details
 
 {% block beforeContent %}
 {% include "../includes/phase-banner.html" %}
-<a href="offline-intro" class="govuk-back-link">Back</a>
+<a href="offline-intro-test" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -22,7 +22,7 @@ We need to check your details
 
 
                <p>You must take the original photo ID document, not a photocopy.</p>
-               <p>Your photo ID must be in date. You can use a UK passport up to 18 months after its expiry date.</p>
+               <p>Your photo ID must not have expired. </p>
                <br>
 
                <!-- <p>The document must be an original and in your current name. Photo or scanned copies will not be accepted.</p> -->
@@ -112,7 +112,10 @@ We need to check your details
                                    items: [
                                      {
                                        value: "UK passport~./offline-passport-details",
-                                       html: "<p>UK passport</p>"
+                                       text: "UK passport",
+                                       hint: {
+                                        text: "If your UK passport has expired, you can still use it to prove your identity up until 18 months after its expiry date."
+                                       }
                                        
                                      },
                                      {
@@ -134,15 +137,7 @@ We need to check your details
                                      },
                                      {
                                        value: "National Identity Card from an EEA country~./offline-eu-id-card",
-                                       html: "<p>National identity card from a European Economic Area (EEA) country</p>"
-                                     },
-                                     {
-                                       value: "CitizenCard~./offline-citizen-pass-card",
-                                       html: "<p>CitizenCard</p>"
-                                     },
-                                     {
-                                       value: "Young Scot nec~./offline-young-scot",
-                                       html: "<p>Young Scot National Entitlement Card (NEC)</p>"
+                                       text: "National identity card from a European Economic Area (EEA) country"
                                      },
                                      {
                                       divider: "or"
