@@ -1,0 +1,235 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a class="govuk-back-link" href="offline-brp-details2">Back</a>
+
+  <!-- {% if prevURL === "http://localhost:3000/preauth/mvp/create-spinner" or prevURL === "https://gds-identity.herokuapp.com/preauth/mvp/create-spinner" or prevURL === "https://gds-identity-ur.herokuapp.com/preauth/mvp/create-spinner" %}
+    <a class="govuk-back-link" href="{{ preAuth }}">Back</a>
+  {% else %}
+    <a href="gov-account" class="govuk-back-link">Back</a>
+  {% endif %} -->
+{% endblock %}
+
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+     <h1 class="govuk-heading-xl page-heading">Your photo ID has expired</h1>
+
+
+     <p class="govuk-body">You need a valid photo ID to prove your identity.</p>
+
+     <h2 class="govuk-heading-m">What would you like to do?</h2>
+
+     
+
+
+<form action="offline-select-document-triage-error" method="post">
+
+
+    <!--
+    
+                     {{ govukRadios({
+                       classes: "govuk-radios",
+                       idPrefix: "offline-doc-check1",
+                       name: "offline-doc-check1",
+    
+                       items: [
+                         {
+                           value: "UK passport~./offline-passport-details",
+                           text: "UK passport",
+                           checked: checked("id-documents", "UK passport"),
+                           hint: {
+                            text: "If your UK passport has expired, you can still use it to prove your identity up until 18 months after the expiry date"
+                           }
+                         }
+                           ]
+    
+                         }) }}
+    
+                         {{ govukRadios({
+                           classes: "govuk-radios",
+                           idPrefix: "offline-doc-check2",
+                           name: "offline-doc-check2",
+    
+                           items: [
+                           {
+                             value: "Biometric residence permit~./offline-brp-details",
+                             text: "Biometric residence permit (BRP)",
+                             checked: checked("id-documents", "BRP")
+                           }
+    
+                               ]
+    
+                             }) }}
+    
+                             {{ govukRadios({
+                               classes: "govuk-radios",
+                               idPrefix: "offline-doc-check3",
+                               name: "offline-doc-check3",
+    
+                               items: [
+                               {
+                                 value: "UK photocard driving licence~./offline-driving-licence",
+                                 text: "UK photocard driving licence",
+                                 checked: checked("id-documents", "UK photocard driving licence")
+                               }
+    
+                                   ]
+    
+                                 }) }}
+    
+                                 {{ govukRadios({
+                                   classes: "govuk-radios",
+                                   idPrefix: "offline-doc-check4",
+                                   name: "offline-doc-check4",
+    
+                                   items: [
+                                   {
+                                     value: "Non-UK passport~./offline-passport-details",
+                                     text: "Non-UK passport",
+                                     checked: checked("id-documents", "Non-UK")
+                                   }
+    
+                                       ]
+    
+                                     }) }}
+    
+                                     hint: {
+                                            text: "If your UK passport has expired, you can still use it to prove your identity up until 18 months after the expiry date"
+                                           }
+    
+    -->
+    
+    {{ govukRadios({
+        classes: "govuk-radios",
+        idPrefix: "expiry-fallback",
+        name: "expiry-fallback",
+        items: [
+          {
+            value: "Check and re-enter~./offline-brp-details2",
+            html: "<p>Check the expiry date and try entering it again</p>"
+          },
+          {
+            value: "Different ID~./offline-select-document-triage",
+            html: "<p>Choose a different photo ID</p>"
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "Prove other~./f2f-escape",
+            text: "Prove your identity another way"
+          }
+        ]
+      }) }}
+
+      
+    
+    <!--
+                           },
+                           {
+                             value: "Other~./offline-passport-details",
+                             text: "Other passport",
+                             checked: checked("id-documents", "Other")
+                           },
+                           {
+                             value: "Biometric residence permit~./offline-brp-details",
+                             text: "Biometric residence permit (BRP)",
+                             checked: checked("id-documents", "BRP")
+                           },
+                           {
+                             value: "UK driving licence~./offline-driving-licence",
+                             text: "UK driving licence",
+                             checked: checked("id-documents", "UK driving licence")
+                           }
+    -->
+    
+    
+    
+                     <!-- ,
+                     {
+                       value: "Other~./offline-passport-details",
+                       text: "Other passport",
+                       checked: checked("id-documents", "Other")
+                     },
+                     {
+                       value: "Biometric residence permit~./offline-brp-details",
+                       text: "Biometric residence permit (BRP)",
+                       checked: checked("id-documents", "BRP")
+                     },
+                     {
+                       value: "UK driving licence~./offline-driving-licence",
+                       text: "UK driving licence",
+                       checked: checked("id-documents", "UK driving licence")
+                     }
+    
+                     hint: {
+                       text: "If your passport has expired, you can still use it to prove your identity up until 18 months after the expiry date."
+                     }, -->
+    <!--
+                     <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <div class="govuk-radios" data-module="govuk-radios">
+           <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+              UK passport
+            </label>
+            <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+              If your UK passport has expired, you can still use it to prove your identity up until 18 months after the expiry date
+            </div>
+          </div>
+          <br>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+              Biometric residence permit (BRP)
+            </label>
+          </div>
+          <br>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+              UK photocard driving licence
+            </label>
+          </div>
+          <br>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+              Other passport
+            </label>
+          </div>
+        </div>
+    
+      </fieldset>
+    </div>
+    -->
+    
+                   <button class="govuk-button" data-module="govuk-button">Continue</button>
+    
+               </form>
+
+
+  </div>
+</div>
+
+{% endblock %}
