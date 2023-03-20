@@ -1,4 +1,4 @@
-{% extends "layout_poc.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
 We need to check your details
@@ -30,7 +30,9 @@ We need to check your details
        titleText: "Go to a Post Office within 10 days to finish proving your identity"
      }) }}
 
-     <p class="govuk-body">To finish proving your identity, you need to go to a Post Office that offers ‘in-branch verification’ within the next 10 days.</p>
+     <p class="govuk-body">To finish proving your identity, you need to go to a Post Office within the next 10 days.</p>
+
+     <p>If you do not go to a Post Office within 10 days, you’ll need to start again.</p>
 
      <p class="govuk-body">You’ve been sent a confirmation email with a link to your Post Office customer letter.</p>
 
@@ -48,7 +50,7 @@ We need to check your details
           <p>A member of Post Office staff will scan your photo ID and take a photo of you.</p>
 
           <div class="govuk-inset-text">
-            Not all Post Offices offer this service. You can <a href="https://www.postoffice.co.uk/identity/in-branch-verification-service#:~:text=Find%20your%20nearest%20branch" class="govuk-link govuk-link--no-visited-state" rel="noreferrer noopener" target="_blank">find your nearest Post Office that offers in branch verification (opens in new tab).</a>
+           You'll find details of your chosen Post Office in your customer letter. But you can <a href="https://www.postoffice.co.uk/identity/in-branch-verification-service#:~:text=Find%20your%20nearest%20branch" class="govuk-link govuk-link--no-visited-state" rel="noreferrer noopener" target="_blank">go to any Post Office that offers in-branch verification (opens in new tab).</a>
             </div>
 
 <!--
@@ -62,7 +64,7 @@ We need to check your details
 -->
           <h2 class="govuk-heading-m">After you've been to the Post Office</h2>
 
-          <p>You’ll get an email with the result of your identity check - usually within a day of visiting the Post Office.</p>
+          <p>You’ll get an email about the result of your identity check - usually within a day of visiting the Post Office.</p>
 
           <h2 class="govuk-heading-m">If you need help</h2>
 <!--
