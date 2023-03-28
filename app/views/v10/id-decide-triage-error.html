@@ -1,0 +1,151 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+ <div class="govuk-grid-column-two-thirds">
+
+  {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Select a way to prove your identity",
+        href: "#identity-method"
+      }
+    ]
+  }) }}
+
+   <h1 class="govuk-heading-xl">
+     How do you want to prove your identity?
+   </h1>
+
+  <p>You can prove your identity online or at a Post Office. The quickest way to prove your identity is online - this takes around 10 minutes.</p> 
+
+   <h2 class="govuk-heading-m">Prove your identity online</h2>
+
+   <p>You’ll need to scan your photo ID and take a photo of your face with your selfie camera using a GOV.UK app. If you cannot use an app, you can still prove your identity online by answering some security questions.</p>
+
+
+   <!-- <h2 class="govuk-heading-m">What you'll need</h2>
+
+   <p>You might need to create an account and prove your identity before you can apply for a basic DBS check.</p> -->
+<!--
+   <p>You’ll also need:</p> -->
+
+
+   <h2 class="govuk-heading-m">Prove your identity at a Post Office</h2>
+
+   <p>You’ll need to enter some details on GOV.UK and then take your chosen photo ID to a Post Office. A member of staff will scan your photo ID and take a photo of you. You’ll get an email with the outcome of your identity check - usually within a day of visiting the Post Office.</p>
+
+
+
+
+
+<!--<p><a href="./fallback" class="govuk-link" rel="noreferrer noopener">I do not have any of these documents</a></p>-->
+
+   <br/>
+<!--
+   <h1 class="govuk-heading-m">
+     How do you want to prove your identity?
+   </h1>
+  -->
+{% from "govuk/components/radios/macro.njk"              import govukRadios %}
+<div class="">
+<form action="id-decide-triage-error" method="post">
+
+     {{ govukRadios({
+     classes: "govuk-radios",
+     idPrefix: "identity-method",
+     name: "identity-method",
+
+     items: [
+
+       {
+         value: "Online~./app-intro",
+         text: "Online"
+       },
+       {
+         value: "In person~./offline-full-name",
+         text: "At a Post Office"
+       }
+     ],
+     errorMessage: {
+      text: "Select a way to prove your identity"
+    }
+   }) }}
+
+       <!-- <input class="govuk-input" id="service" name="service" type="hidden" value="dbs"> -->
+
+       <!--fieldset: {
+         legend: {
+           text: "How do you want to prove your identity?",
+           isPageHeading: true,
+           classes: "govuk-fieldset__legend--s"
+         }
+       },
+       hint: {
+         text: ""
+       }, -->
+
+<!--       <a href="" class="govuk-button" id="save-and-continue" role="button">Continue</a> -->
+       <button class="govuk-button">Continue</button>
+
+       </form>
+
+
+
+     </div>
+
+
+<!--
+<div class="govuk-form-group">
+           <details class="govuk-details" data-module="govuk-details">
+             <summary class="govuk-details__summary help-text-link">
+
+               <span class="govuk-details__summary-text"> I want to prove my identity another way</span>
+             </summary>
+             <div class="govuk-details__text">
+
+               <p>If you are not able to prove your identity online, you can <a href='./offline-intro'>prove your identity in person.</a></p>
+
+               <p>This process will take a lot longer than proving your identity online.</p>
+
+               <p>You will need to complete a short online form, and take your identity document to a Post Office.</p>
+
+
+
+             </div>
+           </details>
+           -->
+</div>
+
+<!-- {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+{{ govukInsetText({
+text: "It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+}) }} -->
+
+
+
+     </div>
+
+
+
+ </div>
+
+
+{% endblock %}
