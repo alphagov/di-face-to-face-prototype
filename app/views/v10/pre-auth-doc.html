@@ -18,30 +18,47 @@ Prove your identity with a GOV.UK account
   <div class="govuk-grid-column-two-thirds">
     <form action="./id-decide-triage" method="post">
 
-      <h1 class="govuk-heading-l">You can prove your identity online using the following photo ID documents</h1>
+      <h1 class="govuk-heading-l">Prove your identity online using one of the following photo ID documents</h1>
 
-      <h2 class="govuk-heading-s">UK photocard driving licence</h2>
+      <h2 class="govuk-heading-m">UK photocard driving licence</h2>
 
-      <p>You'll need a valid full or provisional driving licence with your photo on it.</p>
+      <p>You can use a valid full or provisional driving licence with your photo on it.</p>
 
-      <h2 class="govuk-heading-s">UK or non-UK biometric passport</h2>
+      <h2 class="govuk-heading-m">Biometric passport (or 'ePassport')</h2>
 
-      <p>Biometric passports (or 'ePassports') have a small rectangular symbol on the front cover. You can use them to go through eGates at airpots and train stations.</p>
-
-      <h2 class="govuk-heading-s">Biometric Residence Permit (BRP)</h2>
-
-      <p>An identity card that holds a migrant's personal details, photo and fingerprints. It shows their immigration status and entitlements while they remain in the United Kingdom.</p>
+      <p>Biometric passports allow you to go through eGates at airpots. All valid UK passports are biometric passports but not all non-UK passports are. To check if you have a biometric passport, look for a small rectangular symbol on the front cover.</p>
 
       <div class="govuk-inset-text">
-        If you can't prove your identity online, you can take these documents into the Post Office to get them checked in person.
+        If your UK passport has expired, you can still use it to prove your identity up until 18 months after the expiry date.
       </div>
 
+      <h2 class="govuk-heading-m">Biometric Residence Permit (BRP)</h2>
+
+      <p>You can use a valid BRP to prove your identity. Your BRP holds your personal details, photo and fingerprints if you are a UK visa holder. It shows your immigration status and entitlements while you remain in the United Kingdom.</p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What if I cannot prove my identity online?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          If you cannot prove your identity online, you can take these documents to the Post Office to get them checked in person. You'll need to enter your details on GOV.UK before you can do this.
+        </div>
+      </details>
+
+  
+
     
-      <h2 class="govuk-heading-m">Can you use any of the above photo ID documents to prove your identity?</h2>
+      <h2 class="govuk-heading-m">Can you prove your identity using one of these documents?</h2>
 
       {{ govukRadios({
         classes: "govuk-radios",
         name: "changed-name",
+
+        hint: {
+          text: "You can prove your identity in other ways if you do not have one of the above photo ID documents."
+        },
         
         items: [
           {
@@ -50,11 +67,7 @@ Prove your identity with a GOV.UK account
           },
           {
             value: "no~./pre-auth-id2",
-            text: "No - I have another photo ID"
-          },
-          {
-            value: "no~./f2f-escape2",
-            text: "No - I do not have a photo ID"
+            text: "No"
           }
         ]
       }) }}

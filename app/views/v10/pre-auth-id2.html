@@ -18,39 +18,42 @@ Prove your identity with a GOV.UK account
   <div class="govuk-grid-column-two-thirds">
     <form action="./id-decide-triage" method="post">
 
-      <h1 class="govuk-heading-l">You may need to prove your identity in person at the Post Office</h1>
 
-      <p>This involves taking your photo ID to a Post Office to be checked in person. You'll need to fill in a form on GOV.UK before you can do this.</p>
 
-      <h2 class="govuk-heading-m">You can prove your identity at the Post Office using the following documents</h2>
+      <h2 class="govuk-heading-l">You can prove your identity at a Post Office if you have one of the following documents</h2>
 
-      <h2 class="govuk-heading-s">UK and EU photocard driving licences</h2>
+      <p>You can take your photo ID to a Post Office to be checked in person. You'll need to enter your details on GOV.UK before you can do this.</p>
 
-      <p>You'll need a valid full or provisional driving licence with your photo on it.</p>
+      <h2 class="govuk-heading-m">EU photocard driving licence</h2>
 
-      <h2 class="govuk-heading-s">UK or non-UK passports</h2>
+      <p>You can use a valid full or provisional driving licence with your photo on it.</p>
 
-      <p>You can prove your identity in person with any type of passport, not just biometric passports.</p>
+      <h2 class="govuk-heading-m">Non-biometric passport</h2>
+
+      <p>You can use any type of passport to prove your identity in person at the Post Office, not just biometric passports.</p>
 
      
 
-      <h2 class="govuk-heading-s">Identity cards</h2>
+      <h2 class="govuk-heading-m">National identity card from a European Economic Area (EEA) country</h2>
 
-      <p>You can prove your identity with any of the following identity cards:</p>
+      <p>You can use a national identity card from countries in the European Economic Area (EEA) except Denmark, Iceland and Ireland.</p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Biometric residence permit (BRP)</li>
-        <li>national identity card from a European Economic Area (EEA) country</li>
-      </ul>
-
+      <div class="govuk-inset-text">
+        You can also use one of the documents listed on the previous page to prove your identity in person at the Post Office.
+      </div>
 
 
 
-      <h2 class="govuk-heading-m">Can you use any of the above photo ID documents to prove your identity in person at the Post Office?</h2>
+
+      <h2 class="govuk-heading-m">Can you prove your identity in-person using one of these documents?</h2>
 
       {{ govukRadios({
         classes: "govuk-radios",
         name: "changed-name",
+
+        hint: {
+          text: "There may be other ways to prove your identity if you do not have one of the above photo ID documents."
+        },
         
         items: [
           {
