@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Enter your email address
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+     You have a file to download
+    </h1>
+
+    <p class="govuk-body">GOV.UK One Login has sent you a file to download.</p>
+
+    <form class="form" action="offline-po-letter2" method="post">
+
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+
+    <p class="govuk-body">If you’re not sure why you’ve been sent a file, or you have any questions, call 111.</p>
+
+
+  </div>
+</div>
+
+{% endblock %}

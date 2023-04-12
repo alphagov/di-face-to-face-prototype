@@ -5,25 +5,27 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a href="./offline-eu-driving-licence" class="govuk-back-link">Back</a>
-
+  {{ govukBackLink({
+    href: "javascript:window.history.back()"
+  }) }}
 {% endblock %}
 
 {% block content %}
-  <form class="form" action="./find-nearest-po" method="post">
+  <form class="form" action="./nearest-po-list" method="post">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-
-        <h1 class="govuk-heading-xl">
-        Enter the country of issue of your EU photocard driving licence</h1>
-
-        <p>If the country of issue on your photo ID is not on this list, you'll need to choose another photo ID.</p><br>
-
         {{ xGovukAutocomplete({
           id: "country",
           name: "country",
           allowEmpty: false,
-          
+          label: {
+            classes: "govuk-label--l",
+            isPageHeading: true,
+            text: "Country of birth"
+          },
+          hint: {
+            text: "For example, Austria or Belgium"
+          },
           items: [
             { text: "Austria" },
             { text: "Belgium" },
@@ -51,20 +53,13 @@
             { text: "Slovakia" },
             { text: "Slovenia" },
             { text: "Spain" },
-            { text: "Sweden" },
-            { text: "United Kingdom"}
-
+            { text: "Sweden" }
           ]
         }) }}
 
-        <p><a href="./offline-select-document-triage" class="govuk-link govuk-link--no-visited-state">The country of issue on my photo ID is not on the list</a></p>
-
-
-       
-
-
-        <button href="./find-nearest-po" class="govuk-button" data-module="govuk-button">Continue</button>
-      
+        {{ govukButton({
+          text: "Continue"
+        }) }}
       </div>
     </div>
   </form>
