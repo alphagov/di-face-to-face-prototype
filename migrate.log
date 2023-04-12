@@ -1,0 +1,96 @@
+2023-04-12T11:20:37.522Z
+cwd: ~/Library/CloudStorage/OneDrive-Deloitte(O365D)/Documents/gds-id-offline-main
+package: govuk-prototype-kit@13.6.0
+argv: /usr/local/bin/node ~/.npm/_npx/ab0cb2c39bc0319f/node_modules/.bin/govuk-prototype-kit migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Succeeded [Check migration is being applied to a pre v13 prototype]
+2023-04-12T11:20:49.280Z
+cwd: ~/Library/CloudStorage/OneDrive-Deloitte(O365D)/Documents/gds-id-offline-main
+package: govuk-prototype-kit@13.6.0
+argv: /usr/local/bin/node ~/Library/CloudStorage/OneDrive-Deloitte(O365D)/Documents/gds-id-offline-main/node_modules/.bin/govuk-prototype-kit migrate -- ~/Library/CloudStorage/OneDrive-Deloitte(O365D)/Documents/gds-id-offline-main
+Started [Migrate config.js to config.json]
+Started [Update application SCSS file]
+Started [Deleted files that are no longer needed]
+Started [Deleted directories that are no longer needed]
+Started [Delete listen-on-port.js]
+Started [Delete start.js]
+Started [Delete Procfile]
+Started [Delete app/assets/sass/application-ie8.scss]
+Started [Delete app/assets/sass/unbranded-ie8.scss]
+Started [Delete VERSION.txt]
+Started [Delete server.js]
+Started [Remove unused directory docs]
+Started [Remove unused directory lib]
+Started [Remove unused directory public]
+Succeeded [Migrate config.js to config.json]
+Succeeded [Delete listen-on-port.js]
+Succeeded [Delete start.js]
+Succeeded [Delete VERSION.txt]
+Succeeded [Delete app/assets/sass/application-ie8.scss]
+Succeeded [Delete Procfile]
+Succeeded [Delete server.js]
+Succeeded [Delete app/assets/sass/unbranded-ie8.scss]
+Succeeded [Deleted files that are no longer needed]
+Found [// Add your routes here - above the module.exports line] in [app/routes.js], replacing
+Started [Overwrite app/views/layout.html]
+Started [Overwrite app/assets/javascripts/application.js]
+Started [Overwrite app/filters.js]
+Found [// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you] in [app/assets/sass/application.scss], replacing
+Started [Delete app/assets/images/separator.png]
+Started [Delete app/assets/images/unbranded.ico]
+Keeping these lines from old file
+Copying from [node_modules/govuk-prototype-kit/prototype-starter/app/assets/javascripts/application.js] to [app/assets/javascripts/application.js]
+Started [Delete app/assets/javascripts/auto-store-data.js]
+Started [Delete app/views/includes/breadcrumb_examples.html]
+Started [Delete app/assets/javascripts/jquery-1.11.3.js]
+Started [Delete app/assets/sass/unbranded.scss]
+Started [Delete app/assets/images/separator-2x.png]
+Copying from [node_modules/govuk-prototype-kit/prototype-starter/app/filters.js] to [app/filters.js]
+Started [Delete app/views/layout_unbranded.html]
+Started [Delete app/assets/sass/patterns/_pagination.scss]
+Started [Delete app/assets/sass/patterns/_related-items.scss]
+Started [Delete app/assets/sass/patterns/_contents-list.scss]
+Started [Delete app/assets/sass/patterns/_task-list.scss]
+Keeping these lines from old file
+Started [Delete app/assets/sass/patterns/_mainstream-guide.scss]
+Succeeded [Delete app/assets/images/separator.png]
+Succeeded [Delete app/assets/images/unbranded.ico]
+Succeeded [Delete app/assets/javascripts/auto-store-data.js]
+Succeeded [Delete app/assets/javascripts/jquery-1.11.3.js]
+Succeeded [Delete app/views/layout_unbranded.html]
+Succeeded [Delete app/assets/sass/patterns/_pagination.scss]
+Succeeded [Delete app/assets/sass/patterns/_related-items.scss]
+Succeeded [Update application SCSS file]
+Succeeded [Delete app/assets/images/separator-2x.png]
+Succeeded [Delete app/assets/sass/patterns/_contents-list.scss]
+Succeeded [Delete app/assets/sass/unbranded.scss]
+Succeeded [Delete app/views/includes/breadcrumb_examples.html]
+Succeeded [Delete app/assets/sass/patterns/_task-list.scss]
+Started [Delete app/views/includes/head.html]
+Started [Delete app/views/includes/scripts.html]
+Succeeded [Delete app/assets/sass/patterns/_mainstream-guide.scss]
+Failed [Delete app/views/includes/scripts.html]
+//,// For guidance on how to create routes see:,// https://prototype-kit.service.gov.uk/docs/create-routes,//,,const govukPrototypeKit = require('govuk-prototype-kit'),const router = govukPrototypeKit.requests.setupRouter(),,// Add your routes here,,module.exports = router,,,,// V2 routing,// ------------------------------------------------------------------------,// ------------------------------------------------------------------------,,,// choose wether to continue or go back to RP,router.post('/v2/preauth-route', function (req, res) {,  const usegovuk = req.session.data['use-govuk-account'],  // chooses to continue,  if (usegovuk === 'yes') {,    res.redirect('preauth-checks'),  } else {,    // return to service,    req.session.data['reason'] = 'abandon',    res.redirect('preauth-create-spinner'),  },}),,,// check document,router.post('/app-photoid', function (req, res) {,  // pick up the selected docs,  const photoIds = req.session.data['id-documents'],  // work out the logic for which options to show on the next page,  let passport = ["UK passport"],,    dl = ["UK driving licence"],,    m2b = ["UK passport","UK driving licence"],,  let checker = (arr, target) => target.every(v => arr.includes(v)),,  req.session.data['useiProovPP'] = checker(photoIds, passport),  req.session.data['useiProovDL'] = checker(photoIds, dl),  req.session.data['useM2b'] = checker(photoIds, m2b),,  // route to the methods page unless the 'none' option is picked,  for (j = 0; j < photoIds.length; j++) {,    if (photoIds[j] === 'none') {,      res.redirect('v2/fallback'),    }else if (photoIds[j] === 'UK passport') {,      res.redirect('v2/app-onboard-j1'),    },    else {,      res.redirect('v2/app-onboard-j2'),    },  },,}),,,// V1 routing,// ------------------------------------------------------------------------,// ------------------------------------------------------------------------,,,// choose wether to continue or go back to RP,router.post('/v1/preauth-route', function (req, res) {,  const usegovuk = req.session.data['use-govuk-account'],  // chooses to continue,  if (usegovuk === 'yes') {,    res.redirect('preauth-checks'),  } else {,    // return to service,    req.session.data['reason'] = 'abandon',    res.redirect('preauth-create-spinner'),  },}),,,// check document,router.post('/app-photoid', function (req, res) {,  // pick up the selected docs,  const photoIds = req.session.data['id-documents'],  // work out the logic for which options to show on the next page,  let passport = ["UK passport"],,    dl = ["UK driving licence"],,    m2b = ["UK passport","UK driving licence"],,  let checker = (arr, target) => target.every(v => arr.includes(v)),,  req.session.data['useiProovPP'] = checker(photoIds, passport),  req.session.data['useiProovDL'] = checker(photoIds, dl),  req.session.data['useM2b'] = checker(photoIds, m2b),,  // route to the methods page unless the 'none' option is picked,  for (j = 0; j < photoIds.length; j++) {,    if (photoIds[j] === 'none') {,      res.redirect('v1/pyi-kbv-intro'),    } else {,      res.redirect('v1/app-onboard'),    },  },}),
+Succeeded [Delete app/views/includes/head.html]
+Found [module.exports = router;,module.exports = router] in [app/routes.js], removing
+Succeeded [Remove unused directory public]
+Succeeded [Remove unused directory lib]
+Succeeded [Update routes file]
+Succeeded [Remove unused directory docs]
+Succeeded [Deleted directories that are no longer needed]
+Succeeded [Overwrite app/filters.js]
+Succeeded [Overwrite app/assets/javascripts/application.js]
+Started [Remove old pattern includes from application SCSS file]
+Succeeded [Remove old pattern includes from application SCSS file]
+Started [Remove empty directory app/assets/sass/patterns]
+Started [Remove empty directory app/views/includes]
+Started [Remove empty directory app/assets/images]
+Skipped deleting app/views/includes
+Skipped deleting app/assets/images
+Succeeded [Remove empty directory app/assets/sass/patterns]
+2023-04-12T12:34:00.507Z
+cwd: ~/Library/CloudStorage/OneDrive-Deloitte(O365D)/Documents/gds-id-offline-main
+package: govuk-prototype-kit@13.6.0
+argv: /usr/local/bin/node ~/Library/CloudStorage/OneDrive-Deloitte(O365D)/Documents/gds-id-offline-main/node_modules/.bin/govuk-prototype-kit migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Failed [Check migration is being applied to a pre v13 prototype]
