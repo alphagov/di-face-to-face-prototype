@@ -55,7 +55,7 @@ Enter your details exactly as they appear on your UK passport
           <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
             Day
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="31">
         </div>
       </div>
       <div class="govuk-date-input__item">
@@ -63,7 +63,7 @@ Enter your details exactly as they appear on your UK passport
           <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
             Month
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="">
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="3">
         </div>
       </div>
       <div class="govuk-date-input__item">
@@ -71,7 +71,7 @@ Enter your details exactly as they appear on your UK passport
           <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
             Year
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="">
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="2018">
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@ Enter your details exactly as they appear on your UK passport
         <input class="govuk-input" id="errorcode" name="errorcode" type="hidden" value="{{ data['errorcode'] }}">
         {% endif %}
 
-        <a href="find-nearest-po" id="button" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">Continue</a>
+        <a href="offline-expiry-fallback" id="button" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">Continue</a>
 </form>
 
 
