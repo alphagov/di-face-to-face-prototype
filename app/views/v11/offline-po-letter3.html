@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Enter your email address
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+     Download your file
+    </h1>
+
+    <p class="govuk-body">Save your file somewhere you can find it. You may need to print it or show it to someone later.</p>
+
+    <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="/public/downloads/3d7c4bd0-af17-47ab-9b78.pdf" rel="noreferrer noopener" target="_blank" download>
+      Download this PDF file (0.1KB) to your device</a></p>
+
+    <p>This file is available until 24 April 2023.</p>
+
+    <p>If you have any questions, <a class="govuk-link govuk-link--no-visited-state" href="https://signin.account.gov.uk/contact-us?supportType=PUBLIC" rel="noreferrer noopener" target="_blank">contact us</a>.</p>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

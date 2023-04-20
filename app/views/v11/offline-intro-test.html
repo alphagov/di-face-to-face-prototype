@@ -1,0 +1,226 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+  <!-- {% if prevURL === "http://localhost:3000/preauth/mvp/create-spinner" or prevURL === "https://gds-identity.herokuapp.com/preauth/mvp/create-spinner" or prevURL === "https://gds-identity-ur.herokuapp.com/preauth/mvp/create-spinner" %}
+    <a class="govuk-back-link" href="{{ preAuth }}">Back</a>
+  {% else %}
+    <a href="gov-account" class="govuk-back-link">Back</a>
+  {% endif %} -->
+{% endblock %}
+
+
+{% block content %}
+
+
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+            <div class="responsive-bottom-margin">
+
+              <h1 class="govuk-heading-xl page-heading">How to prove your identity at a Post Office</h1>
+
+      
+              <div class="gem-c-govspeak govuk-govspeak direction-ltr disable-youtube govuk-body" data-module="govspeak">
+
+              
+              <ol class="steps">
+              <li>
+              <h2 class="govuk-heading-m">Get your Post Office customer letter from GOV.UK</h2>
+              </li>
+              <p>Enter the details of your photo ID on GOV.UK.</p>
+              <p>Then select which Post Office you want to take your photo ID to.</p>
+              <p>We’ll send you a confirmation email with a link to download your Post Office customer letter.</p>
+              <li>
+                <h2 class="govuk-heading-m">Go to the Post Office</h2>
+              </li>
+              <p>Take your Post Office customer letter and photo ID to your chosen Post Office. Or go to any <a class="govuk-link govuk-link--no-visited-state" rel="noreferrer noopener" target="_blank" href="https://www.postoffice.co.uk/identity/in-branch-verification-service#:~:text=Find%20your%20nearest%20branch">Post office that offers ‘in-branch verification’ (opens in new tab).</a></p>
+              <p>A member of Post Office staff will scan your photo ID and take a photo of you.</p>
+
+              <div class="govuk-inset-text">
+                You must go to the Post Office within 10 days of getting your confirmation email.
+              </div>
+
+              <li>
+                <h2 class="govuk-heading-m">Wait for your result</h2>
+              </li>
+              <p>You’ll get an email about the result of your identity check - usually within a day of visiting the Post Office.</p>
+              </ol>
+
+
+              <!-- example steps-
+              <ol class="steps govuk-body">
+              <li>
+              <p>Check if someone has the <a href="/legal-right-to-work-in-the-uk">legal right to work</a> in the UK. You may have to do other employment checks as well.</p>
+              </li>
+              <li>
+              <p>Check if you need to apply for a <a href="/disclosure-barring-service-check">DBS check</a> (formerly known as a CRB check) if you work in a field that requires one, eg with vulnerable people or security.</p>
+              </li>
+              <li>
+              <p>Get employment insurance - you need <a href="/employers-liability-insurance">employers’ liability insurance</a> as soon as you become an employer.</p>
+              </li>
+              <li>
+              <p>Send details of the job (including terms and conditions) in writing to your employee. You need to give your employee a <a href="/employment-contracts-and-conditions/written-statement-of-employment-particulars">written statement of employment</a> if you’re employing someone for more than 1 month.</p>
+              </li>
+              <li>
+              <p>Tell HM Revenue and Customs (HMRC) by <a href="/register-employer">registering as an employer</a> - you can do this up to 4 weeks before you pay your new staff.  </p>
+              </li>
+              <li>
+              <p>Check if you need to <a href="/workplace-pensions-employers">automatically enrol your staff</a> into a workplace pension scheme.</p>
+              </li>
+              </ol>
+            -->
+              
+            <a class="govuk-button govuk-!-margin-top-4" role="button" href="./offline-select-document-triage">Continue</a>
+
+            <p><a href="f2f-escape2" class="govuk-link govuk-link--no-visited-state"> I want to prove my identity another way</a></p>
+              
+              </div>
+              
+                  </div>
+                
+
+                <style type="text/css">
+
+.govspeak .steps, .gem-c-govspeak .steps {
+  padding-left: 0;
+  margin-left: 0;
+}
+.govspeak .steps > li, .gem-c-govspeak .steps > li {
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0.75em 0 0.75em 2.5em;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.govspeak .steps > li:before, .gem-c-govspeak .steps > li:before {
+  background-color: #000000;
+  border-radius: 50%;
+  color: #ffffff;
+  float: left;
+  font-size: 80%;
+  height: 1.75em;
+  left: 0.3em;
+  line-height: 1.75em;
+  position: absolute;
+  text-align: center;
+  top: 0.9em;
+  width: 1.75em;
+}
+.govspeak .steps > li:nth-child(1):before, .gem-c-govspeak .steps > li:nth-child(1):before {
+  content: "1";
+}
+.govspeak .steps > li:nth-child(2):before, .gem-c-govspeak .steps > li:nth-child(2):before {
+  content: "2";
+}
+.govspeak .steps > li:nth-child(3):before, .gem-c-govspeak .steps > li:nth-child(3):before {
+  content: "3";
+}
+.govspeak .steps > li:nth-child(4):before, .gem-c-govspeak .steps > li:nth-child(4):before {
+  content: "4";
+}
+.govspeak .steps > li:nth-child(5):before, .gem-c-govspeak .steps > li:nth-child(5):before {
+  content: "2";
+}
+.govspeak .steps > li:nth-child(6):before, .gem-c-govspeak .steps > li:nth-child(6):before {
+  content: "6";
+}
+.govspeak .steps > li:nth-child(7):before, .gem-c-govspeak .steps > li:nth-child(7):before {
+  content: "7";
+}
+.govspeak .steps > li:nth-child(8):before, .gem-c-govspeak .steps > li:nth-child(8):before {
+  content: "8";
+}
+.govspeak .steps > li:nth-child(9):before, .gem-c-govspeak .steps > li:nth-child(9):before {
+  content: "3";
+}
+.govspeak .steps > li:nth-child(10):before, .gem-c-govspeak .steps > li:nth-child(10):before {
+  content: "10";
+}
+.govspeak .steps > li:nth-child(11):before, .gem-c-govspeak .steps > li:nth-child(11):before {
+  content: "11";
+}
+.govspeak .steps > li:nth-child(12):before, .gem-c-govspeak .steps > li:nth-child(12):before {
+  content: "12";
+}
+.govspeak .steps > li:nth-child(13):before, .gem-c-govspeak .steps > li:nth-child(13):before {
+  content: "13";
+}
+.govspeak .steps > li:nth-child(14):before, .gem-c-govspeak .steps > li:nth-child(14):before {
+  content: "14";
+}
+.govspeak .steps > li:nth-child(15):before, .gem-c-govspeak .steps > li:nth-child(15):before {
+  content: "15";
+}
+.govspeak .steps > li:nth-child(16):before, .gem-c-govspeak .steps > li:nth-child(16):before {
+  content: "16";
+}
+.govspeak .steps > li:nth-child(17):before, .gem-c-govspeak .steps > li:nth-child(17):before {
+  content: "17";
+}
+.govspeak .steps > li:nth-child(18):before, .gem-c-govspeak .steps > li:nth-child(18):before {
+  content: "18";
+}
+.govspeak .steps > li:nth-child(19):before, .gem-c-govspeak .steps > li:nth-child(19):before {
+  content: "19";
+}
+.govspeak .steps > li:nth-child(20):before, .gem-c-govspeak .steps > li:nth-child(20):before {
+  content: "20";
+}
+.govspeak .steps > li:nth-child(21):before, .gem-c-govspeak .steps > li:nth-child(21):before {
+  content: "21";
+}
+.govspeak .steps > li:nth-child(22):before, .gem-c-govspeak .steps > li:nth-child(22):before {
+  content: "22";
+}
+.govspeak .steps > li:nth-child(23):before, .gem-c-govspeak .steps > li:nth-child(23):before {
+  content: "23";
+}
+.govspeak .steps > li:nth-child(24):before, .gem-c-govspeak .steps > li:nth-child(24):before {
+  content: "24";
+}
+.govspeak .steps > li:nth-child(25):before, .gem-c-govspeak .steps > li:nth-child(25):before {
+  content: "25";
+}
+.govspeak .steps > li:nth-child(26):before, .gem-c-govspeak .steps > li:nth-child(26):before {
+  content: "26";
+}
+.govspeak .steps > li:nth-child(27):before, .gem-c-govspeak .steps > li:nth-child(27):before {
+  content: "27";
+}
+.govspeak .steps > li:nth-child(28):before, .gem-c-govspeak .steps > li:nth-child(28):before {
+  content: "28";
+}
+.govspeak .steps > li:nth-child(29):before, .gem-c-govspeak .steps > li:nth-child(29):before {
+  content: "29";
+}
+.govspeak .steps > li:nth-child(30):before, .gem-c-govspeak .steps > li:nth-child(30):before {
+  content: "30";
+}
+
+                </style>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

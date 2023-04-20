@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Please wait
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<meta http-equiv="refresh" content="1.20;offline-intro-test.html.html">
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="./find-nearest-po" method="post">
+
+
+      <div class="ccms-loader ccms-loader__fast govuk-!-margin-bottom-9" style="text-align: center;"></div>
+
+      <h1 class="govuk-body govuk-!-margin-bottom-9" style="text-align: center;">Please wait</h1>
+
+
+      <button id="button2" class="govuk-button govuk-!-margin-top-4 govuk-visually-hidden" data-module="govuk-button">Continue</button>
+    </form>
+
+  </div>
+</div>
+<style type="text/css">
+.ccms-loader {
+  border: 12px solid #DEE0E2;
+  border-radius: 50%;
+  border-top-color: #005EA5;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  position: relative;
+  top: 70%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -20px;
+  
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+
+<!--
+
+<script type="text/javascript">
+  spinnerTimer()
+
+  function spinnerTimer() {
+    document.getElementById('button2').click()
+  }
+
+</script>
+
+-->
+
+
+{% endblock %}
