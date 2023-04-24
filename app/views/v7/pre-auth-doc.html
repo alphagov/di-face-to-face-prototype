@@ -1,4 +1,4 @@
-{% extends "layout_poc.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
 Prove your identity with a GOV.UK account
@@ -18,7 +18,7 @@ Prove your identity with a GOV.UK account
   <div class="govuk-grid-column-two-thirds">
     <form  method="post">
 
-      <h1 class="govuk-heading-l">Prove your identity online using one of the following photo ID documents</h1>
+      <h1 class="govuk-heading-l">You can prove your identity online using one of the following photo ID documents</h1>
 
       <h2 class="govuk-heading-m">UK photocard driving licence</h2>
 
@@ -26,7 +26,10 @@ Prove your identity with a GOV.UK account
 
       <h2 class="govuk-heading-m">Biometric passport (or 'ePassport')</h2>
 
-      <p>Biometric passports allow you to go through eGates at airpots. All valid UK passports are biometric passports but not all non-UK passports are. To check if you have a biometric passport, look for a small rectangular symbol on the front cover.</p>
+      <p>All valid UK passports are biometric passports. Biometric passports (or ePassports) have a rectangular symbol on the front cover. Look for this symbol:</p>
+
+     <p><img src="../public/images/biometric_symbol.png" alt="biometric symbol"></p>
+
 
       <div class="govuk-inset-text">
         If your UK passport has expired, you can still use it to prove your identity up until 18 months after the expiry date.
