@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_carers.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="" method="post" class="form">
+
+      <h1 class="govuk-heading-l">
+        Eligibility: caring hours, age and country
+      </h1>
+
+
+      {{ govukRadios({
+        name: "hours-per-week",
+        fieldset: {
+          legend: {
+            html: "<p><b>Do you spend 35 hours or more each week providing care for someone?</b></p>",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--s"
+          }
+        },
+        hint: {
+            text: "This can be any care you provide in person, including helping with things like washing, cooking, household tasks, shopping, or travel."
+          },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
+
+      {{ govukRadios({
+        name: "are-you-aged-16-or-over",
+        fieldset: {
+          legend: {
+            text: "Are you aged 16 or over?",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--s"
+          }
+        },
+       
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
+
+      {{ govukRadios({
+        name: "which-country-do-you-live-in",
+        fieldset: {
+          legend: {
+            text: "Which country do you live in?",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--s"
+          }
+        },
+       
+        items: [
+          {
+            value: "england-scotland-or-wales",
+            text: "England, Scotland or Wales"
+          },
+          {
+            value: "northern-ireland",
+            text: "Northern Ireland"
+          },
+          {
+            value: "another-country",
+            text: "Another country"
+          }
+        ]
+      }) }}
+
+
+      
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+
+
+    
+
+
+
+</form>
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}
