@@ -12,34 +12,46 @@
 
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third">
+    <div class="govuk-grid-column-two-thirds">
+
       {{ xGovukSubNavigation({
         visuallyHiddenTitle: "Section navigation",
+        classes: "govuk-!-font-size-16",
         items: [{
-          text: "Page 1",
-          href: "#",
-          current: true
-        }, {
-          text: "Page 2",
-          href: "#"
-        }, {
-          text: "Page 3",
+          
           href: "#",
           parent: true,
+          text: "Contents",
           children: [{
             text: "First child of page 3",
-            href: "#"
+            href: "#",
+            current: true
           }, {
             text: "Second child of page 3",
             href: "#"
           }]
         }]
       }) }}
-    </div>
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">
-        Heading goes here
-      </h1>
+    
+
+      <!--
+        <h2 class="app-step-nav-related__heading">
+          <span class="app-step-nav-related__pretitle govuk-body-s">Contents</span>
+          &#11834;&nbsp;&nbsp;&nbsp;<a href="#" target="_blank" class="govuk-body govuk-!-font-size-16 govuk-link--no-visited-state">How it works<br>
+            <a href="#" target="_blank"  class="govuk-body govuk-!-font-size-16 govuk-link--no-visited-state">Being a goods vehicle operator</a><br>
+            <a href="#" target="_blank"  class="govuk-body govuk-!-font-size-16 govuk-link--no-visited-state">PSV (Public Service Vehicle) operator licences</a><br>
+            <a href="#" target="_blank"  class="govuk-body govuk-!-font-size-16 govuk-link--no-visited-state">Run a local bus service</a><br>
+            
+        </h2>
+      -->
+        <span class="app-step-nav-related__pretitle govuk-body-s">Contents</span>
+        &#11834;&nbsp;&nbsp;<a style="color:black;" href="#" target="_blank" class="govuk-body govuk-!-font-size-16 govuk-link--no-underline govuk-link--no-visited-state">How it works</a><br>
+        &#11834;&nbsp;&nbsp;<a href="#" target="_blank" class="govuk-body govuk-!-font-size-16 govuk-link--no-visited-state">How it works</a><br>
+
+
+      </div>
+
+
 
       <p>Content goes here.</p>
     </div>
