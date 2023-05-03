@@ -1,7 +1,7 @@
-{% extends "layouts/main.html" %}
+{% extends "layout_poc.html" %}
 
 {% block pageTitle %}
-  Autocomplete question page template – {{ serviceName }} – GOV.UK Prototype Components
+  Select which country your EEA national identity is from
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,10 +15,10 @@
       <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-xl">
-            Enter the country of issue of your EEA national identity card</h1>
-    
-            <p>If the country of issue on your photo ID is not on this list, you'll need to choose another photo ID.</p><br>
-    
+            Select which country your EEA national identity is from</h1>
+            
+            <p>If the country your national identity card is from is not on the list, you'll need to choose another type of photo ID.</p>
+
         {{ xGovukAutocomplete({
           id: "country",
           name: "country",
@@ -60,7 +60,7 @@
         }) }}
 
 
-        <p><a href="./offline-select-document-triage" class="govuk-link govuk-link--no-visited-state">The country of issue on my photo ID is not on the list</a></p>
+        <p><a href="./offline-select-document-triage" class="govuk-link govuk-link--no-visited-state">The country my national identity card is from is not on the list</a></p>
 
 
        

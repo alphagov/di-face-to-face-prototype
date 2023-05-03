@@ -1,11 +1,11 @@
-{% extends "layouts/main.html" %}
+{% extends "layout_poc.html" %}
 
 {% block pageTitle %}
   Autocomplete question page template – {{ serviceName }} – GOV.UK Prototype Components
 {% endblock %}
 
 {% block beforeContent %}
-<a href="./offline-eu-driving-licence" class="govuk-back-link">Back</a>
+<a href="./offline-eu-licence-check" class="govuk-back-link">Back</a>
 
 {% endblock %}
 
@@ -15,9 +15,9 @@
       <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-xl">
-        Enter the country of issue of your EU photocard driving licence</h1>
+        Select which country your EU photocard driving licence is from</h1>
 
-        <p>If the country of issue on your photo ID is not on this list, you'll need to choose another photo ID.</p><br>
+        <p>If the country your driving licence is from is not on the list, you'll need to choose another type of photo ID.</p><br>
 
         {{ xGovukAutocomplete({
           id: "country",
@@ -54,12 +54,10 @@
             { text: "Slovenia" },
             { text: "Spain" },
             { text: "Sweden" }
-            
-
           ]
         }) }}
 
-        <p><a href="./offline-select-document-triage" class="govuk-link govuk-link--no-visited-state">The country of issue on my photo ID is not on the list</a></p>
+        <p><a href="./offline-select-document-triage" class="govuk-link govuk-link--no-visited-state">The country my driving licence is from is not on the list</a></p>
 
 
        

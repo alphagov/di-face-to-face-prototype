@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layout_poc.html" %}
 
 {% block pageTitle %}
   Autocomplete question page template – {{ serviceName }} – GOV.UK Prototype Components
@@ -15,9 +15,9 @@
       <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-xl">
-          Enter the country of issue of your non-UK passport</h1>
+          Select which country your passport is from</h1>
   
-          <p>If the country of issue on your photo ID is not on this list, you'll need to choose another photo ID.</p><br>
+          <p>If the country your passport is from is not on the list, you'll need to choose another type of photo ID.</p><br>
 
           
   
@@ -61,7 +61,7 @@
           ]
         }) }}
 
-        <p><a href="./offline-select-document-triage" class="govuk-link govuk-link--no-visited-state">The country of issue on my photo ID is not on the list</a></p>
+        <p><a href="./offline-select-document-triage" class="govuk-link govuk-link--no-visited-state">The country my passport is from is not on the list</a></p>
 
 
        

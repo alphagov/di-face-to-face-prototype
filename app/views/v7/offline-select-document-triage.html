@@ -1,7 +1,7 @@
 {% extends "layout_poc.html" %}
 
 {% block pageTitle %}
-We need to check your details
+Choose a photo ID you can take to a Post Office
 {% endblock %}
 
 {% block header %}
@@ -21,7 +21,7 @@ We need to check your details
              <h1 class="govuk-heading-xl page-heading">Choose a photo ID you can take to a Post Office</h1>
 
 
-               <p>You must take the original photo ID document, not a photocopy.</p>
+               <p>You must take the original photo ID, not a photocopy.</p>
                <p>Your photo ID must not have expired. </p>
                <br>
 
@@ -125,7 +125,10 @@ We need to check your details
                                      },
                                      {
                                       value: "UK driving licence~./offline-driving-licence",
-                                      html: "<p>UK photocard driving licence</p>"
+                                      text: "UK photocard driving licence",
+                                      hint: {
+                                        text: "The address on your driving licence must be the same as your current address."
+                                      }
                                     },
                                      {
                                        value: "Biometric residence permit~./offline-brp-details",
@@ -135,14 +138,14 @@ We need to check your details
                                        value: "EU photocard driving licence~./offline-eu-driving-licence",
                                        text: "European Union (EU) photocard driving licence",
                                        hint: {
-                                        text: "This must be a plastic photocard. You cannot use a paper or handwritten licence."
+                                        text: "This must be a plastic photocard, not a paper or handwritten licence. It must not have your previous home address on it."
                                        }
                                      },
                                      {
                                        value: "National Identity Card from an EEA country~./offline-eu-id-card",
                                        text: "National identity card from a European Economic Area (EEA) country",
                                        hint: {
-                                        text: "This must be a plastic photocard. You cannot use a paper or handwritten national identity card."
+                                        text: "This must be a plastic photocard, not a paper or handwritten card."
                                        }
                                      },
                                      {

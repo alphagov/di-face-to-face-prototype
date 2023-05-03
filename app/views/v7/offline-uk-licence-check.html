@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a href="offline-driving-licence" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+             <h1 class="govuk-heading-xl page-heading">Is the address on your driving licence the same as your current address?</h1>
+
+
+               <p>If the address on your driving licence is not the same as your current address, you'll need to choose another type of photo ID.</p><br>
+
+               <!-- <p>The document must be an original and in your current name. Photo or scanned copies will not be accepted.</p> -->
+
+               <form action="" method="post">
+
+
+
+
+                                 {{ govukRadios({
+                                   classes: "govuk-radios",
+                                   idPrefix: "offline-doc-check1",
+                                   name: "offline-doc-check1",
+                                   
+                                    
+                                  
+
+
+                                   items: [
+                                     {
+                                       value: "yes~./find-nearest-po",
+                                       html: "<p>Yes</p>"
+
+                                     },
+                                     {
+                                      value: "no~./offline-select-document-triage",
+                                      html: "<p>No</p>"
+                                    }
+                                       ]
+
+                                     }) }}
+
+                                     <details class="govuk-details" data-module="govuk-details">
+                                        <summary class="govuk-details__summary">
+                                          <span class="govuk-details__summary-text">
+                                            How do I change the address on my driving licence?
+                                          </span>
+                                        </summary>
+                                        <div class="govuk-details__text">
+                                            You must update your driving licence when you move home. <a href="https://www.gov.uk/tell-dvla-changed-address"  rel="noreferrer noopener" target="_blank" class="govuk-link--no-visited-state">Tell DVLA you’ve changed address (opens in new tab)</a>                                        </div>
+                                      </details>
+
+
+
+               <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+           </form>
+
+
+              
+
+
+
+  </div>
+</div>
+
+{% endblock %}
