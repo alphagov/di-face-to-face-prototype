@@ -9,7 +9,7 @@
 
 {% block beforeContent %}
 {% include "../includes/phase-banner.html" %}
-<a href="offline-eu-driving-licence" class="govuk-back-link">Back</a>
+<a href="offline-eu-id-card" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -17,10 +17,10 @@
          <div class="govuk-grid-row">
            <div class="govuk-grid-column-two-thirds">
 
-             <h1 class="govuk-heading-xl page-heading">Does your driving licence have your current address on it?</h1>
+             <h1 class="govuk-heading-xl page-heading">Does your identity card have your current address on it?</h1>
 
 
-               <p>If your driving licence has your previous address on it, you'll need to choose another type of photo ID.</p><br>
+               <p>If your identity card has your previous address on it, you'll need to choose another type of photo ID.</p><br>
 
                <!-- <p>The document must be an original and in your current name. Photo or scanned copies will not be accepted.</p> -->
 
@@ -40,7 +40,7 @@
 
                                    items: [
                                      {
-                                       value: "yes~./offline-coi-eu",
+                                       value: "yes~./offline-coi-eea",
                                        html: "<p>Yes, it has my current address on it</p>"
 
                                      },
@@ -52,8 +52,8 @@
                                       divider: "or"
                                     },
                                     {
-                                      value: "noaddress~./offline-coi-eu",
-                                      text: "My driving licence does not have my address on it"
+                                      value: "noaddress~./offline-coi-eea",
+                                      text: "My identity card does not have my address on it"
                                     }
                                        ]
 
