@@ -1,0 +1,149 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+<a href="nearest-po-list" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+     <h1 class="govuk-heading-xl page-heading">Check your answers</h1>
+
+     <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        Make sure your answers are correct before you continue.
+      </strong>
+    </div>
+    
+
+
+     <form action="" method="post" class="form">
+       <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+       <!--   * `cya-questions-short` for short questions -->
+       <!--   * `cya-questions-long` for long questions -->
+       <!--   * none for single group of q&a -->
+<!--
+       
+               <h2 class="govuk-heading-m page-heading" id="postoffice-documents">Communication details</h2> -->
+
+               <dl class="govuk-summary-list govuk-!-margin-bottom-7 govuk-list--spaced">
+
+                <div id="enter-po" class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Chosen photo ID
+                  </dt>
+                   <dd class="govuk-summary-list__value">
+
+                    UK passport
+
+
+
+
+       <br/>
+                   </dd>
+                   <dd class="govuk-summary-list__actions">
+                     <!--<a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+                       Change<span class="govuk-visually-hidden"> Date of birth</span>
+                     </a> -->
+                   </dd>
+                   <dd class="govuk-summary-list__actions">
+                     <a href="offline-select-document-triage" class="govuk-link--no-visited-state">
+                       Change<span class="govuk-visually-hidden"> PO list</span>
+                     </a>
+                   </dd>
+                 </div>
+
+
+
+                 <div id="enter-po" class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Expiry date
+                  </dt>
+                   <dd class="govuk-summary-list__value">
+
+                    31 03 2025
+
+
+
+
+       <br/>
+                   </dd>
+                   <dd class="govuk-summary-list__actions">
+                     <!--<a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+                       Change<span class="govuk-visually-hidden"> Date of birth</span>
+                     </a> -->
+                   </dd>
+                   <dd class="govuk-summary-list__actions">
+                     <a href="offline-passport-details" class="govuk-link--no-visited-state">
+                       Change<span class="govuk-visually-hidden"> PO list</span>
+                     </a>
+                   </dd>
+                 </div>
+
+                 
+
+
+                         <div id="enter-po" class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            Post Office address
+                          </dt>
+                           <dd class="govuk-summary-list__value">
+
+                             Brixton Hill<br>
+                             106 Brixton Hill<br>
+                             SW2 1AH
+
+
+
+
+               <br/>
+                           </dd>
+                           <dd class="govuk-summary-list__actions">
+                             <!--<a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+                               Change<span class="govuk-visually-hidden"> Date of birth</span>
+                             </a> -->
+                           </dd>
+                           <dd class="govuk-summary-list__actions">
+                             <a href="find-nearest-po" class="govuk-link--no-visited-state">
+                               Change<span class="govuk-visually-hidden"> PO list</span>
+                             </a>
+                           </dd>
+                         </div>
+
+
+
+
+
+
+
+                     </dl>
+
+
+
+     <input type="hidden" name="_csrf" value="FfwQ72tV-H9h3OqJX3pxZDmQJ56_UAUeYE9g" />
+
+     <a href="loading-page4" type="submit" class="govuk-button" id="save-and-continue" role="button">Confirm and send</a>
+
+     </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

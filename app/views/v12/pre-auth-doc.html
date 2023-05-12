@@ -1,0 +1,148 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Prove your identity with a GOV.UK account
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form  method="post">
+
+      <h1 class="govuk-heading-l">Prove your identity online using one of the following photo ID documents</h1>
+
+      <h2 class="govuk-heading-m">UK photocard driving licence</h2>
+
+      <p>You can use a valid full or provisional driving licence with your photo on it.</p>
+
+      <h2 class="govuk-heading-m">Biometric passport (or 'ePassport')</h2>
+
+      <p>Biometric passports allow you to go through eGates at airpots. All valid UK passports are biometric passports but not all non-UK passports are. To check if you have a biometric passport, look for a small rectangular symbol on the front cover.</p>
+
+      <div class="govuk-inset-text">
+        If your UK passport has expired, you can still use it to prove your identity up until 18 months after the expiry date.
+      </div>
+
+      <h2 class="govuk-heading-m">Biometric Residence Permit (BRP)</h2>
+
+      <p>You can use a valid BRP to prove your identity. Your BRP holds your personal details, photo and fingerprints if you are a UK visa holder. It shows your immigration status and entitlements while you remain in the United Kingdom.</p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What if I cannot prove my identity online?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          If you cannot prove your identity online, you can take these documents to the Post Office to get them checked in person. You'll need to enter your details on GOV.UK before you can do this.
+        </div>
+      </details>
+
+  
+
+    
+      <h2 class="govuk-heading-m">Can you prove your identity using one of these documents?</h2>
+
+      {{ govukRadios({
+        classes: "govuk-radios",
+        name: "changed-name",
+
+        hint: {
+          text: "You can prove your identity in other ways if you do not have one of the above photo ID documents."
+        },
+        
+        items: [
+          {
+            value: "yes~./id-decide-triage",
+            text: "Yes"
+          },
+          {
+            value: "no~./pre-auth-id2",
+            text: "No"
+          }
+        ]
+      }) }}
+
+
+
+      
+
+      <!-- <p>You can then either:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>upload a picture of your photo ID using the GOV.UK ID Check app</li>
+        <li>enter the details from your photo ID and answer some security questions that only you should know the answers to</li>
+      </ul> -->
+
+
+      <!-- {{ govukRadios({
+      classes: "govuk-radios--inline",
+      idPrefix: "use-govuk-account",
+      name: "use-govuk-account",
+      fieldset: {
+        legend: {
+          text: "Choose a way to prove your identity",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Continue to sign in or create a GOV.UK account",
+          hint: {
+            text: "You'll need your photo ID to prove your identity this way."
+          },
+          checked: checked("use-govuk-account", "yes")
+        },
+        {
+          value: "no",
+          text: "Prove your identity another way",
+          hint: {
+            text: "You can prove your identity online with GOV.UK Verify or take your identity documents to be checked in person."
+          },
+          checked: checked("use-govuk-account", "no")
+        }
+      ]
+    }) }} -->
+
+    <button class="govuk-button">Continue</button>
+
+</form>
+
+    {% if data['devMode'] === 'true' %}
+    {# DEVMODE SCENARIOS #}
+
+    <details class="nhsuk-details dev-mode govuk-!-margin-bottom-5" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <h4>Alternate versions</h4>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="identity-welcome">Standard page (signed out)</a>
+          </li>
+          <li>
+            <a href="identity-welcome-signedin">Signed in version</a>
+          </li>
+        </ul>
+      </div>
+    </details>
+    {% endif %}
+
+  </div>
+
+</div>
+{% endblock %}
