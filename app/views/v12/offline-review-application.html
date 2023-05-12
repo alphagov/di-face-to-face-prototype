@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-We need to check your details
+Check your answers
 {% endblock %}
 
 {% block header %}
@@ -49,7 +49,7 @@ We need to check your details
                   </dt>
                    <dd class="govuk-summary-list__value">
 
-                    UK passport
+                    EU photocard driving licence
 
 
 
@@ -63,7 +63,7 @@ We need to check your details
                    </dd>
                    <dd class="govuk-summary-list__actions">
                      <a href="offline-select-document-triage" class="govuk-link--no-visited-state">
-                       Change<span class="govuk-visually-hidden"> PO list</span>
+                       Change<span class="govuk-visually-hidden"> Chosen photo ID</span>
                      </a>
                    </dd>
                  </div>
@@ -90,12 +90,61 @@ We need to check your details
                    </dd>
                    <dd class="govuk-summary-list__actions">
                      <a href="offline-passport-details" class="govuk-link--no-visited-state">
-                       Change<span class="govuk-visually-hidden"> PO list</span>
+                       Change<span class="govuk-visually-hidden"> Expiry date</span>
                      </a>
                    </dd>
                  </div>
 
-                 
+
+                 <div id="enter-po" class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Does your driving licence have your current address on it?                   </dt>
+                   <dd class="govuk-summary-list__value">
+
+                    Yes, it has my current address on it
+
+
+
+
+       <br/>
+                   </dd>
+                   <dd class="govuk-summary-list__actions">
+                     <!--<a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+                       Change<span class="govuk-visually-hidden"> Date of birth</span>
+                     </a> -->
+                   </dd>
+                   <dd class="govuk-summary-list__actions">
+                     <a href="offline-eu-licence-check" class="govuk-link--no-visited-state">
+                       Change<span class="govuk-visually-hidden"> address check answer</span>
+                     </a>
+                   </dd>
+                 </div>
+
+
+                 <div id="enter-po" class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                     Country
+                  </dt>
+                   <dd class="govuk-summary-list__value">
+
+                    Italy
+
+
+
+
+       <br/>
+                   </dd>
+                   <dd class="govuk-summary-list__actions">
+                     <!--<a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+                       Change<span class="govuk-visually-hidden"> Date of birth</span>
+                     </a> -->
+                   </dd>
+                   <dd class="govuk-summary-list__actions">
+                     <a href="offline-coi-eu" class="govuk-link--no-visited-state">
+                       Change<span class="govuk-visually-hidden"> country</span>
+                     </a>
+                   </dd>
+                 </div>
 
 
                          <div id="enter-po" class="govuk-summary-list__row">
@@ -119,8 +168,8 @@ We need to check your details
                              </a> -->
                            </dd>
                            <dd class="govuk-summary-list__actions">
-                             <a href="find-nearest-po" class="govuk-link--no-visited-state">
-                               Change<span class="govuk-visually-hidden"> PO list</span>
+                             <a href="nearest-po-list" class="govuk-link--no-visited-state">
+                               Change<span class="govuk-visually-hidden"> Post Office address</span>
                              </a>
                            </dd>
                          </div>
