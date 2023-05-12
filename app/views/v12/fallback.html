@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="" method="post">
+
+      <h1 class="govuk-heading-xl">Continue to prove your identity another way</h1>
+
+
+
+      <p>You can currently only prove your identity with your GOV.UK One Login if you have a photo ID.</p>
+      <br>
+
+
+      <p class="govuk-body govuk-!-font-weight-bold">What you can do</p>
+
+      <p>Continue to the service you were trying to use and look for others to prove your identity.</p>
+
+<!--      <button class="govuk-button" data-module="govuk-button">Continue</button>  -->
+
+<a href="outside-scope" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+
+
+
+<!--
+      <ul class="govuk-list govuk-list--bullet">
+        <li>UK passport</li>
+        <li>Other passport</li>
+        <li>Biometric residence permit (BRP)</li>
+        <li>UK driving licence</li>
+      </ul>
+
+
+        <h2 class="govuk-heading-m">Apply for identity documents</h2>
+<p>If you do not have any of these identity documents, you might be able to apply: </p>
+<p><a href="#">apply online for a UK passport</a></p>
+<p><a href="#">apply for a replacement biometric residence permit (BRP)</a></p>
+<p><a href="#">apply for a UK driving licence</a></p>
+-->
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

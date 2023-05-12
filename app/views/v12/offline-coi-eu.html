@@ -1,0 +1,316 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Autocomplete question page template – {{ serviceName }} – GOV.UK Prototype Components
+{% endblock %}
+
+{% block beforeContent %}
+<a href="./offline-eu-licence-check" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+  <form class="form" action="./find-nearest-po" method="post">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">
+        Select which country your EU photocard driving licence is from</h1>
+
+        <p>If the country your driving licence is from is not on the list, you'll need to choose another type of photo ID.</p><br>
+
+        <select
+                   name="country-of-issue-input-eu"
+                   id="country-of-issue-input-eu"
+                   title="Country of issue"
+
+                   autocorrect="off"
+                   autocomplete="off"
+                   class=" govuk-select govuk-input--width-20 "
+                 >
+                   <option value="" selected="selected">Select country</option>
+
+                   <option
+                         value="Austria"
+
+                         data-alternative-spellings="AT Österreich Osterreich Oesterreich"
+
+                         data-country-code="AT"
+                       >Austria</option>
+
+                       <option
+                         value="Belgium"
+
+                         data-alternative-spellings="BE België Belgie Belgien Belgique"
+                         data-relevancy-booster="1.5"
+                         data-country-code="BE"
+                       >Belgium</option>
+
+                       <option
+                         value="Bulgaria"
+
+                         data-alternative-spellings="BG България"
+
+                         data-country-code="BG"
+                       >Bulgaria</option>
+
+                       <option
+                         value="Croatia"
+
+                         data-alternative-spellings="HR Hrvatska"
+
+                         data-country-code="HR"
+                       >Croatia</option>
+
+                       <option
+                         value="Cyprus"
+
+                         data-alternative-spellings="CY Κύπρος Kýpros Kıbrıs"
+
+                         data-country-code="CY"
+                       >Cyprus</option>
+
+                       <option
+                         value="Czech Republic"
+
+                         data-alternative-spellings="CZ Česká Ceska"
+
+                         data-country-code="CZ"
+                       >Czech Republic</option>
+
+                       <option
+                         value="Denmark"
+
+                         data-alternative-spellings="DK Danmark"
+                         data-relevancy-booster="1.5"
+                         data-country-code="DK"
+                       >Denmark</option>
+
+                       <option
+                       value="Estonia"
+
+                       data-alternative-spellings="EE Eesti"
+
+                       data-country-code="EE"
+                     >Estonia</option>
+
+                     <option
+                         value="Finland"
+
+                         data-alternative-spellings="FI Suomi"
+
+                         data-country-code="FI"
+                       >Finland</option>
+
+
+
+                       <option
+                         value="France"
+
+                         data-alternative-spellings="FR République française"
+                         data-relevancy-booster="2.5"
+                         data-country-code="FR"
+                       >France</option>
+
+                       <option
+                         value="Germany"
+
+                         data-alternative-spellings="DE Bundesrepublik Deutschland"
+                         data-relevancy-booster="3"
+                         data-country-code="DE"
+                       >Germany</option>
+
+                       <option
+                         value="Greece"
+
+                         data-alternative-spellings="GR Ελλάδα"
+                         data-relevancy-booster="1.5"
+                         data-country-code="GR"
+                       >Greece</option>
+
+                       <option
+                         value="Hungary"
+
+                         data-alternative-spellings="HU Magyarország"
+
+                         data-country-code="HU"
+                       >Hungary</option>
+
+                       <option
+                         value="Ireland"
+
+                         data-alternative-spellings="IE Éire"
+                         data-relevancy-booster="1.2"
+                         data-country-code="IE"
+                       >Ireland</option>
+
+                       <option
+                         value="Italy"
+
+                         data-alternative-spellings="IT Italia"
+                         data-relevancy-booster="2"
+                         data-country-code="IT"
+                       >Italy</option>
+
+                       <option
+                         value="Latvia"
+
+                         data-alternative-spellings="LV Latvija"
+
+                         data-country-code="LV"
+                       >Latvia</option>
+
+                       <option
+                         value="Lithuania"
+
+                         data-alternative-spellings="LT Lietuva"
+
+                         data-country-code="LT"
+                       >Lithuania</option>
+
+
+
+                       <option
+                         value="Luxembourg"
+
+                         data-alternative-spellings="LU"
+
+                         data-country-code="LU"
+                       >Luxembourg</option>
+
+                       <option
+                         value="Malta"
+
+                         data-alternative-spellings="MT"
+
+                         data-country-code="MT"
+                       >Malta</option>
+
+                       <option
+                       value="Netherlands"
+
+                       data-alternative-spellings="NL Holland Nederland"
+                       data-relevancy-booster="1.5"
+                       data-country-code="NL"
+                     >Netherlands</option>
+
+                     <option
+                         value="Poland"
+
+                         data-alternative-spellings="PL Polska"
+                         data-relevancy-booster="1.25"
+                         data-country-code="PL"
+                       >Poland</option>
+
+
+
+                       <option
+                         value="Portugal"
+
+                         data-alternative-spellings="PT Portuguesa"
+                         data-relevancy-booster="1.5"
+                         data-country-code="PT"
+                       >Portugal</option>
+
+                       <option
+                         value="Romania"
+
+                         data-alternative-spellings="RO Rumania Roumania România"
+
+                         data-country-code="RO"
+                       >Romania</option>
+
+                       <option
+                         value="Slovakia"
+
+                         data-alternative-spellings="SK Slovenská Slovensko"
+
+                         data-country-code="SK"
+                       >Slovakia</option>
+
+
+
+                       <option
+                         value="Slovenia"
+
+                         data-alternative-spellings="SI Slovenija"
+
+                         data-country-code="SI"
+                       >Slovenia</option>
+
+                       <option
+                         value="Spain"
+
+                         data-alternative-spellings="ES España"
+                         data-relevancy-booster="2"
+                         data-country-code="ES"
+                       >Spain</option>
+
+                       <option
+                         value="Sweden"
+
+                         data-alternative-spellings="SE Sverige"
+                         data-relevancy-booster="1.5"
+                         data-country-code="SE"
+                       >Sweden</option>
+
+
+
+
+                   </select>
+
+        <!--
+
+        {{ xGovukAutocomplete({
+          id: "country",
+          name: "country",
+          allowEmpty: false,
+          showAllValues: true,
+          showNoOptionsFound: true,
+          
+          items: [
+            { text: "Austria" },
+            { text: "Belgium" },
+            { text: "Bulgaria" },
+            { text: "Croatia" },
+            { text: "Republic of Cyprus" },
+            { text: "Czech Republic" },
+            { text: "Denmark" },
+            { text: "Estonia" },
+            { text: "Finland" },
+            { text: "France" },
+            { text: "Germany" },
+            { text: "Greece" },
+            { text: "Hungary" },
+            { text: "Ireland" },
+            { text: "Italy" },
+            { text: "Latvia" },
+            { text: "Lithuania" },
+            { text: "Luxembourg" },
+            { text: "Malta" },
+            { text: "Netherlands" },
+            { text: "Poland" },
+            { text: "Portugal" },
+            { text: "Romania" },
+            { text: "Slovakia" },
+            { text: "Slovenia" },
+            { text: "Spain" },
+            { text: "Sweden" }
+          ]
+        }) }}
+      -->
+      <br>
+      <br>
+
+        <p><a href="./offline-select-document-triage" class="govuk-link govuk-link--no-visited-state">The country my driving licence is from is not on the list</a></p>
+
+
+       
+
+
+        <button href="./find-nearest-po" class="govuk-button" data-module="govuk-button">Continue</button>
+      
+      </div>
+    </div>
+  </form>
+{% endblock %}

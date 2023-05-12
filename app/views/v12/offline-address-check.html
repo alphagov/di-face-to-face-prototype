@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+     <h1 class="govuk-heading-xl page-heading">Confirm your addresses</h1>
+
+
+     <form action="" method="post" class="form">
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Make sure your details are correct before you continue.
+        </strong>
+      </div>
+<!--
+      <p><b>Current address</b>
+        <br>
+
+        8 Oxford Row,
+        <br>
+        Leeds,
+        <br>
+        LS1 3BE
+      </p>
+
+      <p><a class= "govuk-link--no-visited-state" href="offline-home-address">
+        Change<span class="govuk-visually-hidden"> Dob</span></a></p>
+
+      <hr class="govuk-section-break govuk-section-break--visible">
+      <br>
+
+      <p><b>Year you started living at this address</b>
+        <br>
+        2020
+      </p>
+
+      <p><a class= "govuk-link--no-visited-state" href="offline-address-details2">
+        Change<span class="govuk-visually-hidden"> Dob</span></a></p>
+
+      <hr class="govuk-section-break govuk-section-break--visible">
+      -->
+
+
+       <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+
+
+
+                 <div id="enter-id" class="govuk-summary-list__row">
+                   <dt class="govuk-summary-list__key">
+                     Current home address
+                   </dt>
+                   <dd class="govuk-summary-list__value">
+
+
+                    8 Oxford Row,
+                    <br>
+                    Leeds,
+                    <br>
+                    LS1 3BE
+          
+
+       
+                   </dd>
+                   <dd class="govuk-summary-list__actions">
+                     <!--<a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+                       Change<span class="govuk-visually-hidden"> Date of birth</span>
+                     </a> -->
+                   </dd>
+                   <dd class="govuk-summary-list__actions">
+                     <a class= "govuk-link--no-visited-state" href="offline-address-details">
+                       Change<span class="govuk-visually-hidden"> Passport details</span>
+                     </a>
+                   </dd>
+                 </div>
+
+                 <div id="enter-id" class="govuk-summary-list__row">
+                   <dt class="govuk-summary-list__key">
+                    Year you started living at your current home address
+                   </dt>
+                   <dd class="govuk-summary-list__value">
+
+
+          2022
+         
+                   </dd>
+                   <dd class="govuk-summary-list__actions">
+                     <!--<a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+                       Change<span class="govuk-visually-hidden"> Date of birth</span>
+                     </a> -->
+                   </dd>
+                   <dd class="govuk-summary-list__actions">
+                     <a class= "govuk-link--no-visited-state" href="offline-address-past">
+                       Change<span class="govuk-visually-hidden"> Passport expiry</span>
+                     </a>
+                   </dd>
+                 </div>
+
+          
+
+             </dl>
+
+
+
+
+
+
+<input type="hidden" name="_csrf" value="FfwQ72tV-H9h3OqJX3pxZDmQJ56_UAUeYE9g" />
+
+<a href="./need-to-check" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+
+
+
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{# if coming in from a service - find out which one #}
+
+{% block pageTitle %}
+Create a GOV.UK account or sign in
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+  {% if data['use-govuk-account'] %}
+<!--    <a class="govuk-back-link" href="/preauth/mvp/identity-welcome">Back</a>-->
+  {% else %}
+
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="./auth-create-email" method="post" class="form">
+
+      <h1 class="govuk-heading-l">Create a GOV.UK One Login or sign in
+        {% if data.prototype['serviceType'] === 'identity' %}
+        <!-- to prove your identity -->
+        {% elif data.prototype['serviceType'] === 'save' %}
+        to save your progress
+        {% elif data.prototype['serviceType'] === 'account' %}
+        <!-- to create your account -->
+        {% endif %}
+      </h1>
+
+      <p>You’ll need:<p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>an email address</li>
+        <li>a way to get security codes - this can be a UK mobile phone number or an authenticator app</li>
+      </ul>
+
+      <div class="govuk-inset-text">
+        GOV.UK One Login is also available <a href="#" class="govuk-link">in Welsh (Cymraeg).</a>
+      </div>
+
+  
+      <div class="govuk-button-group">
+      <button class="govuk-button" style="margin-bottom: 20px;">
+        Create a GOV.UK One Login
+      </button>
+      <a href="auth-create-email2" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Sign in
+      </a>
+      </div>
+
+<!--
+      <p class="govuk-body">If you already have a GOV.UK One Login you can <a href="auth-create-email2" class="govuk-link govuk-link--no-visited-state">sign in</a>.</p>
+-->
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">About GOV.UK One Login</span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>GOV.UK One Login is new. At the moment you can only use it with:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Apply for a vehicle operator licence</li>
+            <li>Apply to become a registered social worker in England</li>
+            <li>GOV.UK email subscriptions</li>
+            <li>LITE (Licensing for International Trade and Enterprise)</li>
+            <li>Sign your mortgage deed</li>
+           </ul>
+           <p>GOV.UK One Login does not work with all government accounts and services yet (for example Government Gateway or Universal Credit).</p>
+           <p>In the future, you'll be able to use GOV.UK One Login to access all services on GOV.UK.</p>
+        </div>
+      </details>
+
+    </form>
+
+
+  </div>
+</div>
+
+
+
+{% endblock %}

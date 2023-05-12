@@ -1,0 +1,214 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Benefits",
+      href: "#"
+    },
+    {
+      text: "Benefits and financial support if you're caring for someone",
+      href: "#"
+    }
+  ]
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+ <div class="govuk-grid-column-two-thirds">
+
+   <h1 class="govuk-heading-xl">
+     Carer's Allowance
+   </h1>
+
+   <span class="app-step-nav-related__pretitle govuk-body">Contents</span><br>
+   <ul class="govuk-list govuk-list--spaced">
+   <li>&#8212;&nbsp;&nbsp;<a href="index1" class="govuk-body govuk-!-font-size-19 ">How it works</a></li>
+   <li>&#8212;&nbsp;&nbsp;<a href="index-ca12" class="govuk-body govuk-!-font-size-19 ">Eligibility</a></li>
+   <li>&#8212;&nbsp;&nbsp;<a href="index-ca22" class="govuk-body govuk-!-font-size-19 ">Effect on other benefits</a></li>
+   <li>&#8212;&nbsp;&nbsp;<a href="index-ca-return" class="govuk-body govuk-!-font-size-19 ">Make a claim</a></li>
+   <li>&#8212;&nbsp;&nbsp;<a href="index-ca42" class="govuk-body govuk-!-font-size-19 ">Report a change in circumstances</a></li>
+   <p style="color:black;"><li>&#8212;&nbsp;&nbsp;If you're working</li>
+   </p>
+   </ul>
+
+   <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="border-color:black;border-width: thin;">
+
+   <h2 class="govuk-heading-l">If you're working</h2>
+
+   <p>You can work and get Carer’s Allowance, as long as you spend at least 35 hours in your caring role.</p>
+
+   <p>You can get support for you or the person you care for from your employer, local councils and other organisations.</p>
+
+   <h3 class="govuk-heading-m">Time off for an emergency</h3>
+
+   <p>You can ask your employer for time off to deal with an emergency involving someone else who depends on you for care. How much time off you get depends on your situation.</p>
+
+   <p>If you do not qualify for time off, your employer may allow you ‘compassionate leave’ for emergency situations.</p>
+
+   <h3 class="govuk-heading-m">Flexible working</h3>
+
+   <p>If you need to work more flexibly, for example work part-time or work from home, you can <a href="#" class="govuk-link--no-visited-state">request flexible working</a>.</p>
+
+   <p>You do not have to tell your employer about your caring role or give another reason why you need to work more flexibly.</p>
+
+   <h3 class="govuk-heading-m">Respite care or ‘short break’ care</h3>
+
+   <p>If you need someone to help look after the person you care for while you’re at work, you can apply for respite care (also known as ‘short break’ care).</p>
+
+   <p>Respite care options include:</p>
+
+   <ul class="govuk-list govuk-list--bullet">
+    <li>getting a paid carer or a volunteer to sit with the person you look after for a few hours</li>
+    <li>a regular place in a day care centre for the person you care for</li>
+  </ul>
+
+  <p>Your local council may pay for respite care but you and the person you care for will <a href="#" class="govuk-link--no-visited-state">need an assessment</a> before you can apply.</p>
+
+  <p><a href="#" class="govuk-link--no-visited-state">Contact your local authority for information about local support</a>.</p>
+
+  <h3 class="govuk-heading-m">Advice on starting work</h3>
+
+  <p>If you need help starting or returning to work, contact your <a href="#" class="govuk-link--no-visited-state">local Jobcentre Plus</a> for help on how to combine work with your caring responsibilities.</p>
+
+
+
+  <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="Pagination">
+
+    <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="index-ca42" rel="prev" data-track-category="contentsClicked" data-track-action="previous" data-track-label="/carers-allowance" data-track-dimension="previous" data-track-dimension-index="29">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewbox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">Previous</span>
+            <span class="govuk-visually-hidden">:</span>
+            <span class="govuk-pagination__link-label">Report a change in circumstances</span>
+        </a>
+      </div>
+
+    
+</nav>
+
+<p><a href="#" class="govuk-link--no-visited-state">View a printable version of the whole guide</a></p>
+
+<!---
+<h2 class="govuk-heading-m">If you've already visited a Post Office to prove your identity</h2>
+
+<p>If you’ve already visited a Post Office to prove your identity, continue to view the result of your identity check.</p>
+
+<br>
+-->
+<!--
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      I've already visited a Post Office to prove my identity
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    If you've already visited a Post Office, continue and then sign in to your GOV.UK One Login to view your result.
+  </div>
+</details>
+-->
+
+
+<!--
+<div class="govuk-inset-text" style="border-color:#b1b4b6;
+border-width: thin;">
+  DVSA customer service centre<br>
+  Telephone: 0300 123 9000 <br>
+  Monday to Friday, 7:30am to 6pm<br>
+  <a href="#">Find out about call charges</a>
+</div>
+
+<p>If you live in Northern Ireland, contact the Transport Regulation Unit to get help with your application.</p>
+
+<div class="govuk-inset-text" style="border-color:#b1b4b6;
+border-width: thin;">
+  Transport Regulation Unit<br>
+  Telephone: 0300 200 7831<br>
+  Monday to Friday, 9am to 5pm<br>
+  <a href="#">Find out about call charges</a>
+</div>
+-->
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<h3 class="govuk-heading-m">Explore the topic</h3>
+
+<p class="govuk-body-s"><a href="#"><b>Benefits and financial support if you're caring for someone</b></a></p>
+<p class="govuk-body-s"><a href="#"><b>Lasting power of attorney, being in care and managing finances</b></a></p>
+<p class="govuk-body-s"><a href="#"><b>Carers</b></a></p>
+
+<h3 class="govuk-heading-m">Elsewhere on the web</h3>
+
+<p class="govuk-body-s"><a href="#">Claiming benefits if you live, move or travel abroad</a></p>
+
+
+   </div>
+
+   <div class="govuk-grid-column-one-third">
+    <br><br><br> <br> <br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    
+    
+
+    <div class="app-step-nav-related app-step-nav-related--singular">
+      <h2 class="app-step-nav-related__heading">
+        <span class="app-step-nav-related__pretitle">Related content</span>
+        <p><a href="#" target="_blank" class="govuk-body ">Carer's Allowance: report changes</a></p>
+          <p><a href="#" target="_blank"  class="govuk-body ">Attendance Allowance</a></p>
+          <p><a href="#" target="_blank"  class="govuk-body ">Carer's Credit</a></p>
+          <p><a href="#" target="_blank"  class="govuk-body ">Constant Attendance Allowance</a></p>
+          <p><a href="#" target="_blank"  class="govuk-body ">Show 3 more</a></p>
+
+      </h2>
+    </div>
+  </div>
+ </div>
+
+ <style type="text/css">
+  .app-step-nav-related {
+      border-color:#1d70b8;
+      border-width: thin;
+
+    }
+</style>
+
+<!--
+ <style type="text/css">
+  .govuk-inset-text {
+      border-color:#b1b4b6;
+      border-width: thin;
+
+    }
+</style>
+-->
+<style type="text/css">
+  .govuk-section-break {
+      background-color: #1d70b8;
+      color:#1d70b8;
+      border-color:#1d70b8;
+      border-width: medium;
+
+    }
+</style>
+
+
+{% endblock %}

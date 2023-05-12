@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a href="offline-address-details" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+             <h1 class="govuk-heading-xl page-heading">Check your address</h1>
+
+
+             <form action="" method="post" class="form">
+
+                <p>Make sure there are no mistakes in your current home address before you continue.</p>
+
+                <p>8 OXFORD ROW<br>
+                LEEDS<br>
+                LS1 3BE
+
+                </p>
+
+
+                {{ govukRadios({
+                    classes: "govuk-radios",
+                    idPrefix: "address-check",
+                    name: "address-check",
+                    fieldset: {
+                        legend: {
+                          text: "Is your current home address correct?",
+                          classes: "govuk-fieldset__legend--s"
+                        }
+                      },
+                    items: [
+                      {
+                        value: "yes~./offline-address-past",
+                        html: "<p>Yes</p>"
+                      },
+                      {
+                        value: "no~./offline-address-details2",
+                        html: "<p>No</p>"
+                      }
+                    ]
+                  }) }}
+
+
+
+
+
+<!--
+               <h1 class="govuk-heading-xl page-heading">Find your address</h1>
+
+
+               <form action="" method="post" class="form">
+
+
+
+
+               <div class="govuk-form-group ">
+
+
+
+                   <label class="govuk-label" for="postcode-input">
+                     UK postcode
+                   </label>
+
+
+                 <input
+                   class="govuk-input govuk-input--width-20 "
+                   name="postcode-input"
+
+
+                   type="text"
+                   id="postcode-input"
+                   value=""
+                   autocomplete="postal-code"
+                   >
+
+
+               </div>
+
+
+
+                 <! <input type="submit" class="govuk-button" value="Look up address" id="lookup"> -->
+
+
+                 <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+             </form>
+
+
+
+<!--
+                 <div class="govuk-inset-text">
+
+             <p>If you have a non-UK address, or your UK address can't be found, you can <a href="offline-address-details">add your address manually</a>.</p>
+
+                 </div>
+-->
+
+  <!-- <div class="govuk-form-group">
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary help-text-link">
+        <span class="govuk-details__summary-text">Add your address manually</span>
+      </summary>
+      <div class="govuk-details__text">
+
+  <p>If you have a non-UK address, or your UK address can't be found, you can <a href="">add your address manually</a>.</p>
+
+      </div>
+    </details>
+  </div> -->
+
+
+<!--
+  <a href="offline-address-details" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a> -->
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

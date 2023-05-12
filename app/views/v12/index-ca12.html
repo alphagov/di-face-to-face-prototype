@@ -1,0 +1,301 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Benefits",
+      href: "#"
+    },
+    {
+      text: "Benefits and financial support if you're caring for someone",
+      href: "#"
+    }
+  ]
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+ <div class="govuk-grid-column-two-thirds">
+
+   <h1 class="govuk-heading-xl">
+     Carer's Allowance
+   </h1>
+
+   <span class="app-step-nav-related__pretitle govuk-body">Contents</span><br>
+   <ul class="govuk-list govuk-list--spaced">
+   <li>&#8212;&nbsp;&nbsp;<a href="index1" class="govuk-body govuk-!-font-size-19 ">How it works</a></li>
+   <p style="color:black;"><li>&#8212;&nbsp;&nbsp;Eligibility</li>
+   <li>&#8212;&nbsp;&nbsp;<a href="index-ca22"  class="govuk-body govuk-!-font-size-19 govuk-link--no-visited-state">Effect on other benefits</a></li>
+   <li>&#8212;&nbsp;&nbsp;<a href="index-ca-return"  class="govuk-body govuk-!-font-size-19 govuk-link--no-visited-state">Make a claim</a></li>
+   <li>&#8212;&nbsp;&nbsp;<a href="index-ca42"  class="govuk-body govuk-!-font-size-19 govuk-link--no-visited-state">Report a change in circumstances</a></li>
+   &#8212;&nbsp;&nbsp;<a href="index-ca52" class="govuk-body govuk-!-font-size-19 govuk-link--no-visited-state">If you're working</a><br>
+   </p>
+   </ul>
+
+   <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="border-color:black;border-width: thin;">
+
+   <h2 class="govuk-heading-l govuk-!-font-size-36">Eligibility</h2>
+
+   <p>You may be eligible for Carer’s Allowance if you, the person you care for and the type of care you provide meets certain criteria.</p>
+
+   <h2 class="govuk-heading-l">The person you care for</h2>
+
+   <p>The person you care for must already get one of these benefits:</p>
+
+   <ul class="govuk-list govuk-list--bullet">
+    <li>Personal Independence Payment - daily living component</li>
+    <li>Disability Living Allowance - the middle or highest care rate</li>
+    <li>Attendance Allowance</li>
+    <li>Constant Attendance Allowance at or above the normal maximum rate with an Industrial Injuries Disablement Benefit</li>
+    <li>Constant Attendance Allowance at the basic (full day) rate with a War Disablement Pension</li>
+    <li>Armed Forces Independence Payment</li>
+    <li>Child Disability Payment - the middle or highest care rate</li>
+    <li>Adult Disability Payment - daily living component at the standard or enhanced rate</li>
+  </ul>
+
+  <h3 class="govuk-heading-m">If you care for the person with others</h3>
+
+  <p>You cannot get Carer’s Allowance if you share the care of someone and the other carer is already claiming:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Carer’s Allowance for that person</li>
+    <li>the <a href="#" class="govuk-link--no-visited-state">extra amount of Universal Credit for caring for someone who gets a disability-related benefit</a> for that person</li>
+  </ul>
+
+  <p>If you want to get Carer’s Allowance, speak to the other carer about changing their benefits.</p>
+
+  <p>If the other carer does not want to do that, you can still apply for Carer’s Allowance. The Department for Work and Pensions (DWP) will decide who should receive the benefit.</p>
+
+  <h2 class="govuk-heading-l">The type of care you provide</h2>
+
+  <p>You need to spend at least 35 hours a week caring for someone. This can include:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>helping with washing and cooking</li>
+    <li>taking the person you care for to a doctor’s appointment</li>
+    <li>helping with household tasks, like managing bills and shopping</li>
+  </ul>
+
+  <h2 class="govuk-heading-l">Your eligibility</h2>
+
+  <p>All of the following must apply:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>you’re 16 or over</li>
+    <li>you spend at least 35 hours a week caring for someone</li>
+    <li>you’ve been in England, Scotland or Wales for at least 2 of the last 3 years (this does not apply if you’re a refugee or have humanitarian protection status)</li>
+    <li>you normally live in England, Scotland or Wales, or you live abroad as a member of the armed forces (you might still be eligible if you’re moving to or already living in an <a href="#" class="govuk-link--no-visited-state">EEA country or Switzerland</a>)</li>
+    <li>you’re not in full-time education</li>
+    <li>you’re not studying for 21 hours a week or more</li>
+    <li>you’re not subject to <a href="#" class="govuk-link--no-visited-state">immigration control</a></li>
+    <li>your earnings are £139 or less a week after tax, National Insurance and expenses</li>
+  </ul>
+
+  <p>If you’re from the EU, Switzerland, Norway, Iceland or Liechtenstein, you and your family usually also need settled or pre-settled status under the EU Settlement Scheme to get Carer’s Allowance. The deadline to apply to the scheme was 30 June 2021 for most people, but you might still be able to apply. <a href="#" class="govuk-link--no-visited-state">Check if you can still apply to the EU Settlement Scheme</a>.
+  </p>
+
+
+   <div class="govuk-inset-text">
+    If your earnings are sometimes more than £139 a week you might still be eligible for Carer’s Allowance. Your average earnings may be calculated to work out if you’re eligible.  
+</div>
+
+
+  <h3 class="govuk-heading-m">Calculating your earnings</h3>
+
+  <p>Your earnings are any income from employment and self-employment after tax, National Insurance and expenses.</p>
+
+  <p>Expenses can include:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>50% of your pension contributions</li>
+    <li>equipment you need to do your job, for example specialist clothing</li>
+    <li>travel costs between different workplaces that are not paid for by your employer, for example fuel or train fares</li>
+    <li>business costs if you’re self-employed, for example a computer you only use for work</li>
+  </ul>
+
+  <p>If you pay a carer to look after the disabled person or your children while you work, you can treat care costs that are less than or equal to 50% of your earnings as an expense. The carer must not be your spouse, partner, parent, child or sibling.</p>
+
+  <div class="govuk-inset-text">
+    <p class="govuk-heading-m">Example</p>
+    <p>You earn £100 a week (after tax, National Insurance and other expenses) and spend £60 a week on care while you work. You can treat £50 of this as an expense.</p>
+</div>
+
+<p>Payments that do not count as earnings include:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>money received from an occupational or private pension</li>
+    <li>contributions towards your living or accommodation costs from someone you live with (they cannot be a tenant or boarder)</li>
+    <li>the first £20 a week and 50% of the rest of any income you make from someone boarding in your home</li>
+    <li>a loan or advance payment from your employer</li>
+  </ul>
+
+
+  <h2 class="govuk-heading-m">If you get State Pension</h2>
+
+  <p>You cannot get the full amount of both Carer’s Allowance and your State Pension at the same time.</p>
+
+  <p>If your pension is £76.75 a week or more, you will not get a Carer’s Allowance payment.</p>
+
+  <p>If your pension is less than £76.75 a week, you’ll get a Carer’s Allowance payment to make up the difference.</p>
+
+  <h2 class="govuk-heading-m">If you get Pension Credit</h2>
+
+  <p>If your State Pension is more than £76.75 a week, you will not get a Carer’s Allowance payment but your Pension Credit payments will increase instead.</p>
+
+
+  <p>For each week you get Carer’s Allowance you’ll automatically get <a href="#" class="govuk-link--no-visited-state">National Insurance credits</a>.</p>
+
+  <h2 class="govuk-heading-m">If you're not eligible</h2>
+
+  <p>You might be eligible for <a href="#" class="govuk-link--no-visited-state">Carer’s Credit</a> if you’re not eligible for Carer’s Allowance.</p>
+
+
+
+  <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="Pagination">
+
+    <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="index1" rel="prev" data-track-category="contentsClicked" data-track-action="previous" data-track-label="/carers-allowance" data-track-dimension="previous" data-track-dimension-index="29">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewbox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">Previous</span>
+            <span class="govuk-visually-hidden">:</span>
+            <span class="govuk-pagination__link-label">How it works</span>
+        </a>
+      </div>
+
+    <div class="govuk-pagination__next">
+      <a class="govuk-link govuk-pagination__link" href="index-ca22" rel="next" data-track-category="contentsClicked" data-track-action="next" data-track-label="/carers-allowance/eligibility" data-track-dimension="next" data-track-dimension-index="29">
+        <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewbox="0 0 15 13">
+          <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+        </svg>
+        <span class="govuk-pagination__link-title">Next</span>
+          <span class="govuk-visually-hidden">:</span>
+          <span class="govuk-pagination__link-label">Effect on other benefits</span>
+      </a>
+    </div>
+</nav>
+
+<p><a href="#" class="govuk-link--no-visited-state">View a printable version of the whole guide</a></p>
+
+<!---
+<h2 class="govuk-heading-m">If you've already visited a Post Office to prove your identity</h2>
+
+<p>If you’ve already visited a Post Office to prove your identity, continue to view the result of your identity check.</p>
+
+<br>
+-->
+<!--
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      I've already visited a Post Office to prove my identity
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    If you've already visited a Post Office, continue and then sign in to your GOV.UK One Login to view your result.
+  </div>
+</details>
+-->
+
+
+<!--
+<div class="govuk-inset-text" style="border-color:#b1b4b6;
+border-width: thin;">
+  DVSA customer service centre<br>
+  Telephone: 0300 123 9000 <br>
+  Monday to Friday, 7:30am to 6pm<br>
+  <a href="#">Find out about call charges</a>
+</div>
+
+<p>If you live in Northern Ireland, contact the Transport Regulation Unit to get help with your application.</p>
+
+<div class="govuk-inset-text" style="border-color:#b1b4b6;
+border-width: thin;">
+  Transport Regulation Unit<br>
+  Telephone: 0300 200 7831<br>
+  Monday to Friday, 9am to 5pm<br>
+  <a href="#">Find out about call charges</a>
+</div>
+-->
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<h3 class="govuk-heading-m">Explore the topic</h3>
+
+<p class="govuk-body-s"><a href="#"><b>Benefits and financial support if you're caring for someone</b></a></p>
+<p class="govuk-body-s"><a href="#"><b>Lasting power of attorney, being in care and managing finances</b></a></p>
+<p class="govuk-body-s"><a href="#"><b>Carers</b></a></p>
+
+<h3 class="govuk-heading-m">Elsewhere on the web</h3>
+
+<p class="govuk-body-s"><a href="#">Claiming benefits if you live, move or travel abroad</a></p>
+
+
+   </div>
+
+   <div class="govuk-grid-column-one-third">
+    <br><br><br> <br> <br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    
+    
+
+    <div class="app-step-nav-related app-step-nav-related--singular">
+      <h2 class="app-step-nav-related__heading">
+        <span class="app-step-nav-related__pretitle">Related content</span>
+        <p><a href="#" target="_blank" class="govuk-body ">Carer's Allowance: report changes</a></p>
+          <p><a href="#" target="_blank"  class="govuk-body ">Attendance Allowance</a></p>
+          <p><a href="#" target="_blank"  class="govuk-body ">Carer's Credit</a></p>
+          <p><a href="#" target="_blank"  class="govuk-body ">Constant Attendance Allowance</a></p>
+          <p><a href="#" target="_blank"  class="govuk-body ">Show 3 more</a></p>
+
+      </h2>
+    </div>
+  </div>
+ </div>
+
+ <style type="text/css">
+  .app-step-nav-related {
+      border-color:#1d70b8;
+      border-width: thin;
+
+    }
+</style>
+
+<!--
+ <style type="text/css">
+  .govuk-inset-text {
+      border-color:#b1b4b6;
+      border-width: thin;
+
+    }
+</style>
+-->
+<style type="text/css">
+  .govuk-section-break {
+      background-color: #1d70b8;
+      color:#1d70b8;
+      border-color:#1d70b8;
+      border-width: medium;
+
+    }
+</style>
+
+
+{% endblock %}
