@@ -1,7 +1,7 @@
 {% extends "layout_poc.html" %}
 
 {% block pageTitle %}
-You've signed in to your GOV.UK account
+Start proving your identity with GOV.UK One Login
 {% endblock %}
 
 {% block header %}
@@ -16,14 +16,16 @@ You've signed in to your GOV.UK account
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="./pre-auth-doc" method="post">
+      <form class="form" action="./app-intro" method="post">
 
         <h1 class="govuk-heading-l">
-          Continue to prove your identity with GOV.UK One Login
+          Start proving your identity with GOV.UK One Login
         </h1>
 
+        <p>First, you will be asked some questions to find the best way to prove your identity.</p>
 
-        <button id="button" class="govuk-button" data-module="govuk-button">Continue</button>
+
+        <button id="button" class="govuk-button" data-module="govuk-button">Start</button>
 
       </form>
     </div>
