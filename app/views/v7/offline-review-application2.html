@@ -11,7 +11,7 @@ Check your answers
 {% block beforeContent %}
 {% include "../includes/phase-banner.html" %}
 
-<a href="po-customer-letter" class="govuk-back-link">Back</a>
+<a href="offline-address-check-letter" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -97,7 +97,8 @@ Check your answers
 
                  <div id="enter-po" class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    Does your driving licence have your current address on it?                   </dt>
+                    Does your driving licence have your current address on it?                   
+                  </dt>
                    <dd class="govuk-summary-list__value">
 
                     Yes, it has my current address on it
@@ -114,7 +115,7 @@ Check your answers
                    </dd>
                    <dd class="govuk-summary-list__actions">
                      <a href="offline-eu-licence-check" class="govuk-link--no-visited-state">
-                       Change<span class="govuk-visually-hidden"> address check answer</span>
+                       Change<span class="govuk-visually-hidden">Does your driving licence have your current address on it?</span>
                      </a>
                    </dd>
                  </div>
@@ -139,7 +140,7 @@ Check your answers
                    </dd>
                    <dd class="govuk-summary-list__actions">
                      <a href="offline-coi-eu" class="govuk-link--no-visited-state">
-                       Change<span class="govuk-visually-hidden"> country</span>
+                       Change<span class="govuk-visually-hidden">country</span>
                      </a>
                    </dd>
                  </div>
@@ -171,6 +172,57 @@ Check your answers
                            </dd>
                          </div>
 
+
+                         <div id="enter-po" class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            How do you want to get your Post Office customer letter?
+                          </dt>
+                           <dd class="govuk-summary-list__value">
+
+                            By email and post
+
+
+
+
+                           </dd>
+                           <dd class="govuk-summary-list__actions">
+                             <!--<a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+                               Change<span class="govuk-visually-hidden"> Date of birth</span>
+                             </a> -->
+                           </dd>
+                           <dd class="govuk-summary-list__actions">
+                             <a href="po-customer-letter" class="govuk-link--no-visited-state">
+                               Change<span class="govuk-visually-hidden"> How do you want to get your Post Office customer letter?</span>
+                             </a>
+                           </dd>
+                         </div>
+
+                         <div id="enter-po" class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            Address                          
+                          </dt>
+                           <dd class="govuk-summary-list__value">
+
+                            123 Warwick House <br>
+                            Example Lane<br>
+                            London<br>
+                            N1 3TN
+
+
+
+
+                           </dd>
+                           <dd class="govuk-summary-list__actions">
+                             <!--<a href="/post-office/po-document-detail/edit/council-tax" id="edit-council-tax">
+                               Change<span class="govuk-visually-hidden"> Date of birth</span>
+                             </a> -->
+                           </dd>
+                           <dd class="govuk-summary-list__actions">
+                             <a href="offline-address-check-letter" class="govuk-link--no-visited-state">
+                               Change<span class="govuk-visually-hidden"> Address</span>
+                             </a>
+                           </dd>
+                         </div>
 
 
 

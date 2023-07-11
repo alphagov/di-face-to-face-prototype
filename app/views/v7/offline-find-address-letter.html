@@ -1,7 +1,7 @@
 {% extends "layout_poc.html" %}
 
 {% block pageTitle %}
-Find a Post Office where you can prove your identity
+Find an address
 {% endblock %}
 
 {% block header %}
@@ -10,7 +10,7 @@ Find a Post Office where you can prove your identity
 
 {% block beforeContent %}
 {% include "../includes/phase-banner.html" %}
-
+<a class="govuk-back-link" href="./offline-address-check-letter">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -19,7 +19,7 @@ Find a Post Office where you can prove your identity
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-l">
-      Find a Post Office where you can prove your identity</h1>
+      Find an address</h1>
 
     <form action="" method="post" class="form">
 
@@ -28,9 +28,11 @@ Find a Post Office where you can prove your identity
 
     <div class="govuk-form-group ">
 
+      <p>Enter the UK postcode of where you want to have your Post Office customer letter sent.</p>
 
 
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="postcode-input">
+
+        <h1 class="govuk-label"><label class="govuk-label" for="postcode-input">
           Enter a UK postcode
         </label>
       </h1>
@@ -59,9 +61,12 @@ Find a Post Office where you can prove your identity
       <!-- <input type="submit" class="govuk-button" value="Look up address" id="lookup"> -->
 
 
-      <a href="nearest-po-list" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+      <a href="offline-find-address-letter2" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
 
   </form>
+
+  <a href="#" class="govuk-link govuk-body govuk-link--no-visited-state">Enter address manually</a>
+
 
   </div>
 

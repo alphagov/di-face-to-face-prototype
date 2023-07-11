@@ -1,0 +1,82 @@
+{% extends "layout_poc.html" %}
+
+{% block pageTitle %}
+Check your address 
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a href="po-customer-letter" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+             <h1 class="govuk-heading-l page-heading">Check your address</h1>
+
+             <p>You gave the following address as your current home address.</p>
+
+             <div class="govuk-inset-text">
+                123 Warwick House<br>
+                Example Lane<br>
+                London<br>
+                N1 3TN              
+            </div>
+
+ 
+
+             <form action="" method="post">
+
+
+
+
+                {{ govukRadios({
+                  classes: "govuk-radios",
+                  idPrefix: "po-customer-letter-check-address",
+                  name: "do-you-want-your-post-office-customer-letter-to-be-sent-to-this-address",
+                  fieldset: {
+                    legend: {
+                      text: "Do you want your Post Office customer letter to be sent to this address?",
+                      isPageHeading: false,
+                      classes: "govuk-fieldset__legend--m"
+                    }
+                  },
+                  
+                   
+                 
+
+
+                  items: [
+                    {
+                      value: "Yes~./offline-review-application2",
+                      text: "Yes"
+
+                    },
+                    {
+                     value: "No~./offline-find-address-letter",
+                     text: "No, I want my customer letter sent to a different address"
+                   }
+                      ]
+
+                    }) }}
+
+                    
+
+
+
+<button class="govuk-button" data-module="govuk-button">Continue</button>
+
+</form>
+
+
+  </div>
+</div>
+
+{% endblock %}
