@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Enter the details from your photo ID and answer security questions
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form  method="post">
+
+      <h1 class="govuk-heading-l">Enter the details from your photo ID and answer security questions</h1>
+
+      <p class="govuk-body">To prove your identity, you'll need to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>enter the details from your UK driving licence or UK passport (you might find it easier to do this if you have the photo ID you want to use with you)</li>
+        <li>enter your current home address (and your previous address if you've recently moved)</li>
+        <li>answer some questions that only you should know the answers to</li>
+    </ul>
+
+      
+    
+      <h2 class="govuk-heading-m">Which photo ID would you like to use to prove your identity this way?</h2>
+
+      {{ govukRadios({
+        classes: "govuk-radios",
+        name: "which-photo-ID",
+        
+        items: [
+          {
+            value: "ukpassport~./outside-scope",
+            text: "UK passport"
+          },
+          {
+            value: "ukdrivinglicence~./outside-scope",
+            text: "UK driving licence"
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "pyianotherway~./offline-full-name",
+            text: "Prove your identity another way",
+            hint: {
+                text: "This involves taking your photo ID to a Post Office to be checked in person. You'll need to fill in a form on GOV.UK before you can do this."
+              }
+          }
+        ]
+      }) }}
+
+
+
+      
+
+      <!-- <p>You can then either:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>upload a picture of your photo ID using the GOV.UK ID Check app</li>
+        <li>enter the details from your photo ID and answer some security questions that only you should know the answers to</li>
+      </ul> -->
+
+
+      <!-- {{ govukRadios({
+      classes: "govuk-radios--inline",
+      idPrefix: "use-govuk-account",
+      name: "use-govuk-account",
+      fieldset: {
+        legend: {
+          text: "Choose a way to prove your identity",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Continue to sign in or create a GOV.UK account",
+          hint: {
+            text: "You'll need your photo ID to prove your identity this way."
+          },
+          checked: checked("use-govuk-account", "yes")
+        },
+        {
+          value: "no",
+          text: "Prove your identity another way",
+          hint: {
+            text: "You can prove your identity online with GOV.UK Verify or take your identity documents to be checked in person."
+          },
+          checked: checked("use-govuk-account", "no")
+        }
+      ]
+    }) }} -->
+
+    <button class="govuk-button">Continue</button>
+
+</form>
+
+    {% if data['devMode'] === 'true' %}
+    {# DEVMODE SCENARIOS #}
+
+    <details class="nhsuk-details dev-mode govuk-!-margin-bottom-5" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <h4>Alternate versions</h4>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="identity-welcome">Standard page (signed out)</a>
+          </li>
+          <li>
+            <a href="identity-welcome-signedin">Signed in version</a>
+          </li>
+        </ul>
+      </div>
+    </details>
+    {% endif %}
+
+  </div>
+
+</div>
+{% endblock %}

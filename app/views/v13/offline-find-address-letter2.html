@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find an address
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a class="govuk-back-link" href="./offline-find-address-letter">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Choose an address</h1>
+
+      <h2 class="govuk-heading-m page-heading">Postcode</h2>
+
+      <h2
+      class="govuk-heading-m page-heading">SW2 1AA&emsp;<a href="find-nearest-po" class="govuk-link govuk-link--no-visited-state">Change</a>
+      </h2>
+
+    <form action="" method="post" class="form">
+
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="subject">
+          Choose an address from the list
+        </label>
+        <select class="govuk-select" id="subject" name="subject" aria-describedby="subject-hint">
+          <option value="choose" selected>Choose an address from the list</option>
+          <option value="109brixtonhill">109 BRIXTON HILL, LONDON, SW2 1AA</option>
+          <option value="108brixtonhill">108 BRIXTON HILL, LONDON, SW2 1AA</option>
+          <option value="107brixtonhill">107 BRIXTON HILL, LONDON, SW2 1AA</option>
+          <option value="106brixtonhill">106 BRIXTON HILL, LONDON, SW2 1AA</option>
+        </select>
+      </div>
+
+
+      <!-- <input type="submit" class="govuk-button" value="Look up address" id="lookup"> -->
+
+
+      <a href="offline-address-check-letter2" type="submit" class="govuk-button" id="save-and-continue" role="button">Use this address</a>
+
+  </form>
+
+  <a href="#" class="govuk-link govuk-body govuk-link--no-visited-state">I cannot find my address in the list</a>
+
+
+  </div>
+
+  </div>
+{% endblock %}
