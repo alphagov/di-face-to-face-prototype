@@ -20,41 +20,49 @@ You can prove your identity at a Post Office if you have one of the following do
 
 
 
-      <h2 class="govuk-heading-l">You can prove your identity at a Post Office if you have one of the following documents</h2>
+      <h2 class="govuk-heading-l">Prove your identity at a Post Office with one of the following types of photo ID</h2>
 
-      <p>You can take your photo ID to a Post Office to be checked in person. You'll need to enter your details on GOV.UK before you can do this.</p>
+      <p>Based on what you told us, you cannot prove your identity online.</p>
 
-      <h2 class="govuk-heading-m">EU photocard driving licence</h2>
+      <p>If you have any of the following types of photo ID, you can prove your identity at a Post Office instead.</p>
 
-      <p>You can use a valid full or provisional driving licence with your photo on it.</p>
+      <h2 class="govuk-heading-m">European Union (EU) photocard driving licence</h2>
 
-      <h2 class="govuk-heading-m">Non-biometric passport</h2>
+      <p>You can use an EU driving licence if:</p>
 
-      <p>You can use any type of passport to prove your identity in person at the Post Office, not just biometric passports.</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>it is a plastic photocard, not a paper or handwritten licence</li>
+        <li>it has not expired</li>
+        <li>the address on it is the same as your current address (if it has an address)</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Non-UK passport</h2>
+
+      <p>You can use a non-UK passport as long as it has not expired.</p>
 
      
 
-      <h2 class="govuk-heading-m">National identity card from a European Economic Area (EEA) country</h2>
+      <h2 class="govuk-heading-m">National identity card from a European Economic Area country</h2>
 
-      <p>You can use a national identity card from countries in the European Economic Area (EEA) except Denmark, Iceland and Ireland.</p>
+      <p>You can use a national identity card from a European Economic Area (EEA) country if:</p>
 
-      <div class="govuk-inset-text">
-        You can also use one of the documents listed on the previous page to prove your identity in person at the Post Office.
-      </div>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>it is a plastic photocard, not a paper or handwritten licence</li>
+        <li>it has not expired</li>
+        <li>the address on it is the same as your current address (if it has an address)</li>
+      </ul>
+
+      <p>The EEA includes EU countries, Norway, Iceland and Liechtenstein.</p>
 
 
 
-
-      <h2 class="govuk-heading-m">Can you prove your identity in-person using one of these documents?</h2>
+      <h2 class="govuk-heading-m">Do you have any of these types of photo ID?</h2>
 
       {{ govukRadios({
         classes: "govuk-radios",
         name: "changed-name",
 
-        hint: {
-          text: "There may be other ways to prove your identity if you do not have one of the above photo ID documents."
-        },
-        
+       
         items: [
           {
             value: "yes~./offline-full-name",

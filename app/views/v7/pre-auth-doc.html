@@ -1,7 +1,7 @@
 {% extends "layout_poc.html" %}
 
 {% block pageTitle %}
-Prove your identity online using one of the following photo ID documents
+Prove your identity with a GOV.UK account
 {% endblock %}
 
 {% block header %}
@@ -18,47 +18,53 @@ Prove your identity online using one of the following photo ID documents
   <div class="govuk-grid-column-two-thirds">
     <form  method="post">
 
-      <h1 class="govuk-heading-l">Prove your identity online using one of the following photo ID documents</h1>
+      <h1 class="govuk-heading-l">Tell us if you have one of the following types of photo ID</h1>
+
+      <p>This will help us find the best way for you to prove your identity.</p>
 
       <h2 class="govuk-heading-m">UK photocard driving licence</h2>
 
-      <p>You can use a valid full or provisional driving licence with your photo on it.</p>
+      <p>You can use a UK driving licence if it:</p>
 
-      <h2 class="govuk-heading-m">Biometric passport (or 'ePassport')</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>has your photo</li>
+        <li>has not expired</li>
+      </ul>
 
-      <p>Biometric passports allow you to go through eGates at airpots. All valid UK passports are biometric passports but not all non-UK passports are. To check if you have a biometric passport, look for a small rectangular symbol on the front cover.</p>
+      <p>It can be a full or provisional UK driving licence.</p>
 
-      <div class="govuk-inset-text">
-        If your UK passport has expired, you can still use it to prove your identity up until 18 months after the expiry date.
-      </div>
+      <h2 class="govuk-heading-m">UK passport</h2>
 
-      <h2 class="govuk-heading-m">Biometric Residence Permit (BRP)</h2>
+      <p>You can use any UK passport. If your UK passport has expired, you can still use it to prove your identity up until 18 months after its expiry date.</p>
 
-      <p>You can use a valid BRP to prove your identity. Your BRP holds your personal details, photo and fingerprints if you are a UK visa holder. It shows your immigration status and entitlements while you remain in the United Kingdom.</p>
+      <h2 class="govuk-heading-m">Non-UK passport with a biometric chip</h2>
 
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            What if I cannot prove my identity online?
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          If you cannot prove your identity online, you can take these documents to the Post Office to get them checked in person. You'll need to enter your details on GOV.UK before you can do this.
-        </div>
-      </details>
+      <p>You can use a non-UK passport if it:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>has a biometric chip</li>
+        <li>has not expired</li>
+      </ul>
+
+      <p>To check if your passport has biometric chip, look for the rectangular biiometric chip symbol on the front cover.</p>
+
+
+     <p><img src="../public/images/biometric_symbol.png" alt="biometric symbol"></p>
+
+
+      <h2 class="govuk-heading-m">UK biometric residence permit</h2>
+
+      <p>You can use a UK biometric residence permit (BRP) that has not expired.</p>
 
   
 
     
-      <h2 class="govuk-heading-m">Can you prove your identity using one of these documents?</h2>
+      <h2 class="govuk-heading-m">Do you have any of these types of photo ID?</h2>
 
       {{ govukRadios({
         classes: "govuk-radios",
-        name: "changed-name",
+        name: "types-of-id",
 
-        hint: {
-          text: "You can prove your identity in other ways if you do not have one of the above photo ID documents."
-        },
         
         items: [
           {

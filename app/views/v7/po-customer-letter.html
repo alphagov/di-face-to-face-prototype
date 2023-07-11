@@ -1,0 +1,77 @@
+{% extends "layout_poc.html" %}
+
+{% block pageTitle %}
+Your Post Office customer letter
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a href="nearest-po-list" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+             <h1 class="govuk-heading-l page-heading">Your Post Office customer letter</h1>
+
+             <p>We’ll send you a confirmation email with a link to download your Post Office customer letter. But we can also send your customer letter to you by post.</p>
+
+             <form action="" method="post">
+
+
+
+
+                {{ govukRadios({
+                  classes: "govuk-radios",
+                  idPrefix: "po-customer-letter-check",
+                  name: "how-do-you-want-to-get-your-post-office-customer-letter",
+                  fieldset: {
+                    legend: {
+                      text: "How do you want to get your Post Office customer letter?",
+                      isPageHeading: false,
+                      classes: "govuk-fieldset__legend--m"
+                    }
+                  },
+                  
+                   
+                 
+
+
+                  items: [
+                    {
+                      value: "By email only~./offline-review-application",
+                      text: "By email only"
+
+                    },
+                    {
+                     value: "By email and post~./offline-address-check-letter",
+                     text: "By email and post"
+                     
+                   }
+                      ]
+
+                    }) }}
+
+                    
+
+
+
+<button class="govuk-button" data-module="govuk-button">Continue</button>
+
+</form>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}
