@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Your Post Office customer letter
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a href="nearest-po-list" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+             <h1 class="govuk-heading-l page-heading">Get reminders about your identity check</h1>
+
+             <p>To finish proving your identity, you’ll need to go to your chosen Post Office within 10 days.</p>
+
+             <p>We can send you a reminder by email and text message.</p>
+
+             <div class="govuk-inset-text">
+              07500 123456<br>
+              example@gmail.com
+            </div>
+
+        
+
+             <form action="./offline-review-application" method="post">
+              
+              {{ govukCheckboxes({
+              name: "reminders",
+              fieldset: {
+                legend: {
+                  text: "How would you like to get reminders?",
+                  isPageHeading: false,
+                  classes: "govuk-fieldset__legend--m"
+                }
+              },
+              hint: {
+                text: "Select all options that are relevant to you"
+              },
+              items: [
+                {
+                  value: "Email",
+                  text: "Email"
+                },
+                {
+                  value: "Text message",
+                  text: "Text message"
+                },
+                {
+                  divider: "or"
+                },
+                {
+                  value: "none",
+                  text: "I don't want to get reminders about my identity check",
+                  behaviour: "exclusive"
+                }
+              ]
+            }) }}
+
+
+
+
+
+
+
+                    
+
+
+
+<button class="govuk-button" data-module="govuk-button">Continue</button>
+
+</form>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

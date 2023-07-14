@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Does your national identity card have an expiry date?
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a href="offline-select-document-triage" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+             <form action="" method="post">
+
+
+
+
+                {{ govukRadios({
+                  classes: "govuk-radios",
+                  idPrefix: "po-customer-letter-check",
+                  name: "how-do-you-want-to-get-your-post-office-customer-letter",
+                  fieldset: {
+                    legend: {
+                      text: "Does your passport have an expiry date?",
+                      isPageHeading: true,
+                      classes: "govuk-fieldset__legend--l"
+                    }
+                  },
+                  
+                   
+                 
+
+
+                  items: [
+                    {
+                      value: "Yes~./offline-other-passport-details",
+                      text: "Yes"
+
+                    },
+                    {
+                     value: "No~./offline-coi-passport",
+                     text: "No"
+                     
+                     
+                   }
+                      ]
+
+                    }) }}
+
+                    
+
+
+
+<button class="govuk-button" data-module="govuk-button">Continue</button>
+
+</form>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}
