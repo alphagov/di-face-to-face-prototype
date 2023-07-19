@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Your Post Office customer letter
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a href="user-support-form-po" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+             <h1 class="govuk-heading-l page-heading">A problem entering your details</h1>
+
+             {{ govukTextarea({
+              name: "tell-us-what-happened",
+              id: "tell-us-what-happened",
+              label: {
+                text: "Tell us what happened ",
+                classes: "govuk-label--s",
+                isPageHeading: true
+              },
+              hint: {
+                text: "For example, you had a problem entering your personal details or details from your photo ID, such as your passport or driving licence."
+              }
+            }) }}
+
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--s" for="event-name">
+                  What service were you trying to use?
+                </label>
+              </h1>
+              <div id="event-name-hint" class="govuk-hint">
+                If you cannot remember the name of the service, tell us what you were trying to do. For example, ‘Get a DBS check’. Or you can tell us the name of the government department you’ve been dealing with.
+              </div>
+              <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+            </div>
+
+            <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                Do not include personal or financial information, for example your passport or credit card details.
+              </strong>
+            </div>
+
+            
+
+
+
+
+
+             <form action="" method="post">
+
+
+
+
+                {{ govukRadios({
+                  classes: "govuk-radios",
+                  idPrefix: "reply-by-email",
+                  name: "reply-by-email",
+                  fieldset: {
+                    legend: {
+                      text: "Can we reply to you by email?",
+                      isPageHeading: false,
+                      classes: "govuk-fieldset__legend--m"
+                    }
+                  },
+                  
+                   
+                 
+
+
+                  items: [
+                    {
+                      value: "yes",
+                      text: "Yes"
+
+                    },
+                    {
+                     value: "yes",
+                     text: "No"
+                   }
+                      ]
+
+                    }) }}
+
+                    
+
+
+
+<button class="govuk-button" data-module="govuk-button">Continue</button>
+
+</form>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

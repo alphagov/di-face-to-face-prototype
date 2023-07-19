@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Your Post Office customer letter
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a href="user-support-form" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+             <h1 class="govuk-heading-l page-heading">A problem proving your identity with the Post Office</h1>
+
+
+
+             <form action="" method="post">
+
+
+
+
+                {{ govukRadios({
+                  classes: "govuk-radios",
+                  idPrefix: "user-support-form-po",
+                  name: "tell-us-what-happened",
+                  fieldset: {
+                    legend: {
+                      text: "Tell us what happened",
+                      isPageHeading: false,
+                      classes: "govuk-fieldset__legend--m"
+                    }
+                  },
+                  
+                   
+                 
+
+
+                  items: [
+                    {
+                      value: "You had a problem entering your details~./user-support-po-details",
+                      text: "You had a problem entering your details"
+
+                    },
+                    {
+                     value: "You had a problem with your Post Office customer letter~./user-support-po-letter",
+                     text: "You had a problem with your Post Office customer letter"
+                   }
+                      ]
+
+                    }) }}
+
+                    
+
+
+
+<button class="govuk-button" data-module="govuk-button">Continue</button>
+
+</form>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}
