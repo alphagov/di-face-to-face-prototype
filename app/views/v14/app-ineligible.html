@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Start proving your identity with GOV.UK One Login
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "../includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="./kbv-dropout" method="post">
+
+        <h1 class="govuk-heading-l">
+          You can confirm your identity by entering details about your documents and records.
+        </h1>
+
+        <p>Based on what you've told us, this is the best option for you. You can choose this option on the next screen.</p>
+
+
+        <button id="button" class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
