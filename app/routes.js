@@ -11,10 +11,32 @@ const router = govukPrototypeKit.requests.setupRouter()
 const radioButtonRedirect = require('radio-button-redirect')
 router.use(radioButtonRedirect)
 
-// Dual comms UR - sending text messages
-
 var NotifyClient = require('notifications-node-client').NotifyClient,
     notify = new NotifyClient(process.env.NOTIFYAPIKEY);
+
+// notify email sending test 
+
+router.post('/email-address-page', function (req, res) {
+
+  notify.sendEmail(
+    // this long string is the template ID, copy it from the template
+    // page in GOV.UK Notify. It’s not a secret so it’s fine to put it
+    // in your code.
+    '1e29bf2c-a39a-4fb0-ae05-3832fed5392f',
+    // `emailAddress` here needs to match the name of the form field in
+    // your HTML page
+    req.body.emailAddress
+  );
+
+  // This is the URL the users will be redirected to once the email
+  // has been sent
+  res.redirect('/offline-email-confirmation');
+
+});
+
+// Dual comms UR - sending text messages
+
+
 /*
 router.post(‘/v14/offline-enter-mobile', function(req, res) {
   if (req.body.mobileNumber !== '') {
