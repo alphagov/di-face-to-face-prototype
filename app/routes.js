@@ -18,8 +18,13 @@ var NotifyClient = require('notifications-node-client').NotifyClient,
 
 
 // notify email sending test 
-
+/*
 router.post('/email-address-page', function (req, res) {
+
+  var personalisation = {
+    'first_name': 'Amala',
+    'reference_number': '300241'
+  }
 
   notify.sendEmail(
     // this long string is the template ID, copy it from the template
@@ -28,14 +33,34 @@ router.post('/email-address-page', function (req, res) {
     '1e29bf2c-a39a-4fb0-ae05-3832fed5392f',
     // `emailAddress` here needs to match the name of the form field in
     // your HTML page
-    req.body.emailAddress
-  );
+    req.body.emailAddress, {
+      personalisation: personalisation,
+      reference: ""
+    }
+  )
 
   // This is the URL the users will be redirected to once the email
   // has been sent
   res.redirect('/offline-email-confirmation');
 
 });
+*/
+router.post('app/views/v14/offline-enter-mobile.html', function (req, res) {
+  if (req.body.mobileNumber !== '') {
+    var pinCode1 = Math.floor(100 + Math.random() * 900)
+    var pinCode2 = Math.floor(100 + Math.random() * 900)
+    var personalisation = {
+      'code': pinCode1 + ' ' + pinCode2
+    }
+    notify.sendSms(
+      '5f76fecc-44b0-4950-bb5e-0d8e52e51cc9',
+      req.body.mobileNumber,
+      { personalisation: personalisation }
+    ).catch(err => console.error(err))
+  }
+  res.redirect('offline-checkphone')
+})
+
 
 // Dual comms UR - sending text messages
 
@@ -58,7 +83,7 @@ router.post(‘/v14/offline-enter-mobile', function(req, res) {
 // ------------------------------------------------------------------------
 // ------------------------------------------------------------------------
 
-
+/*
 // choose wether to continue or go back to RP
 router.post('/v2/preauth-route', function (req, res) {
   const usegovuk = req.session.data['use-govuk-account']
@@ -149,7 +174,7 @@ router.post('/app-photoid', function (req, res) {
   }
 })
 
-/*
+
 router.post('/offline-enter-mobile', function (req, res) {
   if (req.body.mobileNumber !== '') {
     notify.sendSms(
@@ -161,6 +186,8 @@ router.post('/offline-enter-mobile', function (req, res) {
   res.redirect('/offline-checkphone')
 })
 */
+
+/*
 router.post('/offline-enter-mobile', function (req, res) {
   
     notify.sendSms(
@@ -172,4 +199,47 @@ router.post('/offline-enter-mobile', function (req, res) {
   
   res.redirect('/offline-checkphone')
 })
+*/
 
+router.post('/email-address-page-answer', function(request, response) {
+
+  var whichemail = request.session.data['email-address-page']
+  if (whichemail !=='') {
+    var personalisation = {
+      'first_name': 'Amala',
+      'reference_number': '300241'
+    }
+  
+    notify.sendEmail(
+      // this long string is the template ID, copy it from the template
+      // page in GOV.UK Notify. It’s not a secret so it’s fine to put it
+      // in your code.
+      '1e29bf2c-a39a-4fb0-ae05-3832fed5392f',
+      // `emailAddress` here needs to match the name of the form field in
+      // your HTML page
+      request.body.emailAddress, {
+        personalisation: personalisation,
+        reference: ""
+      }
+    )
+  } 
+})
+
+// Final Dual Comms Sms code ** need to add logic for checkbox
+router.post('/offline-checkphone', function(request, response) {
+
+  var whichphone = request.session.data['offline-enter-mobile']
+  if (whichphone !=='') {
+    var personalisation = {
+      'first_name': 'Amala',
+      'reference_number': '300241'
+    }
+  
+    notify.sendSms(
+      '5f76fecc-44b0-4950-bb5e-0d8e52e51cc9',
+      request.body.mobileNumber,
+      { personalisation: personalisation }
+    )
+  }
+  response.redirect('/v14/offline-checkphone') 
+})
