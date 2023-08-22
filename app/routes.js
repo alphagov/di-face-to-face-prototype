@@ -11,8 +11,11 @@ const router = govukPrototypeKit.requests.setupRouter()
 const radioButtonRedirect = require('radio-button-redirect')
 router.use(radioButtonRedirect)
 
+
 var NotifyClient = require('notifications-node-client').NotifyClient,
     notify = new NotifyClient(process.env.NOTIFYAPIKEY);
+
+
 
 // notify email sending test 
 
