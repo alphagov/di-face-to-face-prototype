@@ -124,6 +124,7 @@ router.post('/app-photoid', function (req, res) {
   }
 })
 
+/*
 router.post('/offline-enter-mobile', function (req, res) {
   if (req.body.mobileNumber !== '') {
     notify.sendSms(
@@ -132,6 +133,18 @@ router.post('/offline-enter-mobile', function (req, res) {
       { personalisation: null }
     ).catch(err => console.error(err)) .then(res => console.log(res))
   }
+  res.redirect('/offline-checkphone')
+})
+*/
+router.post('/offline-enter-mobile', function (req, res) {
+  
+    notify.sendSms(
+      '5f76fecc-44b0-4950-bb5e-0d8e52e51cc9',
+      '+447717643215',
+      { personalisation: null,
+        reference: null }
+    ).catch(err => console.error(err)) .then(res => console.log(res))
+  
   res.redirect('/offline-checkphone')
 })
 
