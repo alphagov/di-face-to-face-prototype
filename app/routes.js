@@ -124,14 +124,14 @@ router.post('/app-photoid', function (req, res) {
   }
 })
 
-router.post('/app/views/v14/offline-enter-mobile', function (req, res) {
+router.post('/offline-enter-mobile', function (req, res) {
   if (req.body.mobileNumber !== '') {
     notify.sendSms(
       '5f76fecc-44b0-4950-bb5e-0d8e52e51cc9',
       req.body.mobileNumber,
       { personalisation: null }
-    ).catch(err => console.error(err))
+    ).catch(err => console.error(err)) .then(res => console.log(res))
   }
-  res.redirect('offline-checkphone')
+  res.redirect('/offline-checkphone')
 })
 
