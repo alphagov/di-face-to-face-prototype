@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v3.html" %}
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<!--
+{% include "../includes/phase-banner.html" %}
+-->
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+               <h1 class="govuk-heading-xl page-heading">Your GOV.UK One Login account</h1>
+
+               <p>You're signed in as <a class="govuk-body govuk-!-font-weight-bold">your.name@example.com</a></p>
+
+               <h2 class="govuk-heading-m page-heading">Services you sign in to with your GOV.UK account</h2>
+
+
+               <style type="text/css">
+                   .govuk-notification-banner {
+                       background-color: #1d70b8;
+                       color:#1d70b8;
+                       border-color:#b1b4b6;
+                       border-width: thin;
+
+                     }
+                 </style>
+
+                 <style type="text/css">
+                     .govuk-notification-banner__title {
+                         color:#0b0c0c;
+                         
+
+                       }
+                   </style>
+
+                   <style type="text/css">
+                    .accounts-menu {
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+
+.accounts-menu__link {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+@media (min-width: 40.0625em) {
+.accounts-menu__link {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+}}
+
+.accounts-menu__item {
+    list-style-type: none;
+    padding: 12px 0;
+}
+
+@media (min-width: 40.0625em) {
+  .accounts-menu__item {
+      margin: 0 0 20px;
+      padding: 5px 0;
+  }
+}
+
+.accounts-menu__item--current {
+    margin-left: -14px;
+    padding-left: 10px;
+    border-left: 4px solid #1d70b8;
+}
+
+
+.accounts-menu__item--current .accounts-menu__link {
+    text-decoration: none;
+}
+
+.feedback-footer {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f3f2f1;
+}
+
+.accounts-panel {
+    padding: 30px;
+    border: solid 1px #b1b4b6;
+    border-top: solid 3px #1d70b8;
+}
+
+.accounts-border-list__item {
+    border-bottom: solid 1px #b1b4b6;
+}
+
+
+                   </style>
+
+               
+
+  <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+    
+          </div>
+      <div class="govuk-notification-banner__content">
+        <h2 class="govuk-heading-s">Sign your mortgage deed</h2>
+        <p>Our digital mortgage service allows homeowners who are remortgaging to sign their mortgage deed quickly and securely.</p>
+<p><a class="govuk-notification-banner__link" href="./return-successful-identity">Go to Sign your mortgage deed</a></p>
+<p class="govuk-hint">Last used: 10 January 2023</p>
+
+</div>
+</div>
+
+
+<style type="text/css">
+    .govuk-panel--confirmation {
+        background-color: #f3f2f1;
+        color:#000000;
+        text-align: left;
+
+      }
+  </style>
+
+
+  <div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-heading-m page-heading">
+    About GOV.UK One Login accounts
+  </h1>
+  <div class="govuk-panel__body">
+    <p>GOV.UK One Login accounts are new. At the moment you can only use your GOV.UK One Login account with a few services.</p>
+  
+<p>GOV.UK One Login accounts are currently separate from other government accounts (for example Government Gateway or Universal Credit).</p>
+<p>In the future, you'll be able to use your GOV.UK One Login account to sign in to most services on GOV.UK.</p>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

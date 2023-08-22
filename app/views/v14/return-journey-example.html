@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v3.html" %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+         <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+               <h1 class="govuk-heading-xl page-heading">Your services</h1>
+
+               <p>You're signed in as <a class="govuk-body govuk-!-font-weight-bold">your.name@example.com</a></p>
+
+
+               <style type="text/css">
+                   .govuk-notification-banner {
+                       border-color:#b1b4b6;
+                       border-width: thin;
+
+                     }
+                 </style>
+
+                 <style type="text/css">
+                     .govuk-notification-banner__title {
+                         color:#0b0c0c;
+                         
+
+                       }
+                   </style>
+
+                   <style>
+                    .govuk-phase-banner{
+                      padding-left: 20px;
+                    }
+                   </style>
+
+               
+
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__content">
+  <p><a class="govuk-notification-banner__link" href="./loading-page2">Sign your mortgage deed</a></p>
+  <p class="govuk-hint">Last used: 10 February 2023</p>
+  
+  </div>
+  </div>
+
+
+<style type="text/css">
+    .govuk-panel--confirmation {
+        background-color: #f3f2f1;
+        color:#000000;
+        text-align: left;
+
+      }
+  </style>
+
+
+  <div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-heading-m page-heading">
+    About your GOV.UK One Login 
+  </h1>
+  <div class="govuk-panel__body">
+    <p>GOV.UK One Login is new. At the moment you can only use it with:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+     <li>Apply for a vehicle operator licence</li>
+     <li>Apply to become a registered social worker in England</li>
+     <li>GOV.UK email subscriptions</li>
+     <li>LITE (Licensing for International Trade and Enterprise)</li>
+     <li>Sign your mortgage deed</li>
+    </ul>
+  
+    <p>GOV.UK One Login does not work with all government accounts and services yet (for example Government Gateway or Universal Credit).</p>
+    <p>In the future, you'll be able to use GOV.UK One Login to access all services on GOV.UK.</p>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

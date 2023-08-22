@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We need to check your details
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="./loading-page" method="post" class="form">
+
+    <h1 class="govuk-heading-xl page-heading">You've successfully entered your photo ID details</h1>
+
+    <p>You’ll need to enter your current home address (and your previous address if you’ve recently moved) when you continue.</p>
+
+    <a href="./offline-home-address" id="button" class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">Continue</a>
+
+
+
+    
+
+
+
+</form>
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}

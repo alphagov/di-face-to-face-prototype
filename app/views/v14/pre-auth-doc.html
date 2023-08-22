@@ -1,0 +1,155 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Tell us if you have one of the following types of photo ID
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form  method="post">
+
+      <h1 class="govuk-heading-l">Tell us if you have one of the following types of photo ID</h1>
+
+      <p>This will help us find the best way for you to prove your identity.</p>
+
+      <h2 class="govuk-heading-m">UK photocard driving licence</h2>
+
+      <p>You can use a UK driving licence if it:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>has your photo</li>
+        <li>has not expired</li>
+      </ul>
+
+      <p>It can be a full or provisional UK driving licence.</p>
+
+      <h2 class="govuk-heading-m">UK passport</h2>
+
+      <p>You can use any UK passport. If your UK passport has expired, you can still use it to prove your identity up until 18 months after its expiry date.</p>
+
+      <h2 class="govuk-heading-m">Non-UK passport with a biometric chip</h2>
+
+      <p>You can use a non-UK passport if it:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>has a biometric chip</li>
+        <li>has not expired</li>
+      </ul>
+
+      <p>To check if your passport has biometric chip, look for the rectangular biiometric chip symbol on the front cover.</p>
+
+
+     <p><img src="../public/images/biometric_symbol.png" alt="An illustration of the front cover of a passport. 
+      The passport has a golden camera symbol at the bottom, which means it has a biometric chip"></p>
+
+
+      <h2 class="govuk-heading-m">UK biometric residence permit</h2>
+
+      <p>You can use a UK biometric residence permit (BRP) that has not expired.</p>
+
+  
+
+    
+      <h2 class="govuk-heading-m">Do you have any of these types of photo ID?</h2>
+
+      {{ govukRadios({
+        classes: "govuk-radios",
+        name: "types-of-id",
+
+        
+        items: [
+          {
+            value: "yes~./id-decide-triage",
+            text: "Yes"
+          },
+          {
+            value: "no~./pre-auth-id2",
+            text: "No"
+          }
+        ]
+      }) }}
+
+
+
+      
+
+      <!-- <p>You can then either:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>upload a picture of your photo ID using the GOV.UK ID Check app</li>
+        <li>enter the details from your photo ID and answer some security questions that only you should know the answers to</li>
+      </ul> -->
+
+
+      <!-- {{ govukRadios({
+      classes: "govuk-radios--inline",
+      idPrefix: "use-govuk-account",
+      name: "use-govuk-account",
+      fieldset: {
+        legend: {
+          text: "Choose a way to prove your identity",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Continue to sign in or create a GOV.UK account",
+          hint: {
+            text: "You'll need your photo ID to prove your identity this way."
+          },
+          checked: checked("use-govuk-account", "yes")
+        },
+        {
+          value: "no",
+          text: "Prove your identity another way",
+          hint: {
+            text: "You can prove your identity online with GOV.UK Verify or take your identity documents to be checked in person."
+          },
+          checked: checked("use-govuk-account", "no")
+        }
+      ]
+    }) }} -->
+
+    <button class="govuk-button">Continue</button>
+
+</form>
+
+    {% if data['devMode'] === 'true' %}
+    {# DEVMODE SCENARIOS #}
+
+    <details class="nhsuk-details dev-mode govuk-!-margin-bottom-5" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <h4>Alternate versions</h4>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="identity-welcome">Standard page (signed out)</a>
+          </li>
+          <li>
+            <a href="identity-welcome-signedin">Signed in version</a>
+          </li>
+        </ul>
+      </div>
+    </details>
+    {% endif %}
+
+  </div>
+
+</div>
+{% endblock %}
