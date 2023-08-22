@@ -11,8 +11,24 @@ const router = govukPrototypeKit.requests.setupRouter()
 const radioButtonRedirect = require('radio-button-redirect')
 router.use(radioButtonRedirect)
 
+// Dual comms UR - sending text messages
 
+var NotifyClient = require('notifications-node-client').NotifyClient,
+    notify = new NotifyClient(process.env.NOTIFYAPIKEY);
+/*
+router.post(‘/v14/offline-enter-mobile', function(req, res) {
+  if (req.body.mobileNumber !== '') {
 
+    NotifyClient
+  .sendSms('5f76fecc-44b0-4950-bb5e-0d8e52e51cc9', '+447717643215', {
+    personalisation: null,
+    reference: null,
+    })
+  .then(res => console.log(res))
+  .catch(err => console.error(err)) }
+  res.redirect(‘offline-checkphone') })
+
+*/
 // V2 routing
 // ------------------------------------------------------------------------
 // ------------------------------------------------------------------------
@@ -30,6 +46,8 @@ router.post('/v2/preauth-route', function (req, res) {
     res.redirect('preauth-create-spinner')
   }
 })
+
+
 
 
 // check document
@@ -105,3 +123,15 @@ router.post('/app-photoid', function (req, res) {
     }
   }
 })
+
+router.post('/app/views/v14/offline-enter-mobile', function (req, res) {
+  if (req.body.mobileNumber !== '') {
+    notify.sendSms(
+      '5f76fecc-44b0-4950-bb5e-0d8e52e51cc9',
+      req.body.mobileNumber,
+      { personalisation: null }
+    ).catch(err => console.error(err))
+  }
+  res.redirect('offline-checkphone')
+})
+
