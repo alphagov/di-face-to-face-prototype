@@ -16,9 +16,131 @@ var NotifyClient = require('notifications-node-client').NotifyClient,
     notify = new NotifyClient(process.env.NOTIFYAPIKEY);
 
 
+//Individuals :
+//AUTH PHONE NUMBER - WORKING
+//SMS1
 
-// notify email sending test 
+router.post('/v14/offline-po-process', async function(request, response) {
+
+  var authphone = request.session.data['auth-create-mobile-test']
+
+  if (authphone !=='') {
+   
+  
+    await notify.sendSms(
+      '107d1929-b546-4f03-92a1-a37f89a0428b',
+      request.session.data['mobileNumberauth']
+    ).then(function() { 
+      response.redirect('/v14/offline-po-process')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+
+  } else {
+    response.send("No phone number provided")
+
+  } 
+})
+
+// SMS2 - sent after PO
+router.post('/v14/offline-successful-email', async function(request, response) {
+
+  var authphone = request.session.data['auth-create-mobile-test']
+
+  if (authphone !=='') {
+   
+  
+    await notify.sendSms(
+      '7eb456b7-a03c-4930-a235-0f857f4e7f13',
+      request.session.data['mobileNumberauth']
+    ).then(function() { 
+      response.redirect('/v14/offline-successful-email')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+  } else {
+    response.send("No phone number provided")
+  } 
+   
+})
+
+
+//F2F PHONE NUMBER
+//BOTH WORKING
 /*
+router.post('/v14/offline-po-process', async function(request, response) {
+
+  var whichphone = request.session.data['offline-enter-mobile']
+
+  if (whichphone !=='') {
+   
+  
+    await notify.sendSms(
+      '107d1929-b546-4f03-92a1-a37f89a0428b',
+      request.session.data['mobileNumber']
+    ).then(function() { 
+      response.redirect('/v14/offline-po-process')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+
+  } else {
+    response.send("No phone number provided")
+
+  } 
+})
+
+// SMS2 - sent after PO
+router.post('/v14/offline-successful-email', async function(request, response) {
+
+  var whichphone = request.session.data['offline-enter-mobile']
+
+  if (whichphone !=='') {
+   
+  
+    await notify.sendSms(
+      '7eb456b7-a03c-4930-a235-0f857f4e7f13',
+      request.session.data['mobileNumber']
+    ).then(function() { 
+      response.redirect('/v14/offline-successful-email')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+  } else {
+
+    response.send("No phone number provided")
+  } 
+   
+})
+*/
+
+
+/*
+// notify email sending test 
 router.post('/email-address-page', function (req, res) {
 
   var personalisation = {
@@ -45,6 +167,8 @@ router.post('/email-address-page', function (req, res) {
 
 });
 */
+
+/*
 router.post('app/views/v14/offline-enter-mobile.html', function (req, res) {
   if (req.body.mobileNumber !== '') {
     var pinCode1 = Math.floor(100 + Math.random() * 900)
@@ -60,9 +184,7 @@ router.post('app/views/v14/offline-enter-mobile.html', function (req, res) {
   }
   res.redirect('offline-checkphone')
 })
-
-
-// Dual comms UR - sending text messages
+*/
 
 
 /*
@@ -175,17 +297,7 @@ router.post('/app-photoid', function (req, res) {
 })
 
 
-router.post('/offline-enter-mobile', function (req, res) {
-  if (req.body.mobileNumber !== '') {
-    notify.sendSms(
-      '5f76fecc-44b0-4950-bb5e-0d8e52e51cc9',
-      req.body.mobileNumber,
-      { personalisation: null }
-    ).catch(err => console.error(err)) .then(res => console.log(res))
-  }
-  res.redirect('/offline-checkphone')
-})
-*/
+
 
 /*
 router.post('/offline-enter-mobile', function (req, res) {
@@ -201,6 +313,8 @@ router.post('/offline-enter-mobile', function (req, res) {
 })
 */
 
+/*
+//prototype example
 router.post('/email-address-page-answer', function(request, response) {
 
   var whichemail = request.session.data['email-address-page']
@@ -224,15 +338,383 @@ router.post('/email-address-page-answer', function(request, response) {
     )
   } 
 })
+*/
 
-// Final Dual Comms Sms code ** need to add logic for checkbox
-router.post('/offline-checkphone', function(request, response) {
+/*
+// Dual Comms Sms code ** need to add logic for checkbox
+router.post('/v14/offline-checkphone', async function(request, response) {
 
   var whichphone = request.session.data['offline-enter-mobile']
   if (whichphone !=='') {
+   
+  
+    await notify.sendSms(
+      '5f76fecc-44b0-4950-bb5e-0d8e52e51cc9',
+      request.session.data['mobileNumber']
+    ).then(function() { 
+      response.redirect('/v14/offline-checkphone')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+  } else {
+    response.send("No phone number provided")
+
+  }
+   
+})
+*/
+/*
+router.post('/v14/auth-create-checkphone', async function(request, response) {
+
+  var authphone = request.session.data['auth-create-mobile']
+  if (authphone !=='') {
+   
+  
+    await notify.sendSms(
+      '5f76fecc-44b0-4950-bb5e-0d8e52e51cc9',
+      request.session.data['mobileNumberAuth']
+    ).then(function() { 
+      response.redirect('/v14/auth-create-checkphone')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+  } else {
+    response.send("No phone number provided")
+
+  }
+   
+})
+
+*/
+
+
+
+/*
+// SMS1 - sent at PO - WORKING 19:14
+router.post('/v14/offline-po-process', async function(request, response) {
+
+  var whichphone = request.session.data['offline-enter-mobile']
+  var authphone = request.session.data['auth-create-mobile']
+
+  if (whichphone !=='') {
+   
+  
+    await notify.sendSms(
+      '107d1929-b546-4f03-92a1-a37f89a0428b',
+      request.session.data['mobileNumber']
+    ).then(function() { 
+      response.redirect('/v14/offline-po-process')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+
+  } else if (authphone !=='') {
+
+    await notify.sendSms(
+      '107d1929-b546-4f03-92a1-a37f89a0428b',
+      request.session.data['mobileNumberAuth']
+    ).then(function() { 
+      response.redirect('/v14/offline-po-process')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+  
+  } else {
+    response.send("No phone number provided")
+
+  } 
+})
+*/
+
+
+// SMS1 - Test with new page 'auth-create-mobile-test' - not working
+/*
+router.post('/v14/offline-po-process', async function(request, response) {
+
+  //var whichphone = request.session.data['offline-enter-mobile']
+  var authphone = request.session.data['auth-create-mobile-test']
+
+  if (authphone !=='') {
+   
+  
+    await notify.sendSms(
+      '107d1929-b546-4f03-92a1-a37f89a0428b',
+      request.session.data['mobileNumberauth']
+    ).then(function() { 
+      response.redirect('/v14/offline-po-process')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+
+  } else {
+   
+    await notify.sendSms(
+      '107d1929-b546-4f03-92a1-a37f89a0428b',
+      request.session.data['mobileNumber']
+    ).then(function() { 
+      response.redirect('/v14/offline-po-process')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+  
+  } 
+})
+*/
+
+/*
+//Swapping order - not working
+router.post('/v14/offline-po-process', async function(request, response) {
+
+  var whichphone = request.session.data['offline-enter-mobile']
+  var authphone = request.session.data['auth-create-mobile']
+
+  if (authphone !=='') {
+   
+  
+    await notify.sendSms(
+      '107d1929-b546-4f03-92a1-a37f89a0428b',
+      request.session.data['mobileNumberAuth']
+    ).then(function() { 
+      response.redirect('/v14/offline-po-process')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+
+  } else if (whichphone !=='') {
+
+    await notify.sendSms(
+      '107d1929-b546-4f03-92a1-a37f89a0428b',
+      request.session.data['mobileNumber']
+    ).then(function() { 
+      response.redirect('/v14/offline-po-process')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+  
+  } 
+})
+*/
+
+// Separating whichphone and authpone test - work individually
+/*router.post('/v14/offline-po-process', async function(request, response) {
+
+  var whichphone = request.session.data['offline-enter-mobile']
+
+  if (whichphone !=='') {
+   
+  
+    await notify.sendSms(
+      '107d1929-b546-4f03-92a1-a37f89a0428b',
+      request.session.data['mobileNumber']
+    ).then(function() { 
+      response.redirect('/v14/offline-po-process')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+
+  } else {
+    response.send("No phone number provided")
+
+  } 
+})
+
+router.post('/v14/offline-po-process', async function(request, response) {
+
+  var authphone = request.session.data['auth-create-mobile']
+
+  if (authphone !=='') {
+   
+  
+    await notify.sendSms(
+      '107d1929-b546-4f03-92a1-a37f89a0428b',
+      request.session.data['mobileNumberAuth']
+    ).then(function() { 
+      response.redirect('/v14/offline-po-process')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+
+  } else {
+    response.send("No phone number provided")
+
+  } 
+})
+*/
+
+/*
+// testing swapping order - first is working
+router.post('/v14/offline-po-process', async function(request, response) {
+
+  var authphone = request.session.data['auth-create-mobile']
+  var whichphone = request.session.data['offline-enter-mobile']
+
+
+  if (authphone !=='') {
+   
+  
+    await notify.sendSms(
+      '107d1929-b546-4f03-92a1-a37f89a0428b',
+      request.session.data['mobileNumberAuth']
+    ).then(function() { 
+      response.redirect('/v14/offline-po-process')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+  
+  } else if (whichphone !=='') {
+
+    await notify.sendSms(
+      '107d1929-b546-4f03-92a1-a37f89a0428b',
+      request.session.data['mobileNumber']
+    ).then(function() { 
+      response.redirect('/v14/offline-po-process')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+  
+  } else {
+    response.send("No phone number provided")
+
+  } 
+})
+*/
+
+
+/*
+// SMS2 - sent after PO
+router.post('/v14/offline-successful-email', async function(request, response) {
+
+  var whichphone = request.session.data['offline-enter-mobile']
+  var authphone = request.session.data['auth-create-mobile']
+
+  if (authphone !=='' && whichphone =='') {
+   
+  
+    await notify.sendSms(
+      '7eb456b7-a03c-4930-a235-0f857f4e7f13',
+      request.session.data['mobileNumberAuth']
+    ).then(function() { 
+      response.redirect('/v14/offline-successful-email')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+  } else {
+
+    await notify.sendSms(
+      '7eb456b7-a03c-4930-a235-0f857f4e7f13',
+      request.session.data['mobileNumber']
+    ).then(function() { 
+      response.redirect('/v14/offline-successful-email')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+  } 
+   
+})
+*/
+
+
+// routing user for DFC depending on when phone number given 
+router.post('/v14/offline-enter-mobile', function (req, res) {
+
+  var enterMobile = req.session.data['security-codes']
+
+  if (enterMobile == "Text message"){
+    // Send user to next page
+    res.redirect('/v14/offline-identity-phone')
+  } else {
+    res.redirect('/v14/offline-enter-mobile')
+  }
+
+})
+
+
+/* not correct
+router.post('/offline-email-confirmation', function(request, response) {
+
+  var userphone = request.session.data['offline-enter-mobile']
+  var authphone = request.session.data['auth-create-mobile']
+  if (authphone == '') {
     var personalisation = {
-      'first_name': 'Amala',
-      'reference_number': '300241'
     }
   
     notify.sendSms(
@@ -241,5 +723,25 @@ router.post('/offline-checkphone', function(request, response) {
       { personalisation: personalisation }
     )
   }
+// else use data from userphone 
   response.redirect('/v14/offline-checkphone') 
 })
+*/
+
+/* 
+else if (authphone !=='') {
+
+    await notify.sendSms(
+      '5f76fecc-44b0-4950-bb5e-0d8e52e51cc9',
+      request.session.data['mobileNumberAuth']
+    ).then(function() { 
+      response.redirect('/v14/offline-po-process')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+*/
