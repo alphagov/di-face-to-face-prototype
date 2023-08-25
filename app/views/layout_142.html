@@ -1,0 +1,77 @@
+{#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
+{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
+
+{% if useAutoStoreData %}
+  {% block footer %}
+    {{ govukFooter({
+      meta: {
+        items: [
+        {
+          href: "/v142/offline-email-confirmation",
+          text: "Email confirmation (for UR)"
+        },
+        {
+          href: "/v142/offline-successful-email1",
+          text: "Outcome email after PO (for UR)"
+        },
+        {
+          href: "/v7/offline-email-confirmation",
+          text: "POC Confirmation Email"
+        },
+        {
+          href: "/v7/offline-successful-email",
+          text: "POC Outcome Email (after PO)"
+        },
+         {
+           href: "/manage-prototype/clear-data",
+           text: "Clear data"
+         }
+        ],
+        visuallyHiddenTitle: "Footer links"
+      }
+    }) }}
+  {% endblock %}
+{% endif %}
+
+<!--
+items: [
+        {
+          href: "/v3/offline-email-confirmation",
+          text: "Email confirmation V3 (for UR purpose)"
+        },
+        {
+          href: "/v2/offline-email-confirmation",
+          text: "Email confirmation V2 (for UR purpose)"
+         },
+        {
+            href: "/v3/offline-successful-email",
+            text: "Successful verification email V3 (for UR)"
+          },
+         {
+            href: "/v2/offline-successful-email",
+            text: "Successful verification email V2 (for UR)"
+          },
+          {
+            href: "/prototype-admin/clear-data",
+            text: "Clear data"
+          }
+-->
+
+
