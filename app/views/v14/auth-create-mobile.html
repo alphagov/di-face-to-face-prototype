@@ -26,7 +26,7 @@ Enter your mobile phone number
 
 
 
-    <form class="form" action="./auth-create-checkphone" method="post">
+    <form class="form" action="/v14/auth-create-checkphone" method="post">
 
       <!-- Enter Password -->
 
@@ -35,7 +35,7 @@ Enter your mobile phone number
           <label class="govuk-label" for="mobile-number">UK mobile phone number</label>
 
           <div class="gem-c-show-password__input-wrapper">
-            <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobileNumber" type="tel" spellcheck="false" autocomplete="tel">
+            <input class="govuk-input govuk-input--width-20" id="mobile-number-auth" name="mobileNumberAuth" type="tel" spellcheck="false" autocomplete="tel">
 
           </div> <!-- /. gem-c-show-password__input-wrapper -->
         </div> <!-- /. govuk-form-group -->
@@ -46,7 +46,7 @@ Enter your mobile phone number
       <div class="govuk-form-group">
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+              <input class="govuk-checkboxes__input" id="no-uk-num" name="nonUKAuth" type="checkbox" value="email" data-aria-controls="conditional-contact">
               <label class="govuk-label govuk-checkboxes__label" for="contact">
                 I do not have a UK mobile number
               </label>
@@ -59,7 +59,7 @@ Enter your mobile phone number
                 <div id="contact-hint" class="govuk-hint">
                   Include the country code, for example +33 for France
                 </div>
-                <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
+                <input class="govuk-input govuk-!-width-one-half" id="enter-int-num" name="intNumberAuth" type="tel" spellcheck="false" autocomplete="email">
               </div>
             </div>
             

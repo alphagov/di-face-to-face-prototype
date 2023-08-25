@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Enter your mobile phone number
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a class="govuk-back-link" href="nearest-po-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      We need to send you text messages about your identity check
+        </h1>
+
+    <p>We'll send text messages to your phone number ending <b>789</b></p>
+
+
+
+
+
+    <form class="form" action="/v14/offline-review-application" method="post">
+
+      <!-- Enter Password -->
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            I cannot receive text messages
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          If you cannot receive text messages, you'll need to <a href="f2f-escape2">prove your identity another way</a>. This will cancel your current identity check.
+        </div>
+      </details>
+
+      
+
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

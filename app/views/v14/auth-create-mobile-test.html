@@ -10,7 +10,7 @@ Enter your mobile phone number
 
 {% block beforeContent %}
 {% include "../includes/phase-banner.html" %}
-<a class="govuk-back-link" href="nearest-po-list">Back</a>
+<a class="govuk-back-link" href="auth-security-codes">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -28,7 +28,7 @@ Enter your mobile phone number
 
 
 
-    <form class="form" action="/v14/offline-checkphone" method="post">
+    <form class="form" action="/v14/auth-create-checkphone" method="post">
 
       <!-- Enter Password -->
 
@@ -37,7 +37,7 @@ Enter your mobile phone number
           <label class="govuk-label" for="mobile-number">UK mobile phone number</label>
 
           <div class="gem-c-show-password__input-wrapper">
-            <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobileNumber" type="tel" spellcheck="false" autocomplete="tel">
+            <input class="govuk-input govuk-input--width-20" id="mobile-numberauth" name="mobileNumberauth" type="tel" spellcheck="false" autocomplete="tel">
 
           </div> <!-- /. gem-c-show-password__input-wrapper -->
         </div> <!-- /. govuk-form-group -->
@@ -48,7 +48,7 @@ Enter your mobile phone number
       <div class="govuk-form-group">
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="contact" name="nonukNumber" type="checkbox" value="email" data-aria-controls="conditional-contact">
+              <input class="govuk-checkboxes__input" id="contact" name="nonukNumberauth" type="checkbox" value="email" data-aria-controls="conditional-contact">
               <label class="govuk-label govuk-checkboxes__label" for="contact">
                 I do not have a UK mobile number
               </label>
@@ -61,7 +61,7 @@ Enter your mobile phone number
                 <div id="contact-hint" class="govuk-hint">
                   Include the country code, for example +33 for France
                 </div>
-                <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="intNumber" type="tel" spellcheck="false" autocomplete="email">
+                <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="intNumberauth" type="tel" spellcheck="false" autocomplete="email">
               </div>
             </div>
             
