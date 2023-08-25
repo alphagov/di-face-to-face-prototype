@@ -12,7 +12,7 @@ Text message reminder from GOV UK
 
 <div class="govuk-grid-column-two-thirds">
 
-    <img src="../public/images/PO_process_short.png" width="3000" height="800" alt="An illustration of the identity verification process at the Post Office. 
+    <img src="../public/images/PO-process-return.png" width="1500" height="800" alt="An illustration of the identity verification process at the Post Office. 
     You arrive at the Post Office, where a member of staff then scans your Post Office customer letter. The member of staff then scans your photo ID, and you receive a text message from GOV.UK. 
     Afterwards the member of staff takes a scan of your face.">
 
@@ -20,7 +20,13 @@ Text message reminder from GOV UK
 <br>
 <br>
 
-<a href="offline-po-process1" type="submit" class="govuk-button" id="save-and-continue" role="button">After the Post Office</a>
+<form class="form" action="/v14/offline-successful-email" method="post">
+
+    <button class="govuk-button" data-module="govuk-button">
+      Go to result
+    </button>
+    
+    </form>
 
 </div>
 
