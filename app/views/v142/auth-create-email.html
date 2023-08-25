@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Enter your email address
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+  <a href="./auth-gov-account" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Enter your email address
+    </h1>
+
+
+    <form class="form" action="./auth-create-checkemail" method="post">
+      <div class="govuk-form-group">
+        <!-- <div id="email-hint" class="govuk-hint">
+            We’ll only use this to send you a receipt
+        </div> -->
+        <input class="govuk-input govuk-!-width-two-thirds" id="email" name="emailAddress" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+      <input class="govuk-input" name="signin" type="hidden" value="create">
+    </form>
+  </div>
+</div>
+
+{% endblock %}

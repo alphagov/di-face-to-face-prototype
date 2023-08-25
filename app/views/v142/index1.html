@@ -1,0 +1,85 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Sign your mortgage deed
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_mortgage.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+ <div class="govuk-grid-column-two-thirds">
+
+   <h1 class="govuk-heading-xl">
+     Sign your mortgage deed
+   </h1>
+
+   <p>To do this you will need:</p>
+
+   <ul class="govuk-list govuk-list--bullet">
+    <li>to prove your identity online</li>
+    <li>a current UK address</li>
+  <li>your mobile phone registered with the conveyancer</li>
+  <li>the borrower reference supplied to you by the conveyancer.</li>
+</ul>
+
+<p>The personal information you provide will be used to process the application and may be used to contact you.</p>
+
+<h2 class="govuk-heading-m">If you've already visited a Post Office to prove your identity</h2>
+
+<p>If you’ve already visited a Post Office to prove your identity, continue to view the result of your identity check.</p>
+
+
+
+<!--
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      I've already visited a Post Office to prove my identity
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    If you've already visited a Post Office, continue and then sign in to your GOV.UK One Login to view your result.
+  </div>
+</details>
+-->
+<a href="loading-page2" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+  Start now
+  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+  <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+  </svg></a>
+  <br>
+  <br>
+
+  <h2 class="govuk-heading-m">How we use your personal information</h2>
+  <p>HM Land Registry will retain and may share your personal details for fraud prevention and detection purposes. HM Land Registry may also carry out third party checks in relation to the information supplied.</p>
+
+  <p>For further information please see our <a href="javascript:void(0)">personal information charter (opens in new tab)</a></p>
+
+
+
+<h2 class="govuk-heading-m">Why is the government involved in this?</h2>
+<p>HM Land Registry records any change to the ownership of registered land or property - this includes changes to mortgages and leases.</p>
+
+
+
+
+
+
+
+   </div>
+ </div>
+
+
+
+
+{% endblock %}

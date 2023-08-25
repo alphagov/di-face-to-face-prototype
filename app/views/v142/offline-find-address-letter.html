@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Find an address
+{% endblock %}
+
+{% block header %}
+{% include "../includes/header_v1.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/phase-banner.html" %}
+<a class="govuk-back-link" href="./offline-address-check-letter">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Find an address</h1>
+
+    <form action="" method="post" class="form">
+
+
+
+
+    <div class="govuk-form-group ">
+
+      <p>Enter the UK postcode of where you want to have your Post Office customer letter sent.</p>
+
+
+
+        <h1 class="govuk-label"><label class="govuk-label" for="postcode-input">
+          Enter a UK postcode
+        </label>
+      </h1>
+
+        <div id="event-name-hint" class="govuk-hint">
+          For example, SW1A 2AA
+        </div>
+
+
+        <input
+        class="govuk-input govuk-input--width-10 "
+        name="postcode-input"
+
+
+        type="text"
+        id="postcode-input"
+        value=""
+        autocomplete="postal-code"
+        >
+
+
+    </div>
+
+
+
+      <!-- <input type="submit" class="govuk-button" value="Look up address" id="lookup"> -->
+
+
+      <a href="offline-find-address-letter2" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+
+  </form>
+
+  <a href="#" class="govuk-link govuk-body govuk-link--no-visited-state">Enter address manually</a>
+
+
+  </div>
+
+  </div>
+{% endblock %}
