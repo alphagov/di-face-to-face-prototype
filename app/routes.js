@@ -19,77 +19,17 @@ var NotifyClient = require('notifications-node-client').NotifyClient,
 //Individuals :
 //AUTH PHONE NUMBER - WORKING
 //SMS1
-
-router.post('/v14/offline-po-process', async function(request, response) {
-
-  var authphone = request.session.data['auth-create-mobile-test']
-
-  if (authphone !=='') {
-   
-  
-    await notify.sendSms(
-      '107d1929-b546-4f03-92a1-a37f89a0428b',
-      request.session.data['mobileNumberauth']
-    ).then(function() { 
-      response.redirect('/v14/offline-po-process')
-    
-    })
-
-    .catch(function(err) {
-      response.redirect('/v14/offline-checkphone-error')
-      
-      console.error(err) 
-    })
-    
-
-  } else {
-    response.send("No phone number provided")
-
-  } 
-})
-
-// SMS2 - sent after PO
-router.post('/v14/offline-successful-email', async function(request, response) {
-
-  var authphone = request.session.data['auth-create-mobile-test']
-
-  if (authphone !=='') {
-   
-  
-    await notify.sendSms(
-      '7eb456b7-a03c-4930-a235-0f857f4e7f13',
-      request.session.data['mobileNumberauth']
-    ).then(function() { 
-      response.redirect('/v14/offline-successful-email')
-    
-    })
-
-    .catch(function(err) {
-      response.redirect('/v14/offline-checkphone-error')
-      
-      console.error(err) 
-    })
-    
-  } else {
-    response.send("No phone number provided")
-  } 
-   
-})
-
-
-//F2F PHONE NUMBER
-//BOTH WORKING
 /*
 router.post('/v14/offline-po-process', async function(request, response) {
 
-  var whichphone = request.session.data['offline-enter-mobile']
+  var authphone = request.session.data['auth-create-mobile-test']
 
-  if (whichphone !=='') {
+  if (authphone !=='') {
    
   
     await notify.sendSms(
       '107d1929-b546-4f03-92a1-a37f89a0428b',
-      request.session.data['mobileNumber']
+      request.session.data['mobileNumberauth']
     ).then(function() { 
       response.redirect('/v14/offline-po-process')
     
@@ -111,14 +51,14 @@ router.post('/v14/offline-po-process', async function(request, response) {
 // SMS2 - sent after PO
 router.post('/v14/offline-successful-email', async function(request, response) {
 
-  var whichphone = request.session.data['offline-enter-mobile']
+  var authphone = request.session.data['auth-create-mobile-test']
 
-  if (whichphone !=='') {
+  if (authphone !=='') {
    
   
     await notify.sendSms(
       '7eb456b7-a03c-4930-a235-0f857f4e7f13',
-      request.session.data['mobileNumber']
+      request.session.data['mobileNumberauth']
     ).then(function() { 
       response.redirect('/v14/offline-successful-email')
     
@@ -131,12 +71,72 @@ router.post('/v14/offline-successful-email', async function(request, response) {
     })
     
   } else {
-
     response.send("No phone number provided")
   } 
    
 })
 */
+
+//F2F PHONE NUMBER
+//BOTH WORKING
+
+router.post('/v14/offline-po-process', async function(request, response) {
+
+  var whichphone = request.session.data['offline-enter-mobile']
+
+  if (whichphone !=='') {
+   
+  
+    await notify.sendSms(
+      '107d1929-b546-4f03-92a1-a37f89a0428b',
+      request.session.data['mobileNumber']
+    ).then(function() { 
+      response.redirect('/v14/offline-po-process')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+
+  } else {
+    response.send("No phone number provided")
+
+  } 
+})
+
+// SMS2 - sent after PO
+router.post('/v14/offline-successful-email', async function(request, response) {
+
+  var whichphone = request.session.data['offline-enter-mobile']
+
+  if (whichphone !=='') {
+   
+  
+    await notify.sendSms(
+      '7eb456b7-a03c-4930-a235-0f857f4e7f13',
+      request.session.data['mobileNumber']
+    ).then(function() { 
+      response.redirect('/v14/offline-successful-email')
+    
+    })
+
+    .catch(function(err) {
+      response.redirect('/v14/offline-checkphone-error')
+      
+      console.error(err) 
+    })
+    
+  } else {
+
+    response.send("No phone number provided")
+  } 
+   
+})
+
 
 
 /*
