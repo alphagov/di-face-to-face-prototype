@@ -18,7 +18,7 @@ Choose a photo ID you can take to a Post Office
          <div class="govuk-grid-row">
            <div class="govuk-grid-column-two-thirds">
 
-             <h1 class="govuk-heading-l page-heading">Choose a photo ID you can take to a Post Office</h1>
+             <h1 class="govuk-heading-l page-heading">Choose which photo ID you can take to a Post Office</h1>
 
 
                <p>You cannot use a photocopy or digital copy of your photo ID.</p>
@@ -27,7 +27,7 @@ Choose a photo ID you can take to a Post Office
 
                <!-- <p>The document must be an original and in your current name. Photo or scanned copies will not be accepted.</p> -->
 
-               <form action="offline-select-document-triage-error" method="post">
+               <form action="offline-select-document-triage" method="post">
 
 
 <!--
@@ -132,7 +132,10 @@ Choose a photo ID you can take to a Post Office
                                     },
                                      {
                                        value: "Biometric residence permit~./offline-brp-details",
-                                       html: "<p>Biometric residence permit (BRP)</p>"
+                                       text: "Biometric residence permit (BRP)",
+                                       hint: {
+                                        text: "You might have a BRP if you have a visa for longer than 6 months or indefinite leave to remain. You cannot use a UK Frontier Worker permit (FWP) or a UK biometric residence card (BRC), also called a UK residence card."
+                                      }
                                      },
                                      {
                                        value: "EU photocard driving licence~./offline-licence-expiry-check",
@@ -152,7 +155,7 @@ Choose a photo ID you can take to a Post Office
                                       divider: "or"
                                     },
                                     {
-                                      value: "I do not have any of these documents~./fallback",
+                                      value: "I do not have any of these documents~./f2f-escape",
                                       html: "<p>I do not have any of these documents</p>"
                                     }
                                        ]

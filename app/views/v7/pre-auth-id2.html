@@ -16,7 +16,7 @@ You can prove your identity at a Post Office if you have one of the following do
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form action="./id-decide-triage" method="post">
+    <form action="pre-auth-doc-two" method="post">
 
 
 
@@ -47,7 +47,7 @@ You can prove your identity at a Post Office if you have one of the following do
       <p>You can use a national identity card from a European Economic Area (EEA) country if:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>it is a plastic photocard, not a paper or handwritten licence</li>
+        <li>it is a plastic photocard, not a paper or handwritten card</li>
         <li>it has not expired</li>
         <li>the address on it is the same as your current address (if it has an address)</li>
       </ul>
@@ -60,16 +60,16 @@ You can prove your identity at a Post Office if you have one of the following do
 
       {{ govukRadios({
         classes: "govuk-radios",
-        name: "changed-name",
+        name: "types-of-id2",
 
        
         items: [
           {
-            value: "yes~./offline-full-name",
+            value: "yes",
             text: "Yes"
           },
           {
-            value: "no~./f2f-escape2",
+            value: "no",
             text: "No"
           }
         ]
