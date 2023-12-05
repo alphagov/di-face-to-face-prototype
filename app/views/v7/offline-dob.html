@@ -24,108 +24,44 @@ Enter your date of birth
 
 
 
-               <form action="" method="post" class="form">
+               <form action="cic-check" method="post" class="form">
 
 
-
-               <div class="govuk-form-group ">
-
-                   <fieldset class="govuk-fieldset">
-<!--                     <legend>
-
-
-
-
-
-                       <span class="govuk-label">Date of birth</span>
-
-
-
-
-                     </legend>
--->
-
-
-
-
-                       <span class="govuk-hint govuk-!-margin-bottom-1">For example, 31 3 1980</span>
-                       <br>
-                       <br>
-
-
-
-
-
-
-                   <div class="govuk-date-input">
-
-                     <div class="govuk-date-input__item">
-                       <div class="govuk-form-group">
-                         <label class="govuk-label" for="date-of-birth-day">Day</label>
-                         <input
-                           maxlength="2"
-                           id="date-of-birth-day"
-                           min="1"
-                           max="31"
-
-                           class="govuk-input govuk-date-input__input govuk-input--width-2 "
-                           type="text" inputmode="numeric"
-                           name="date-of-birth-day"
-
-                             autocomplete="bday-day"
-
-                         >
-                       </div>
-                     </div>
-
-
-                     <div class="govuk-date-input__item">
-                       <div class="govuk-form-group">
-                         <label class="govuk-label" for="date-of-birth-month">Month</label>
-                         <input
-                           maxlength="2"
-                           id="date-of-birth-month"
-
-                           class="govuk-input govuk-date-input__input govuk-input--width-2 "
-                           type="text" inputmode="numeric"
-                           name="date-of-birth-month"
-
-                             autocomplete="bday-month"
-
-                         >
-                       </div>
-                     </div>
-
-                     <div class="govuk-date-input__item">
-                       <div class="govuk-form-group">
-
-                           <label class="govuk-label" for="date-of-birth-year">Year</label>
-
-                         <input
-                           maxlength="4"
-                           id="date-of-birth-year"
-
-                           class="govuk-input govuk-date-input__input govuk-input--width-4 "
-                           type="text" inputmode="numeric"
-                           name="date-of-birth-year"
-
-                             autocomplete="bday-year"
-
-                         >
-                       </div>
-                     </div>
-                   </div>
-
-                   </fieldset>
-
-               </div>
+               {{ govukDateInput({
+                id: "user-dob",
+                namePrefix: "user-dob",
+                hint: {
+                text: "For example, 31 3 1980"
+                },
+                items: [
+                {
+                name: "day",
+                value: data['user-dob-day'],
+                classes: "govuk-input--width-2",
+                autocomplete: "bday-day"
+                },
+                {
+                name: "month",
+                value: data['user-dob-month'],
+                classes: "govuk-input--width-2",
+                autocomplete: "bday-month"
+                },
+                {
+                name: "year",
+                value: data['user-dob-year'],
+                classes: "govuk-input--width-4",
+                autocomplete: "bday-year"
+                }
+                ]
+                })
+        
+                }}
 
 
 
 
-               <input type="hidden" name="_csrf" value="KCjmvCyO-CEnd52CFTQZejD-T7ckoILfExQ4" />
 
-               <a href="cic-check" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+               <button id="button" class="govuk-button" data-module="govuk-button">Continue</button>
 
 
 

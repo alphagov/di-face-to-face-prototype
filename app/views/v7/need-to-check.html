@@ -17,6 +17,7 @@ We need to check your details
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    <form action="offline-intro-test" post="">
     <h1 class="govuk-heading-l">
       We need to check your details
     </h1>
@@ -40,9 +41,40 @@ We need to check your details
       </div>
     </details>
 
-    <a href="./loading-page3" class="govuk-button" id="save-and-continue" role="button">Continue</a>
+   <!-- <a href="./loading-page3" class="govuk-button" id="save-and-continue" role="button">Continue</a> -->
 
+   <button id="button2" class="govuk-button govuk-visually-hidden" data-module="govuk-button">Continue</button>
+
+   <button class="govuk-button govuk-!-margin-top-4" id="button--save" data-module="govuk-button">Continue</button>
+
+    </form>
   </div>
 
   </div>
+
+  <script type="text/javascript">
+    submitSpinner()
+  
+    function buttonClicked(target) {
+      target.setAttribute('disabled', 'disabled')
+      target.className += ' button--save'
+      setTimeout(function () {
+        document.getElementById('button2').click()
+      }, 2000)
+    }
+  
+    function submitSpinner() {
+      var selects = document.getElementById('button--save')
+      selects.addEventListener('click', function (event) {
+        event.preventDefault()
+        if (selects.getAttribute('disabled') === 'disabled') {
+          console.log('already clicked')
+        } else {
+          event.preventDefault()
+          console.log(selects.getAttribute('disabled'))
+          buttonClicked(selects)
+        }
+      })
+    }
+  </script>
 {% endblock %}

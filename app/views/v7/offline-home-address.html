@@ -12,103 +12,78 @@ Find your address
 {% include "../includes/phase-banner.html" %}
 
 {% endblock %}
+{% if data.prototype['appComplete'] === 'true'%}
+  {% set input = 'LS1 2NE' %}
+{% endif %}
 
 {% block content %}
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-         <div class="govuk-grid-row">
-           <div class="govuk-grid-column-two-thirds">
+    <form action="offline-address-details" method="post">
 
-             <h1 class="govuk-heading-l page-heading">Find your address</h1>
+      <fieldset class="govuk-fieldset" aria-describedby="delivery-address-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Find your address
+          </h1>
+        </legend>
+        {# make app route conditional #}
+        {% if data.prototype['appComplete'] === 'true' or data['dl-postcode'] %}
+        <div class="govuk-inset-text">
+          We’ve used the postcode from your driving licence. You should change this if you do not live at this address anymore.
+        </div>
+        {% endif %}
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="postcode">
+            Enter your postcode
+          </label>
+        <div class="govuk-hint">
+          Enter the postcode of your current home address. This must be a UK postcode, for example SW1A 2AA.
+        </div>
+          <input class="govuk-input govuk-input--width-10" id="postcode" name="address-postcode-current" type="text" autocomplete="postal-code" value="{{ input or data['address-postcode-current'] or data['dl-postcode'] }}">
+        </div>
 
+      </fieldset>
 
-             <form action="" method="post" class="form">
+      <button class="govuk-button" type="submit" data-module="govuk-button">
+        Find address
+      </button>
 
-             <div class="govuk-form-group">
-               <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-body" for="find-address">
-                   Enter your postcode
-                 </label>
-               </h1>
-               <div id="event-name-hint" class="govuk-hint">
-                 Enter the postcode of your current home address. This must be a UK postcode, for example SW1A 2AA.
-               </div>
-               <input class="govuk-input govuk-!-width-one-third" id="find-address" name="find-address" type="text" aria-describedby="find-address-hint">
-             </div>
+<!--      <details class="govuk-details" data-module="govuk-details">-->
+<!--        <summary class="govuk-details__summary">-->
+<!--          <span class="govuk-details__summary-text">I do not live in the UK</span>-->
+<!--        </summary>-->
+<!--        <div class="govuk-details__text">-->
+<!--          <p></p>-->
+<!--        </div>-->
+<!--      </details>-->
 
+    </form>
 
+    {% if data['devMode'] === 'true' %}
+    {# DEVMODE SCENARIOS #}
 
-
-
-<!--
-               <h1 class="govuk-heading-l page-heading">Find your address</h1>
-
-
-               <form action="" method="post" class="form">
-
-
-
-
-               <div class="govuk-form-group ">
-
-
-
-                   <label class="govuk-label" for="postcode-input">
-                     UK postcode
-                   </label>
-
-
-                 <input
-                   class="govuk-input govuk-input--width-20 "
-                   name="postcode-input"
-
-
-                   type="text"
-                   id="postcode-input"
-                   value=""
-                   autocomplete="postal-code"
-                   >
-
-
-               </div>
-
-
-
-                 <! <input type="submit" class="govuk-button" value="Look up address" id="lookup"> -->
-
-
-                 <a href="offline-address-details" type="submit" class="govuk-button" id="save-and-continue" role="button">Find address</a>
-
-             </form>
-
-
-
-<!--
-                 <div class="govuk-inset-text">
-
-             <p>If you have a non-UK address, or your UK address can't be found, you can <a href="offline-address-details">add your address manually</a>.</p>
-
-                 </div>
--->
-
-  <!-- <div class="govuk-form-group">
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary help-text-link">
-        <span class="govuk-details__summary-text">Add your address manually</span>
+    <details class="nhsuk-details dev-mode govuk-!-margin-bottom-5" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
       </summary>
-      <div class="govuk-details__text">
-
-  <p>If you have a non-UK address, or your UK address can't be found, you can <a href="">add your address manually</a>.</p>
-
+      <div class="nhsuk-details__text">
+        <h4>Errors</h4>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="address-error-current-nonefound">No addresses returned from Ordinance Survey</a>
+          </li>
+          <li>
+            <a href="address-error-current-nonefound">Validation error from Ordinance Survey</a>
+          </li>
+        </ul>
       </div>
     </details>
-  </div> -->
-
-
-<!--
-  <a href="offline-address-details" type="submit" class="govuk-button" id="save-and-continue" role="button">Continue</a> -->
-
-
-
+    {% endif %}
 
   </div>
 </div>
